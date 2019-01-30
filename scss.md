@@ -25,7 +25,7 @@
             height: 60vh;
         }
     }
-}
+    }
     ```
 * A partial is simply a Sass file named with a leading underscore. You might name it something like _partial.scss. The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the @import directive.
 *  A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. To create a mixin you use the @mixin directive and give it a name. After you create your mixin, you can then use it as a CSS declaration starting with @include followed by the name of the mixin.    
