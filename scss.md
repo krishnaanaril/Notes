@@ -15,17 +15,61 @@
     background-color: $acolor;
     width: 100vw;
     height: 100vh;
-    .b {
-        background-color: $bcolor;
-        width: 80vw;
-        height: 80vh;
-        .c {
-            background-color: $ccolor;
-            width: 60vw;
-            height: 60vh;
+        .b {
+            background-color: $bcolor;
+            width: 80vw;
+            height: 80vh;
+            .c {
+                background-color: $ccolor;
+                width: 60vw;
+                height: 60vh;
+            }
         }
-    }
     }
     ```
 * A partial is simply a Sass file named with a leading underscore. You might name it something like _partial.scss. The underscore lets Sass know that the file is only a partial file and that it should not be generated into a CSS file. Sass partials are used with the @import directive.
 *  A mixin lets you make groups of CSS declarations that you want to reuse throughout your site. You can even pass in values to make your mixin more flexible. A good use of a mixin is for vendor prefixes. To create a mixin you use the @mixin directive and give it a name. After you create your mixin, you can then use it as a CSS declaration starting with @include followed by the name of the mixin.    
+    ```css
+    @import 'partial';
+
+    $acolor: aqua;
+    $bcolor: green;
+    $ccolor: yellow;
+
+    @mixin baseStyle($color, $width, $height) {
+        background-color: $color;
+        width: $width;
+        height: $height;
+    }
+
+    %paddingStyle {
+        padding: 20px;
+    }
+
+    .a {
+        @include baseStyle($acolor, 100vw , 100vh );
+        @extend %paddingStyle;
+        .b {
+            @include baseStyle($bcolor, 80vw , 80vh );
+            @extend %paddingStyle;
+            .c {
+                @include baseStyle($ccolor, 60vw , 60vh );
+            }
+        }
+    }
+    ```
+    * Operators can be applied without the use of calc()
+    * Usage of @function
+    ```css
+    @function get-square($val) {
+        @return $val * $val;
+    }
+    a {
+        height: #{get-square(8)}vh;
+    }
+    ```
+    * Control Directives & Expressions
+        * if()
+        * @if
+        * @for
+        * @each
