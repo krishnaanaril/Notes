@@ -1,5 +1,10 @@
 # Angular Notes
 
+## Architecture Overview
+
+* An app always has at least a root module that enables bootstrapping, and typically has many more feature modules.
+* Angular NgModules differ from and complement JavaScript (ES2015) modules. 
+
 ## Displaying Data
 
 * Interpolation with double curly braces to display a component property.
