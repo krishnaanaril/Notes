@@ -1,0 +1,476 @@
+ 1287  docker run hello-world
+ 1288  newgrp - docker-ubuntu
+ 1289  docker run hello-world
+ 1290  sudo chmod 666 /var/run/docker.sock
+ 1291  docker run hello-world
+ 1292  docker service -ps
+ 1293  docker service ls
+ 1294  docker ps
+ 1295  docker images
+ 1296  docker info
+ 1297  clear
+ 1298  docker swarm --help
+ 1299  docker swarm join-token --help
+ 1300  docker swarm join-token -q
+ 1301  docker swarm join-token -q manager
+ 1302  clear
+ 1303  docker swarm init
+ 1304  docker-machine --help
+ 1305  docker network inspect
+ 1306  docker network inspect --help
+ 1307  ifconfig -a
+ 1308  hostname -I
+ 1309  hostname 
+ 1310  hostname --help
+ 1311  hostname -i
+ 1312  hostname -I
+ 1313  hostname -i
+ 1314  hostname -I
+ 1315  docker swarm init --help
+ 1316  clear
+ 1317  docker swarm init --help
+ 1318  hostname -I
+ 1319  docker swarm init --advertise-addr 192.168.43.151
+ 1320  docker swarm join-token worker
+ 1321  docker swarm join-token manager
+ 1322  clear
+ 1323  docker info
+ 1324  clear
+ 1325  eht0
+ 1326  eth0
+ 1327  echo eth0
+ 1328  docker node ls
+ 1329  docker service create --name web --publish 8080:80 nginx
+ 1330  open http://localhost:8080
+ 1331  docker service --help
+ 1332  docker service ls
+ 1333  open http://localhost:8080
+ 1334  clear
+ 1335  docker serive ls
+ 1336  docker service ls
+ 1337  clear
+ 1338  docker service inspect web
+ 1339  hostname -I
+ 1340  clear
+ 1341  docker service rm web 
+ 1342  docker service ls
+ 1343  docker service create --name web --publish 8080:80 nginx
+ 1344  docker service ls
+ 1345  docker service update web --replicas=2
+ 1346  docker service ps web
+ 1347  docker ps
+ 1348  docker service scale web=3
+ 1349  docker ps
+ 1350  clear
+ 1351  docker service ps web
+ 1352  docker stop ukzgr
+ 1353  docker stop web.3
+ 1354  docker service --help
+ 1355  clear
+ 1356  docker stop --help
+ 1357  docker service ps web
+ 1358  docker stop ukzgr8tee9oc
+ 1359  docker ps
+ 1360  docker stop 83ac1
+ 1361  docker ps
+ 1362  docker service ps web
+ 1363  docker ps
+ 1364  docker ps --help
+ 1365  clear
+ 1366  docker service ls
+ 1367  docker service ps web 
+ 1368  docker service scale web=1
+ 1369  docker service ps web 
+ 1370  docker service ls
+ 1371  clear
+ 1372  sudo apt-get update 
+ 1373  sudo apt-get install apache2-utils 
+ 1374  ab -v
+ 1375  ab -V
+ 1376  ab -n 1000 -c 4 http://localhost:8080/
+ 1377  ab -n 1000 -c 4 https://krishnamohan.dev
+ 1378  ab -n 1000 -c 4 https://krishnamohan.dev/
+ 1379  clear
+ 1380  docker node ls
+ 1381  git add .
+ 1382  git commit -m "swarm mode notes"
+ 1383  git push master
+ 1384  git remote
+ 1385  git push origin 
+ 1386  git login
+ 1387  git --help
+ 1388  git config --list
+ 1389  cat ~/.aws/credentials 
+ 1390  base=https://github.com/docker/machine/releases/download/v0.16.0 &&   curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&   sudo mv /tmp/docker-machine /usr/local/bin/docker-machine &&   chmod +x /usr/local/bin/docker-machine
+ 1391  docker-machine version
+ 1392  aws version
+ 1393  aws help
+ 1394  aws --version
+ 1395  aws help
+ 1396  pip list
+ 1397  pip3 --version
+ 1398  pip3 list
+ 1399  pip3 install awscli --upgrade --user
+ 1400  aws --version
+ 1401  aws help
+ 1402  aws configure
+ 1403  cat ~/.aws/credentials 
+ 1404  aws ec2 --help
+ 1405  aws ec2 help
+ 1406  aws ec2 describe-instances
+ 1407  aws help
+ 1408  aws sns help
+ 1409  aws sns list-subscriptions
+ 1410  clear
+ 1411  docker-machine create --driver amazonec2 --amazonec2-open-port 8000 aws-sandbox
+ 1412  docker-machine ls
+ 1413  docker-machine ip aws-sandbox
+ 1414  docker-machine inspect aws-sandbox
+ 1415  clear
+ 1416  docker ps
+ 1417  sudo chmod 666 /var/run/docker.sock
+ 1418  docker ps
+ 1419  docker ls
+ 1420  docker --help
+ 1421  docker service ls
+ 1422  docker node --help
+ 1423  docker node ls
+ 1424  docker node ps 
+ 1425  docker ps
+ 1426  docker container --help
+ 1427  clear
+ 1428  docker-machine inspect aws-sandbox
+ 1429  clear
+ 1430  docker-machine ssh aws-sandbox
+ 1431  docker-machine env help
+ 1432  docker-machine ls
+ 1433  docker-machine env -u
+ 1434  eval $(docker-machine env -u)
+ 1435  docker container ls -a
+ 1436  docker-machine help
+ 1437  docker-machine stop help
+ 1438  docker service ls
+ 1439  eval $(docker-machine env -u)
+ 1440  docker service ls
+ 1441  docker ps
+ 1442  sudo chmod 666 /var/run/docker.sock
+ 1443  docker ps
+ 1444  docker service ls
+ 1445  docker service --help
+ 1446  docker service rm web
+ 1447  docker service ls
+ 1448  docker ps
+ 1449  docker ls
+ 1450  docker container ls
+ 1451  docker container ps
+ 1452  docker container --help
+ 1453  docker-machine --help
+ 1454  docker-machine ls
+ 1455  docker-machine inspect aws-sandbox
+ 1456  pwd
+ 1457  docker-machine ip aws-sandbox
+ 1458  docker-machine --help
+ 1459  docker-machine env --help
+ 1460  docker-machine env aws-sandbox
+ 1461  docker-machine ip aws-sandbox
+ 1462  eval $(docker-machine env aws-sandbox)
+ 1463  docker run -d -p 8000:80 --name webserver kitematic/hello-world-nginx
+ 1464  docker ps
+ 1465  docker container ls
+ 1466  docker container --help
+ 1467  eval $(docker-machine env -u)
+ 1468  docker container ls
+ 1469  eval $(docker-machine env aws-sandbox)
+ 1470  docker container ls
+ 1471  sudo ubuntu-drivers autoinstall
+ 1472  su
+ 1473  su 
+ 1474  sudo ubuntu-drivers autoinstall
+ 1475  ps aux | grep [a]pt
+ 1476  sudo rm /var/lib/dpkg/lock
+ 1477  sudo dpkg --configure -a
+ 1478  sudo rm /var/lib/dpkg/lock-frontend 
+ 1479  sudo dpkg --configure -a
+ 1480  sudo ubuntu-drivers autoinstall
+ 1481  sudo dpkg-reconfigure gdm
+ 1482  sudo dpkg-reconfigure lightdm
+ 1483  sudo apt-get install lightdm
+ 1484  sudo apt-get purge 'nvidia*'
+ 1485  sudo add-apt-repository ppa:graphics-drivers
+ 1486  sudo apt-get update
+ 1487  sudo ubuntu-drivers autoinstall
+ 1488  poweroff
+ 1489  xandr
+ 1490  xrandr
+ 1491  xrandr --output HDMI1 --auto --right-of eDP1
+ 1492  xrandr --output HDMI-1-1 --auto --right-of eDP1
+ 1493  xrandr
+ 1494  xrandr --output HDMI-1-1 --auto --right-of eDP1
+ 1495  xrandr
+ 1496  docker-engine ls
+ 1497  docker-machine
+ 1498  docker-machine ls
+ 1499  docker ps
+ 1500  sudo chmod 666 /var/run/docker.sock
+ 1501  docker ps
+ 1502  docker service ps
+ 1503  docker service ls
+ 1504  docker inspect 
+ 1505  docker --help
+ 1506  docker inspect --help
+ 1507  docker ls
+ 1508  docker service ls
+ 1509  eval $(docker-machine env -u)
+ 1510  docker service ls
+ 1511  eval $(docker-machine env aws-sandbox)
+ 1512  docker info
+ 1513  docker image ls
+ 1514  eval $(docker-machine env -u)
+ 1515  docker image ls
+ 1516  docker swarm --help
+ 1517  docker swarm init
+ 1518  docker swarm join-token woker
+ 1519  docker swarm join-token worker
+ 1520  eval $(docker-machine env aws-sandbox)
+ 1521  docker swarm join --token SWMTKN-1-2r53kx4sv7yyzttfby3jr2m1obats5c9cpiqoj99vek7pgpmn5-dieyji5wwja7cq8guzmz3s5p8 192.168.43.151:2377
+ 1522  docker info
+ 1523  docker swarm leave
+ 1524  docker info
+ 1525  eval $(docker-machine env -u)
+ 1526  docker-machine create --driver amazonec2 --amazonec2-open-port 8000 aws-rockbox
+ 1527  eval $(docker-machine env aws-rockbox)
+ 1528  docker ip
+ 1529  docker-machine ip aws-rockbox
+ 1530  docker-machine ip aws-sandbox
+ 1531  docker container ls -a
+ 1532  docker run hello-world
+ 1533  docker run -d -p 8000:80 --name webserver kitematic/hello-world-nginx
+ 1534  docker container ls
+ 1535  docker container ps webserver
+ 1536  docker container --help
+ 1537  docker container inspect webserver
+ 1538  docker-machine ip aws-rockbox
+ 1539  docker-machine --help
+ 1540  docker-machine ls
+ 1541  eval $(docker-machine env -u)
+ 1542  eval $(docker-machine env aws-sandbox)
+ 1543  docker swarm init
+ 1544  eval $(docker-machine env aws-rockbox)
+ 1545  docker swarm join --token SWMTKN-1-4mmsidkfmshe8njfqrnsobdus7hd6vtpgo1i9tfpyp8fbabe13-a8qivjsjm2s1agmvpeqcg5xh5 172.31.42.228:2377
+ 1546  docker info
+ 1547  docker swarm leave
+ 1548  eval $(docker-machine env aws-sandbox)
+ 1549  docker swarm leave
+ 1550  docker-machine ls
+ 1551  docker ssh aws-sandbox
+ 1552  docker-machine ssh aws-sandbox
+ 1553  eval $(docker-machine env aws-sandbox)
+ 1554  docker swarm init --advertise-addr 172.31.42.228
+ 1555  docker swarm leave --force
+ 1556  docker swarm init --advertise-addr 172.31.42.228
+ 1557  aws ec2 describe-security-groups --filter "Name=group-name,Values=docker-swarm"
+ 1558  aws ec2 describe-security-groups --filter "Name=group-name,Values=docker-machine"
+ 1559  docker-machine create aws --help
+ 1560  docker-machine create --driver aws --help
+ 1561  docker-machine create --driver amazonec2 --help
+ 1562  docker-machine --help
+ 1563  docker-machine rm --help
+ 1564  docker-machine rm aws-rockbox
+ 1565  docker-machine rm aws-sandbox
+ 1566  eval $(docker-machine env -u)
+ 1567  $test = 4
+ 1568  $test=4
+ 1569  test=4
+ 1570  echo $test
+ 1571  docker-machine create --driver amazonec2 --help
+ 1572  git add . 
+ 1573  git commit -m "add steps for creating docker swarm"
+ 1574  git push origin 
+ 1575  git add . 
+ 1576  git commit -m "successfully created swawrm in ec2"
+ 1577  git push origin 
+ 1578  aws_test=3
+ 1579  evn | grep aws*
+ 1580  env | grep aws*
+ 1581  $aws_test
+ 1582  echo $aws_test
+ 1583  aws ec2 describe-security-groups --filter "Name=group-name,Values=docker"
+ 1584  aws ec2 describe-security-groups --filter "Name=group-name,Values=docker-swarm-sg"
+ 1585  clear
+ 1586  export AWS_VPC_ID=vpc-07c33bebd4bb9ea33
+ 1587  $AWS_VPC_ID 
+ 1588  echo $AWS_VPC_ID 
+ 1589  export AWS_VPC_SUBNET=subnet-043bbd3e32ca000a7
+ 1590  echo $AWS_VPC_SUBNET 
+ 1591  docker-machine create -d amazonec2 --amazonec2-vpc-id $AWS_VPC_ID --amazonec2-instance-type t2.micro --amazonec2-subnet-id $AWS_VPC_SUBNET --amazonec2-security-group docker-swarm-sg docker-swarm-manager
+ 1592  docker ssh docker-swarm-manager
+ 1593  docker-machine ssh docker-swarm-manager
+ 1594  docker-machine ssh docker-swarm-manager ifconfig eth0
+ 1595  docker-machine --help
+ 1596  docker-machine ip docker-swarm-manager
+ 1597  docker-machine ls
+ 1598  docker-machine ssh docker-swarm-manager
+ 1599  docker-machine create -d amazonec2 --amazonec2-vpc-id $AWS_VPC_ID --amazonec2-instance-type t2.micro --amazonec2-subnet-id $AWS_VPC_SUBNET --amazonec2-security-group docker-swarm-sg docker-swarm-node1
+ 1600  docker-machine create -d amazonec2 --amazonec2-vpc-id $AWS_VPC_ID --amazonec2-instance-type t2.micro --amazonec2-subnet-id $AWS_VPC_SUBNET --amazonec2-security-group docker-swarm-sg docker-swarm-node2
+ 1601  docker-machine ls
+ 1602  docker-machine ssh docker-swarm-manager ifconfig eth0
+ 1603  eval $(docker-machine env docker-swarm-manager)
+ 1604  docker swarm init --advertise-addr 3.91.228.188:2377
+ 1605  eval $(docker-machine env docker-swarm-node1)
+ 1606  docker swarm join --token SWMTKN-1-4db2gxe31n7ljx0mqgioiay53e7elylz5gh1ar7b0l81hnc7mw-9v1othknicgcch60rbqxc0gbf 3.91.228.188:2377
+ 1607  eval $(docker-machine env docker-swarm-node2)
+ 1608  docker swarm join --token SWMTKN-1-4db2gxe31n7ljx0mqgioiay53e7elylz5gh1ar7b0l81hnc7mw-9v1othknicgcch60rbqxc0gbf 3.91.228.188:2377
+ 1609  eval $(docker-machine env docker-swarm-manager)
+ 1610  docker node ls
+ 1611  docker info
+ 1612  eval $(docker-machine env docker-swarm-node2)
+ 1613  docker node ls
+ 1614  eval $(docker-machine env docker-swarm-manager)
+ 1615  docker service create --name psight1 -p 8080:80 --replicas 5 kitematic/hello-world-nginx
+ 1616  docker service ps psight1 psight1 
+ 1617  docker-machine ip
+ 1618  docker-machine ls
+ 1619  docker service ps psight1
+ 1620  docker service inspect psight1 
+ 1621  docker swarm --help
+ 1622  docker swarm update --help
+ 1623  docker network ls
+ 1624  docker service ls
+ 1625  docker service inspect psight1
+ 1626  docker service ps psight1 
+ 1627  docker service --help
+ 1628  docker service scale --help
+ 1629  docker service scale psight1=2
+ 1630  docker service inspect psight1 
+ 1631  docker service ps psight1 
+ 1632  eval $(docker-machine env docker-swarm-manager)
+ 1633  docker node ps
+ 1634  docker node ps docker-swarm-manager 
+ 1635  docker node ps docker-swarm-node1
+ 1636  docker info | grep swarm
+ 1637  docker info
+ 1638  sudo chmod 666 /var/run/docker.sock 
+ 1639  docker info
+ 1640  docker info | grep swarm
+ 1641  eval $(docker-machine env docker-swarm-manager)
+ 1642  docker info | grep swarm
+ 1643  docker info 
+ 1644  docker swarm --help
+ 1645  docker node ls
+ 1646  ab --version
+ 1647  ab -n 100 -c 4 ec2-3-91-228-188.compute-1.amazonaws.com:8080
+ 1648  ab -n 100 -c 4 http://ec2-3-91-228-188.compute-1.amazonaws.com:8080
+ 1649  ab -n 100 -c 4 http://ec2-3-91-228-188.compute-1.amazonaws.com:8080/
+ 1650  docker node ls
+ 1651  docker node inspect docker-swarm-manager
+ 1652  docker node inspect docker-swarm-node1
+ 1653  docker-machine ls
+ 1654  docker node ls
+ 1655  docker network ls
+ 1656  docker node inspect docker-swarm-node1
+ 1657  docker node ps docker-swarm-node1
+ 1658  docker node ps docker-swarm-node2
+ 1659  docker node ps docker-swarm-manager 
+ 1660  docker node ps docker-swarm-manager docker-swarm-node1 docker-swarm-node2
+ 1661  eval $(docker-machine env -u)
+ 1662  docker network ls
+ 1663  docker swarm leave
+ 1664  docker swarm leave --force
+ 1665  docker network ls
+ 1666  eval $(docker-machine env docker-swarm-manager)
+ 1667  docker info | grep name
+ 1668* docker info
+ 1669  docker info | grep Name
+ 1670  docker service ls
+ 1671  docker image ls
+ 1672  clear
+ 1673  watch --help
+ 1674  man watch
+ 1675  watch docker service ls
+ 1676  tmux --help
+ 1677  docker service --help
+ 1678  docker service update --help
+ 1679  clear
+ 1680  docker serive inspect psight1
+ 1681  docker service inspect psight1
+ 1682  docker service inspect psight1 --prett
+ 1683  docker service inspect psight1 --pretty
+ 1684  docker service update --help
+ 1685  jq --help
+ 1686  clear
+ 1687  docker network create --help
+ 1688  docker network create -d overlay --subnet=10.0.9.0/24 backend
+ 1689  docker network ls
+ 1690  docker network inspect backend
+ 1691  docker service create --name balance -p 5000:3000 
+ 1692  docker service create --name balance \-p 5000:3000 
+ 1693  docker service create --name balance -p 5000:3000 --network backend swarmgs/balance
+ 1694  docker service ls
+ 1695  docker node ls
+ 1696  docker service ps balance
+ 1697  clear
+ 1698  docker service create --name customer --network backend swarmgs/customer
+ 1699  docker service ls
+ 1700  docker service logs --help
+ 1701  docker service logs balance
+ 1702  docker service logs balance | grep CUSTOMER_API
+ 1703  docker service ls
+ 1704* 
+ 1705  docker service ls
+ 1706  docker service logs balance | grep CUSTOMER_API
+ 1707  docker service logs balance 
+ 1708  clear
+ 1709  docker service ps balance
+ 1710  docker service ps customer
+ 1711  docker-machine ssh docker-swarm-manager
+ 1712  docker ps
+ 1713  docker exec -it 800074eeb901 bash
+ 1714  docker service scale customer=6
+ 1715  docker service ps customer
+ 1716  docker ps
+ 1717  docker exec -it 800074eeb901 bash
+ 1718  docker ps
+ 1719  docker exec -it 800074eeb901 bash
+ 1720  docker service inspect balance
+ 1721  docker service inspect customer
+ 1722  docker network ls
+ 1723  eval $(docker-engine env docker-swarm-node1)
+ 1724  eval $(docker-machine env docker-swarm-node1)
+ 1725  docker network ls
+ 1726  eval $(docker-machine env docker-swarm-manager)
+ 1727  docker service ls
+ 1728  docker service inspect balance > balance.inspect
+ 1729  pwd
+ 1730  docker service inspect customer > customer.inspect
+ 1731  docker network ls
+ 1732  docker network inspect backend > backend.inspect
+ 1733  docker service rm balance customer
+ 1734  docker network rm backend
+ 1735  docker service ls
+ 1736  docker network ls
+ 1737  docker ps
+ 1738  eval $(docker-machine env docker-swarm-node1)
+ 1739  docker ps
+ 1740  eval $(docker-machine env docker-swarm-node2)
+ 1741  docker ps
+ 1742  eval $(docker-machine env docker-swarm-manager)
+ 1743  history
+ 1744  history --help
+ 1745  clear
+ 1746  vi viz.yml
+ 1747  code viz.yml 
+ 1748  docker stack --help
+ 1749  docker stack ls
+ 1750  eval $(docker-machine env docker-swarm-manager)
+ 1751  clear
+ 1752  code apis.yml
+ 1753  cat apis.yml 
+ 1754  eval $(docker-machine env docker-swarm-manager)
+ 1755  docker stack deploy --help
+ 1756  docker stack deploy -c apis.yml apis
+ 1757  docker stack services apis
+ 1758  docker service ls
+ 1759  docker stack deploy -c apis.yml apis
+ 1760  docker service ls
+ 1761  docker stack ps apis
+ 1762  history > history_11Jul2020.txt

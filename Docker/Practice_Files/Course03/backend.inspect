@@ -1,0 +1,75 @@
+[
+    {
+        "Name": "backend",
+        "Id": "g0unasy68tu2ynatj084rwz96",
+        "Created": "2020-07-12T08:09:05.755488966Z",
+        "Scope": "swarm",
+        "Driver": "overlay",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "10.0.9.0/24",
+                    "Gateway": "10.0.9.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "800074eeb90190cd7e63967e0f4e64a7d92a7de7abc8b480f41b8b980521cccb": {
+                "Name": "balance.1.f146d3j3elfsds954ehmzdrkw",
+                "EndpointID": "0b7a3ffcd84180d1e800bc5f810a081fe82ea49bf01615c2717e71a3f5082570",
+                "MacAddress": "02:42:0a:00:09:08",
+                "IPv4Address": "10.0.9.8/24",
+                "IPv6Address": ""
+            },
+            "bc74aaa404240c1260687b4904e00684f6a2b5295728a8b6bda0f8feab0b99ac": {
+                "Name": "customer.5.oj11lhfrkf9uzgrcnr1ilfry6",
+                "EndpointID": "ef579bd0886200f7750e74d6fdcd4c0c0ca63b6a05abd2057c79679422477fdf",
+                "MacAddress": "02:42:0a:00:09:0c",
+                "IPv4Address": "10.0.9.12/24",
+                "IPv6Address": ""
+            },
+            "bfc4bc2bbd66e39f024a216de2a254313c50658879478fb87805ef82c5f33c84": {
+                "Name": "customer.4.x0gh2m2b60de8d8i0fytk4g83",
+                "EndpointID": "0dad320b96280176782474171b6becb8c2e0f96c85fb4e4e875b48609ee061ca",
+                "MacAddress": "02:42:0a:00:09:0b",
+                "IPv4Address": "10.0.9.11/24",
+                "IPv6Address": ""
+            },
+            "lb-backend": {
+                "Name": "backend-endpoint",
+                "EndpointID": "d4aea8e403cce5b38823dcdf12a25929fa44951e433d8ee0940a2bf1d4bd1498",
+                "MacAddress": "02:42:0a:00:09:04",
+                "IPv4Address": "10.0.9.4/24",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.driver.overlay.vxlanid_list": "4097"
+        },
+        "Labels": {},
+        "Peers": [
+            {
+                "Name": "b682b961f0b4",
+                "IP": "10.0.0.140"
+            },
+            {
+                "Name": "cac5dd2e429c",
+                "IP": "3.91.228.188"
+            },
+            {
+                "Name": "5af492631142",
+                "IP": "10.0.0.254"
+            }
+        ]
+    }
+]
