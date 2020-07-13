@@ -23,6 +23,14 @@
 * Plain mapping between normal mode and swarm mode
     1. docker run -> docker service create
     2. docker-compose -> docker stack deploy
+* The trifecta services
+    1. Containers
+    2. Networking
+    3. Volumes
+* To make the container automatically recover from failures, use health check options.
+* Make use of `docker secret` to manage secret keys. To use `docker secret`, it must be a swarm manager.
+* App reads secrets from '/run/secrets/x'
+
 
 ## Creating a docker swarm in AWS EC2
 * Add an email subscription using **SNS**
