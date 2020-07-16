@@ -1,0 +1,3 @@
+* Programmers should convey the challenges to the managers. It is too unprofessional to bend to the will of managers who don't understand the risks of making messes. An analogy of developer as doctor and manager as patient is presented and made a lot of sense. 
+* The only way to go fast is to keep the code as clean as possible.
+* Quoting Bjourne Stroustrap - Bad code tries to do so much, clean code is focused and elegant.
