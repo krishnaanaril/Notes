@@ -17,3 +17,4 @@
     2. Move from docker compose to k8s
     3. Ensure application scales properly
     5. Performance & end to end testing
+* Similar to Docker which has client and server parts. `kubectl` is the client part of k8s. I've installed `kind` (k8s in docker) in ubuntu for cluster management.
