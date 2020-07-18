@@ -24,3 +24,12 @@
 * Use solution domain names & problem domain names based on the context.
 
 ## Chapter 03 - Functions
+
+* Small - The first rule of function is that it should be small.
+* Blocks and Indenting - Conditional blocks should be one line long (may be another function call). Function should not be large enought to hold nested structures.
+* Do one thing - Functions should do one thing. They should do it well. They should do it only.
+* One level of abstraction per function.
+* Use polymorphism to avoid the using of repeated switch statements.
+* Use descriptive names - A long descriptive name is better than a long descriptive comment (Really? I'm not sure).
+* Function arguments - More than three requires a special justificaiton - and then shouldn't be used anyway.
+* Flag arguments are ugly. Passing a boolean into a function is truly a terrible practice. It's better to create two different functions.
