@@ -18,3 +18,17 @@
     3. Ensure application scales properly
     5. Performance & end to end testing
 * Similar to Docker which has client and server parts. `kubectl` is the client part of k8s. I've installed `kind` (k8s in docker) in ubuntu for cluster management.
+* Pods and conatiners are only accessible within the K8s clusters by default. One way to expose a container port externally: kubectl port-forward
+* If you delete a pod by `kubectl delete pod pod-name`, pod will be be deleted but k8s will create another one in place. To offically delete the pod we need to delete the deployment that created the pod.
+* `kubectl run <deployment-name> --image=<image-name>` to create a pod based on the docker image.
+* YAML files are composed of maps and lists. Indentation matters and always use spaces.
+* `kubectl appl` can be used to create or update a resource.
+
+### Creating Web UI Dashoboard in k8s Windows
+
+* Choose `Docker` settings and enable k8s in it. This will enable `kubectl` command in powershell.
+* Run the command `kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml`. This may change in future, please refer the doc to get the more updated url.
+* Run the command `kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | sls admin-user | ForEach-Object { $_ -Split '\s+' } | Select -First 1)` to get the bearer token.
+* Run the command `kubectl proxy` to make the dashboard up.
+* Navigate to `http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/` in your browser.
+* A login screen will appear and paste the token their.
