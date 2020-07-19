@@ -22,7 +22,11 @@
 * If you delete a pod by `kubectl delete pod pod-name`, pod will be be deleted but k8s will create another one in place. To offically delete the pod we need to delete the deployment that created the pod.
 * `kubectl run <deployment-name> --image=<image-name>` to create a pod based on the docker image.
 * YAML files are composed of maps and lists. Indentation matters and always use spaces.
-* `kubectl appl` can be used to create or update a resource.
+* `kubectl apply` can be used to create or update a resource.
+* K8s relies on Probes to determine the health of a Pod container.
+* Types of probes
+    1. Liveness probe: When should a container restart?
+    2. Readyness probe: When should a  container start receiving traffic?
 
 ### Creating Web UI Dashoboard in k8s Windows
 
