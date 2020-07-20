@@ -27,6 +27,17 @@
 * Types of probes
     1. Liveness probe: When should a container restart?
     2. Readyness probe: When should a  container start receiving traffic?
+* A ReplicaSet is a declarative way to manage Pods.
+* A Deployment is a declarative way to manage Pods using a ReplicaSet.
+* Deployments and ReplicaSets ensure Pods stay running and can be used to scale Pods.
+* ReplicaSets act as a Pod controller:
+    - Self-healing mechanism
+    - Ensure the requested number of Pods are available
+    - Provide fault-tolerance
+    - Can be used to scale Pods
+    - Relies on a Pod template 
+* Use `--save-config` flag with `kubectl create`, if you want to use `kubectl apply` in the future.
+* `kubectl scale deployment [deployment-name] --replicas=5` to scale a deployment.
 
 ### Creating Web UI Dashoboard in k8s Windows
 
