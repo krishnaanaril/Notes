@@ -39,6 +39,30 @@
 * Use `--save-config` flag with `kubectl create`, if you want to use `kubectl apply` in the future.
 * `kubectl scale deployment [deployment-name] --replicas=5` to scale a deployment.
 
+### Creating Serivces
+
+* Pods are "mortal" and may only live in a short time. You can't rely on a Pod IP address staying the same.
+* Services do Pod load balancing 
+* Services can be defined in differenct ways: 
+ - ClusterIP - Expose the service on a cluster-internal IP (default)
+ - NodePort - Expose the service on each Node's IP at a static port.
+ - LoadBalancer - Provision an external IP to act as a load balancer for the service.
+ - ExternalName - Maps a service to a DNS name
+
+### Understanding Storage Options
+
+* Q: How do you store application state/data and exchange it between Pods with K8s? A: **Volumes**
+* A **Volume** can be used to hold data and state for Pods and containers
+* A pod can have multiple Volumes attached to it.
+* Containers rely on a mountPath to access a Volume.
+* K8s supports:
+ - Volumes
+ - PersistentVolumes
+ - PersistentvolumeClaims
+ - StorageClasses
+* A Volume Mount references a Volume by name and defines a mountPath
+* AWS - Elastic Block Store - Cloud support for volume.
+
 ### Creating Web UI Dashoboard in k8s Windows
 
 * Choose `Docker` settings and enable k8s in it. This will enable `kubectl` command in powershell.

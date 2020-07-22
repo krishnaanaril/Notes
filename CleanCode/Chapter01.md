@@ -33,3 +33,9 @@
 * Use descriptive names - A long descriptive name is better than a long descriptive comment (Really? I'm not sure).
 * Function arguments - More than three requires a special justificaiton - and then shouldn't be used anyway.
 * Flag arguments are ugly. Passing a boolean into a function is truly a terrible practice. It's better to create two different functions.
+* If we have more than one argument to a function, it is better to wrap them into a class.
+* If possible function name should be name in such a way that it give info about the intent of the function & arguments.
+* Have no side effects. It should be a pure function.
+* If a function have temporal coupling, it should be advertised in the name.
+* Anything that forces you to check the function signature is equivalent to a double-take. It's a cognitive break and should be avoided.
+* Command - Query separation. Functions should either do or answer something.
