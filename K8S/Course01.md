@@ -62,6 +62,16 @@
  - StorageClasses
 * A Volume Mount references a Volume by name and defines a mountPath
 * AWS - Elastic Block Store - Cloud support for volume.
+* A Persistent Volume Claim (PVC) is a request for a storage unit.
+* A persistent volume is a cluster wide storage resource that relies on network attached storage. Associated with a Pod by using a PersistentVolumeClaim.
+* Work flow: Pod -> PVC -> Persisitent Volumn -> Storage
+* Storage Class - Used to define different "classes" of storage.
+* K8s statefulset: Manages the deployment and scaling of a set of Pods, and provides guarantess about the ordering and uniqueness of these Pods.
+
+### Creating ConfigMaps and Secretes
+
+* ConfigMaps provide a way to store configuration information and provide it to containers.
+
 
 ### Creating Web UI Dashoboard in k8s Windows
 
