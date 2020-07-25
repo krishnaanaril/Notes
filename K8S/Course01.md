@@ -71,6 +71,20 @@
 ### Creating ConfigMaps and Secretes
 
 * ConfigMaps provide a way to store configuration information and provide it to containers.
+* Can store entire files or provide key/value pairs:
+    - Store in a file. Key is the filename, value is the fiel contents (can be JSON, XML, keys/values, etc.)
+    - Provide on the command line
+    - ConfigMap manifest
+* `kubectl get cm` to get configmaps.
+* ConfigMaps can be loaded from volumes during runtime and also from config file.
+* A secret is an object that contains a small amount of sensitive data such as a password, a token, or a key.
+* Avoid storing secrets in container images, i files, or in deployment manifests.
+* K8s only makes secrets available to Nodes that have a Pod requesting the secret.
+* You should limit access to etcd (where Secrets are stored) to only admin users.
+* Secrets aan be created using `kubectl create secret`
+* ConfigMpas provide a way to store configuration data. Secrets provide a way to store sensitive data or files.
+* Access key/value pairs uing envrionment variables or volumes
+
 
 
 ### Creating Web UI Dashoboard in k8s Windows
