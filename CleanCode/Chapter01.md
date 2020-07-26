@@ -39,3 +39,4 @@
 * If a function have temporal coupling, it should be advertised in the name.
 * Anything that forces you to check the function signature is equivalent to a double-take. It's a cognitive break and should be avoided.
 * Command - Query separation. Functions should either do or answer something.
+* Prefer exceptions to return error codes. If we use exceptions, then error processing code can be separated from the happy path code and can be simplified.
