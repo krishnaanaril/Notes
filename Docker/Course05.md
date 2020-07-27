@@ -11,3 +11,8 @@
 * Specify the image version/tag during image pull.
 * Keep it small: Docker images should be small to enough to do the task. 
 * Single line RUN commands in dockerfile are better way to reduce the size of the image.
+
+### Docker Registry
+
+* Can be installed using software package and as docker container.
+* tls/https is required for docker registry to provide security
