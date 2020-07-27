@@ -38,5 +38,9 @@
 * Have no side effects. It should be a pure function.
 * If a function have temporal coupling, it should be advertised in the name.
 * Anything that forces you to check the function signature is equivalent to a double-take. It's a cognitive break and should be avoided.
-* Command - Query separation. Functions should either do or answer something.
-* Prefer exceptions to return error codes. If we use exceptions, then error processing code can be separated from the happy path code and can be simplified.
+* **Command - Query separation**. Functions should either do or answer something.
+* **Prefer exceptions to return error codes**. If we use exceptions, then error processing code can be separated from the happy path code and can be simplified.
+* **Extract try-catch blocks**. So it is better to extract the bodies of the try-catch blocks into functions of their own.
+* Functions that do error handling should have nothing after the catch block.
+* **Don't repeat yourself**. Consider how object oriented programming serves to concentrate code into base classes that would otherwise be redundant.
+* **Structured Programming**. Dijkstra's rule of structured programming, every function and every block within function should've one entry point and one exit point.
