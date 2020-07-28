@@ -20,7 +20,7 @@
 * Vertical ordering - A function that is called should be below a function that does the calling.
 * Horizontal ordering - We should strive to keep our lines short.
 * Indentation - To make the hierarchy of super visible, we indent the lines of source code in proportion to their position in hierarchy.
-* Team Rules - A tema of developers should agree upon a single formatting style and then every member of that team should follow it.
+* Team Rules - A team of developers should agree upon a single formatting style and then every member of that team should follow it.
 
 ## Chapter 06 - Objects & Data Structures
 
