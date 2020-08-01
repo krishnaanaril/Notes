@@ -27,3 +27,5 @@
 * Use `.dockerignore` file to exclude unnecessary content from being sent to daemon.
 * Docker's build process maintains a cache of images referred to as the 'build cache'. The purpose of the build cache is to speed up the process.
 * Place the commands in dockerfile in order to make the maximum use of buld cache.
+* Purpose of **FROM** instruction is to specify base image. **FROM** instruction must be the first in a dockerfile.
+* Keyword, **scratch** indicates build with no base image.
