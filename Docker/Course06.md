@@ -29,3 +29,6 @@
 * Place the commands in dockerfile in order to make the maximum use of buld cache.
 * Purpose of **FROM** instruction is to specify base image. **FROM** instruction must be the first in a dockerfile.
 * Keyword, **scratch** indicates build with no base image.
+* **RUN** command executes command inside container.
+* The concatenation of a command is considerd good practice and is acheived with a logical && shell operator.
+* **HealthCheck** instruction defines command to test container health.
