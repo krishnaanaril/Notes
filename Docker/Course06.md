@@ -32,3 +32,5 @@
 * **RUN** command executes command inside container.
 * The concatenation of a command is considerd good practice and is acheived with a logical && shell operator.
 * **HealthCheck** instruction defines command to test container health.
+* The authoring of Docker images requires careful planning, in advance.
+* Multi-stage builds use multiple FROM instructions. COPY instructions can reference content from a previous build stage.
