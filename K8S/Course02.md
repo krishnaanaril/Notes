@@ -22,3 +22,8 @@
     - Service
     - Stable deployment
     - Canary deployment
+* Blue/Green deployments, which may also be referred to as A/B deployments require two identical hardware envrionments that are configured exactly the same way. While one envrionment is active and serving end users, the other environment remains idle.
+* New applicaiton (green) is deployed alongside the old application (blue).
+* **Changing from blue to green**: Once a green deployment has been successfully rolled out and tested, change the public service's selector to 'green' using `kubectl set selector svc [service-name] 'role=green'`
+* A job creates a Pod(s) that performs a task or batch process. Unlike standard Pods, a job doesn't run indefinitely.
+* A cron job creates jobs on a time based schedule. Scheduled using cron format. Cronjob names must be less than 52 characters.
