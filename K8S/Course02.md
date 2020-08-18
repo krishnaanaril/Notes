@@ -27,3 +27,12 @@
 * **Changing from blue to green**: Once a green deployment has been successfully rolled out and tested, change the public service's selector to 'green' using `kubectl set selector svc [service-name] 'role=green'`
 * A job creates a Pod(s) that performs a task or batch process. Unlike standard Pods, a job doesn't run indefinitely.
 * A cron job creates jobs on a time based schedule. Scheduled using cron format. Cronjob names must be less than 52 characters.
+* Metrics Server is a cluster-wide aggregator of resource usage data. It is deployed by default in clusters created by kube-up.sh script as a deployment object.
+* Key troubleshooting commands
+    - kubectl get pod [pod-name] -o yaml
+    - kubectl describe pod [pod-name]
+    - kubectl exec [pod-name] -it sh  (to login to the shell of a pod)
+* Viewing Pod logs
+    - kubectl logs [pod-name]
+    - kubectl logs [pod-name] -c [container-name]
+* Masater kubectl commands that can help troubleshoot issues with Kubernetes resources.
