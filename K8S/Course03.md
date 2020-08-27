@@ -9,3 +9,13 @@
 * A PVC can bind to a PV that has equal or more storage but not less.
 * Create Storage Classes according to business requirements and tech capabilities. 
 * Storage Classes are immutable objects.
+* Multi Container Patterns
+    - Init pattern
+    - Sidecar pattern
+    - Adapter Pattern
+    - Ambassador Pattern
+* Pods let us augment container in many ways.
+    - Probes
+    - Affinities
+    - Restart Policies
+    - Termination Control
