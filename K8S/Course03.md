@@ -10,7 +10,7 @@
 * Create Storage Classes according to business requirements and tech capabilities. 
 * Storage Classes are immutable objects.
 * Multi Container Patterns
-    - Init pattern
+    - Init pattern 
     - Sidecar pattern
     - Adapter Pattern
     - Ambassador Pattern
@@ -19,3 +19,6 @@
     - Affinities
     - Restart Policies
     - Termination Control
+* K8s gurantees that the init container runs before main container and only once.
+* Init Container - Runs to completion before app container starts
+* Sidecar container = Starts with app container and runs concurrently.
