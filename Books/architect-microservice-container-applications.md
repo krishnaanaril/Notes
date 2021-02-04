@@ -78,4 +78,12 @@
     * Queries. These queries return a result and do not change the state of the system, and they are free of side effects.
 
     * Commands. These commands change the state of a system.
-*  If a microservice must rely on another service to directly service a request, it is not truly autonomous.
+*  If a microservice must rely on another service to directly service a request, it is not truly autonomous.    
+* When you use NoSQL databases for your infrastructure data tier, you typically do not use an ORM like Entity Framework Core. Instead you use the API provided by the NoSQL engine, such as Azure Cosmos DB, MongoDB, Cassandra, RavenDB, CouchDB, or Azure Storage Tables.
+* Strategies to handle partial failure
+    1. Use asynchronous communication (for example, message-based communication) across internal microservices.
+    2. Use retries with exponential backoff.
+    3. Work around network timeouts. 
+    4. Use the Circuit Breaker pattern
+    5. Provide fallbacks. 
+    6. Limit the number of queued requests. 
