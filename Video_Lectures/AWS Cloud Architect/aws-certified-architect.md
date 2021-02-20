@@ -7,6 +7,7 @@
 * NAT Gateway is a highly available **AWS managed service** that makes it easy to connect to the Internet from instances within a private subnet in an Amazon Virtual Private Cloud (Amazon VPC). Previously, you needed to launch a NAT instance to enable NAT for instances in a private subnet.
 * Instances in the private subnet are back-end servers that don't need to accept incoming traffic from the Internet and therefore **do not have public IP addresses**; however, they can send requests to the Internet using the NAT gateway.
 * NAT is expensive. 
+* NAT gateway supports the following protocols: TCP, UDP & ICMP
 
 ### VPC Endpoints
 
