@@ -187,3 +187,43 @@
     - **What** Region, Resource, Action
 - Managed Events - Tracks management operations. Turned on by default. Can't be turned off.
 - Data Events. Tracks specific operations for specific AWS services. Data Events are high volume logging and will result in additional charges. **Turned off by default**.
+
+## AWS Lambda
+
+* It lets you run code without provisioning or managing servers. Servers automatically start and stop when needed. Serverless functions and we pay per invocation.
+* By default you can have 1000 Lambda running concurrently.
+
+## Simple Queue Service (SQS)
+
+* SQS is pull based and not push based.
+* The size of a message can be between 1 byte and 256 KB
+* Message retention by default is 4 days.
+
+## Simple Notification Services (SNS)
+
+* It helps us to subscribe and send notifications via text message, email, webhooks, lambdas, SQS and mobile notifications.
+
+## Elasticache
+
+* It is a managed caching service which either runs Redis or Memcached.
+* Memcached is generally preferred for caching HTML fragments. 
+* Redis is very fast, but arguably not as fast as Memcached.
+
+## Elastic Beanstalk
+
+* Not recommended for production application.
+
+## API Gateway 
+
+* It is a fully managed service to create, publish, maintain, monitor, and secure APIs at any scale.
+
+## AWS Kinesis
+
+* It is a scalable and durable real-time data streaming service. To ingest, and analyze data in real-time from multiple source.
+* You pay per running shards.
+
+## AWS Storage Gateway
+
+* It is used for extending, backing up on-premise storage to the cloud.
+
+# AWS Serverless
