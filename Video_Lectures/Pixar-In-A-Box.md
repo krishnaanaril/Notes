@@ -2,7 +2,7 @@
 
 ## Activity 1: Expressing memories
 
-- **Part A**; Think of a memory that yo remember vividly. It should be a memory that comes easily to you.
+- **Part A**; Think of a memory that you remember vividly. It should be a memory that comes easily to you.
 - **Part B**: Why do you think you remember this so well? Try connecting one or more emotions to this memory.
     - Sadness
     - Joy
