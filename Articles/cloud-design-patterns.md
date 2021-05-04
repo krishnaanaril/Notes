@@ -1,5 +1,13 @@
 # Cloud Design Patterns
 
+## Challenges in Cloud Development
+
+* Data Management
+* Design and Implementation
+* Messaging
+
+## Catalog of patterns
+
 1. Ambassador
 2. Anti-Corruption Layer
 3. Asynchronous Request-Reply
@@ -12,7 +20,7 @@
 10. Compensating Transaction
 11. Competing Consumers
 12. Compute Resource Consolidation
-13. CQRS
+13. CQRS :star:
 14. Deployment Stamps
 15. Event Sourcing
 16. External Configuration Store
@@ -36,6 +44,6 @@
 34. Sharding
 35. SideCar :star:
 36. Static Content Hosting
-37. Strangler Fig
+37. Strangler Fig :star:
 38. Throttling
 39. Valet Key
