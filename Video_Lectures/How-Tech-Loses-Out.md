@@ -11,4 +11,3 @@
 - There is a polarization in many companies and organizations where the technical people are all convinced that the management people are all stupid.
 - Technical people hate sitting in meetings, and hate doing actual management things. So if you do not show up at the meeting, do not be surprised if the company or organization makes choices that you’re not happy with. 
 - If you work at a big technical company and it’s not doing the right things, then we also must do something.
-    
