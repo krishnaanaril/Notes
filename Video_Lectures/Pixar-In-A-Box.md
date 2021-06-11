@@ -13,3 +13,21 @@
     - **Verbally**: Tell your memory to someone that you know. Can you make them feel the emotion.
     - **Written**: Write your memory in less than a page. Do the emotions come out in your words?
     - **Visually**: Express your memory using only lines and shapes. Do the emotions come out in your drawings?
+
+## Your Favorite Stories
+
+- A story is a series of events or narrative which unfolds through time.
+
+## What If...
+
+- Try to alter know story plots with "What Ifs".
+
+## Story & Character
+
+Here's a list of definitions introduced during this lesson.
+
+ -  **Story**: a sequence of events which unfold through time.
+ -  **Perspective**: a point of view or way of seeing the world.
+-  **World**: the environment or set of rules where a story takes place.
+-  **Character**: the subjects or individuals we follow on the journey of the story.
+-  **Protagonist**: the main character(s), whose journey the story is about.
