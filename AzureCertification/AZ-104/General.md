@@ -1,0 +1,301 @@
+- Tag names are case in-sensitive, while tag values are case sensitive.
+- Tags are stored as plain text. Never add sensitive values to tags.
+- The **Contributor** role grants the required permission to apply tags to an entity.
+- Within a **conditional access** policy, an administrator can make use of access controls to either grant or block access to resources.
+- Conditional access policies at their simplest are if-then statements. If a user want to access a resource, then they must complete an action.
+- Conditional access policies are enforced after first factor authentication is completed.
+- **Cloud-init** is the *industry standard* multi distribution for cross platform cloud instance intialization.
+- Use cloud-inti along with azure cli command `az vm create --custom-data` to add certificate autority (CA) info to linux vm.
+- You cannot change the usage model(per enabled user or per authentication) after a MFA provider is created. 
+- Adding new MFA providers is disabled as of 1 September, 2018.
+- By default every 30 mins a syncronization cycle (Azure AD connect sync) is run. If you've modifed the synchronization cycle, make sure that it is run atleast once every 7 days.
+- If you need to manually run a sync cycle, run from Powershell: `Start-ADSyncSyncCycle -PolicyType Delta`
+- To initiate a full sync cycle, run `Start-ADSyncSyncCycle -PolicyType Initial`. Running a full sync cyle can be time consuming.
+-  Read Access - Geo Redundant Storage (RA-GRS) is based on GRS, but it also supports read from secondary region, regardless of whether Microsoft initiates a failover from primary to secondary.
+- If there are more than one resource, ARM template can be reviewed from Resource group blade.
+- If the VM you wish to resize is part of an availablitly set, then you must stop all VMs in the availability set before changing the size of any VM in the availability set.
+- You can detach a data disk from one VM and attach it to the other VM without stopping either of the VMs.
+- For VMSS, you can set the property `properties.platformFaultDomainCount` to 1, 2, or 3(default is 3 if not specified).
+- Each VM in your availability set is assigned an update domain and a fault domain by the underlying Azure platform. Each availability set can be configured with up to 3 fault domins and 20 update domains.
+- A key vault access policy determines whether a given security principal, namely a user, application or user group can perfrom different operations on Key Vault secrets, keys and certificates.
+- It is recommended to assing key valut access policies to user group as it has a limitiation of 1024.
+- After Windows is installed but before the logon screen appears, Windows Setup searches for the **SetupComplete.cmd** file in the *%WINDIR%\Setup\Scripts\* directory
+- To upload virtual hard disk to create an Azure image later use `Add-AzVhd` cmdlet.
+- To replicate an on-premise VM hosted on Hyper-V server in Azure:
+    - Create a storage account
+    - Hyper-V site
+    - Create recovery service vault
+    - Add replicaiton policy
+- If you make a change to the topology of your network and have Windows VPN clients (Point-to-site), the VPN client package for Windows clients must be downloaded and installed again in order for the changes to be applied to the client.
+- A Point-to-Site VPN gateway connection lets you create a secure connection to your Vnet for an individual computer.
+- Enable floating ip while configuring internal load balancer.
+- `Set-AzureStaticVNetIP` sets the static vnet ip address information for a VM object. For recent Powershell cmdlets use `Set-AzNetworkInterface`.
+- Any NIC can have one or more static or dynamic public and private IP addresses assigned to it. 
+- If inbound and outbound security rules are identical for vms, then only one security group is required.
+- Use Azure Monitor to find the cause of performance issues.
+- To add or delete users you must be a User administrator or Global administrator.
+- **Network Contributor** role lets you manage network, but not access them.
+- Azure AD authentication is provided to AKS clusters with OpenID connect. OpenID connect is an identity layer built on top of the OAuth 2.0 protocol.
+- You can set expiration policy only for Office 365 groups in Azure AD.
+- Dynamic membership enables the membership of a team to be defined by one or more rules that check for certain user attributes in Azure AD.
+- Subscriptions can be moved between Management Groups provided the user has the required RBAC permissions.
+- Tags applied to resource group or subscription are not inherited by the resources.
+- If a resource is created before assigning the policy, it doesn't inherit the policy tag.
+- We can move VM, Managed Disk, Storage and Recovery vault from one subscription to another. Moving a resource only moves it to a new Resource group or subscription. It doesn't change the location of the resource.
+- `Set-AzMarketplaceTerms` - Accept or Reject terms for a given publisher id, offer id and plan id.
+- Use Licenses blade Azure AD to assign license to each user.
+- The IT Service Management Connector (ITSMC) allows you to connect Azure and a supported IT Service Management (ITSM) product/service, such as the Microsoft System Center Service Manager. With ITSMC, you can create work items in ITSM tool, based on your Azure alerts.
+- When you connect a windows device with Azure AD using an Azure AD join, Azure AD adds the following security principles to the local administrators group on the device:
+    - Azure AD global administrator role.
+    - Azure AD device administrator role.
+    - User performing Azure AD join
+- In Azure portal, you can manage device administrator role in the devices page.
+- Azure AD registered devices are registered to Azure AD without requiring organizational account to sign in to the device.
+- Azure AD joined devices are joined only to Azure AD requiring organizaiton account to sign in.
+- *Cloud device administrator* doesn't give the permission to add to groups **unless** that user is also the owner.
+- Stop backup if any, before deleting the resource group.
+- *User Access Administrator* role for vnet has full access to all resources including the right to delegate access to others.
+- Azure DevTest Labs is a role used for Azure DevTest labs, not for logic apps.
+- The logic app contributor role lets you manage logic app, but not access them. It provides access to view, edit and udpate logic app.
+- The logic app operator role lets you read, enable and disable logic apps, but not update or edit them.
+- How to analyse cost by tag:
+    - Assign a tag to each resource
+    - From the cost analysis blade, filter the view by tag
+    - Download the usage report
+- You can only move a resource to a Resource Group or Subscription, but the location stays the same.
+- If customer sites are connected via VPN, internal load balancer is enough.
+- Azure application gateway provides load balancing in addition to routing and security functions.
+- Advisor helps you optimise and reduce your overall Azure spend by identyfing idle and underutilized resources. You can get cost recommendations from the Cost tab on Advisor dashboard.
+- You can adjust the guest user settings, their access, who can invite them from "External collaboration settings".
+- No one is given default access to the root management group. Azure AD Global administrators are the only users that can elevate themselves to gain access. 
+- You must use Windows Server Active Directory to update the identity, contact info, or job info for users whose source of authority is Windows Server Active Directory.
+- Usage location is an Azure property that can only be modified from Azure AD.
+- Network contributor role - lets you manage network, but not access to them.
+- *Virtual machine contributor* cannot manage vnet, but *contributor* role can.
+- Azure (RBAC) and Azure AD roles are independant.
+- Azure a Global Administrator in Azure AD, you might not have access to all subscriptions and management groups in your directory.
+- Managed identities for Azure resources provide Azure services with an automatically managed identity in Azure AD.
+- A recovery service vault cannot be deleted unless all its backups are deleted permanently.
+- Azure AD DS and on-premises AD DS authentication do not support authentication against computer accounts. You can consider using a service logon account instead.
+- Security Administrator Role: Can read security information and reports and manage configuration in Azure AD and Office 365.
+- You can only assign locks and tags to Subscriptions, Resource groups and resources.
+- User princpal name is only required for Azure bulk delete.
+- *Traffic Manager Contributor* role lets you manage Traffic Manager profiles, but doesn't let you control who has access to them.
+- Traffic Analytics is a cloud based solution that provides visibility into user and application activity in cloud networks.
+- Traffic Analytics is accessbile only to:
+    - Owner
+    - Reader
+    - Contributor
+    - Network Contributor
+- Administrative units restrict permission in a role to any portion of your organization that you define.
+- Virtual machine contributor can delete the disk, but doesn't have permission to manage vnet and storage account.
+- Every tenant is linked to a single Azure AD instance, which is shared with all tenant's subscription.
+- Access policy for storage account can set retention policy. With a time-based retention policy, users can set policies to store data for specified interval.
+- While blob is in archive storage, the blob data is offline and can't be read or modified. To read or download blob in archive, first you must rehydrate it to an online tier.
+- Object replication is supported for general purpose v2 storage accounts and premium block blob accounts. Object replication supports block blobs only; append blobs and page blobs are not supported.
+- `azcopy sync` command replicates the source location to the destination location. However, the file is skipped if the last modified time in the destination is more recent.
+- `azcopy copy` command copies a directory to blob container.
+- Select **standard** performance for general purpose v2 storage accounts (default). Select **Premium** for scenarios requiring low latency. The following types of premium storage accounts are available: 
+    - Block blobs
+    - File shares
+    - Page blobs
+- Azure import/export service allows data transfer into Azure blobs and Azure files by creating jobs. An **import** job allows you to import data into Azure blobs or Azure Files whereas the **export** job allows data to be exported from Azure blobs.
+- If an app uses managed identity, it can access storage account via IAM.
+- StorageV1 (legacy) do not support tiering (Hot/Cold/Archive).
+- The Azure File Sync agent is a downloadable package that enables Windows Server to be enabled with an Azure File share.
+- Registering Windows server with Storage Sync service establishes a trust relationship between your server and sync service.
+- A sync group defines the sync topology for a set of files. Endpoints within a sync group are kept in sync with each other. A sync group must contain one cloud endpoint, which represents an Azure file share and one or more server endpoints. A server endpoint represents a path on a registered server.
+- Azure File Sync doesn't support more than one server endpoint from the same server in the same sync group.
+- Multiple server endpoints can exist on the same volume if their namespaces are not overlapping and each endpoint is syncing to a unique syncgroup.
+- UNC (Universal Naming Convention) path format: `\\<storageAccountName>.file.core.windows.net\<fileShareName>`\
+- Similar to OS images, a VM image is a collection of metadata and pointers to a set of VHDs stored as page blobs in Azure Storage.
+- Cloud endpoint is scanned by detection job every 24 hrs, so data will be synced only after 24 hrs.
+- After you configure firewall and virtual network settings for your storage account, select **Allow trusted Microsoft services to access this storage account** as an exception to enable Azure Backup service to access the network restricted storage account.
+- If server endpoint and cloud endpoint contain same file names at the time of connection, then file will be renamed not overwritten.
+- Azure Live migration:
+    - You can do live migration to ZRS from LRS only
+    - Also this applies on general purpose v2 storage
+    - Only standard storage account type support live migration
+- GRS and RA-GRS use asynchronous replication. ZRS only support Storage V2 (general purpose) - sycnhronous replication.
+- Two files you should create before you prepare the drives for the import job: 
+    - a dataset CSV file
+    - a driveset CSV file
+- Only VM and file share is allowed to backup
+- Azure Import/Export service is used to securely import large amounts of data to **Azure Blob storage** and **Azure Files** by shipping disk drives to an Azure datacenter.
+- LRS have three copies of data.
+- azcopy support blob and file storage. If you want to support table, use azcopy v7.3 (which is not the latest version).
+- Azure classid deployment enforces a global vCPU quota limits for virtual machines and virtual machine scale sets. It is no longer recommended and superseded by Resource Manager Model.
+
+## New Notes
+- When a user signs up for a Microsoft cloud service, a new Azure AD tenant is created and the user is made a member of the Global Administrator role. However, when an owner of a subscription joins their subscription to an existing tenant, the owner isn't assigned to the Global Administrator role.
+- To add or delete users you must be a User administrator or Global administrator **in the current tenant**.
+- Dynamic groups and role assignable groups are not supported with the Access review process, but nested groups are.
+- Azure Active Directory (Azure AD) access reviews enable organizations to efficiently manage group memberships, access to enterprise applications, and role assignments. User's access can be reviewed on a regular basis to make sure only the right people have continued access.
+- Subscriptions can only be a member of ONE ManagementGroup at a time. You cannot add a existing subscription to a group, but you can move it.
+- Resources created before policy creation will not inherit the policy rules.
+- You can move an app to another App Service plan, as long as the source plan and the target plan are in the same resource group and geographical region. However, you cannot change an App Service plan's region.
+- Network traffic from the VPN gateway is routed to the cloud application through an internal load balancer. The load balancer is located in the front-end subnet of the application.
+- Only Owner and Contributor can perform the actions of deploying VMs and managing Vnets.
+- A Global Administrator in AD can elevate access to all subscriptions and will be User Access Administrator in Azure root scope.
+- Append blobs are not supported in import of Azure Import/Export service.
+- Even though Storage v2 and blob both can support the hot, cool, and archive but Storage V2 is lowest cost.
+- Blobs cannot be backup up to service vaults.
+- Only VM and Fileshare is allowed to Backup.
+- To create a Vault to protect VMs, the Vault must be in the same Region as the VMs.
+- **AzCopy** is a command-line utility that you can use to copy blobs or files to or from a storage account. AzCopy does not support table and queue storage services.
+- Both Azure Active Directory (AD) and Shared Access Signature (SAS) token are supported for Blob storage.
+- Only Shared Access Signature (SAS) token is supported for File storage.
+- Azure files are used as persistent disks for docker images. It doesn't matter the type of the image or its functionality.
+- Log Analytics are independant of locations/regions, while Storage Account must be in the same Region as the Recovery Services Vault.
+- Premium file shares are hosted in a special purpose storage account kind, called a FileStorage account.
+- Object storage data tiering between hot, cool, and archive is supported in Blob Storage and General Purpose v2 (GPv2) accounts. General Purpose v1 (GPv1) accounts don't support tiering.
+- The archive tier supports only LRS, GRS, and RA-GRS.
+- The SAS token is not supported in mounting Azure File share currently, it just supports the Azure storage account key.
+- The **net use** command is a legacy, yet still completely functional command to create, remove and manage SMB Windows mapped connections and drives.
+- VMs can only be backed up in a single Recovery Services Vault. You've to stop existing backup to add another.
+- v1 supports GRS/RA-GRS but question was about least cost. Least cost is ZRS which is only supported for v2 and premium file/block storage.
+- The lifecycle management feature is available in all Azure regions for general purpose v2 (GPv2) accounts, blob storage accounts, premium block blobs storage accounts, and Azure Data Lake Storage Gen2 accounts.
+- To create alert for VM errors:
+    1. Log analytics agent - Install in VM. (or Add Windows Log Analytics VM extension)
+    2. Log analytics workspace - collect the log files from Log Analytics Agent.
+    3. Azure Monitor - Create alert based on logs read from Log Analytics Workspace.
+- We cannot just move a virtual machine between networks. What we need to do is identify the disk used by the VM, delete the VM itself while retaining the disk, and recreate the VM in the target virtual network and then attach the original disk to it.
+- Web App can only created and identified in App Service plan in same region and resource group.
+- The Custom Script Extension downloads and executes scripts on Azure VMs. This extension is useful for post deployment configuration, software installation, or any other configuration / management task. 
+- To install kubectl locally, use the az aks install-cli command: az aks install-cli.
+- The app (App Service Plan) must be running in the Standard, Premium, or Isolated tier in order for you to enable multiple deployment slots.
+- VM Scale Set consists of a set of identically configured VMs. Availability Set consists of a set of discrete VMs.
+- A regional (non-zonal) scale set uses placement groups, which act as an implicit availability set with five fault domains and five update domains. 
+- Changing Subscription won't affect the downtime, it will just you change the billing.
+- When you redeploy a VM, it moves the VM to a new node within the Azure infrastructure and then powers it back on, retaining all your configuration options and associated resources.
+- You should use CNAME records for all custom DNS names except root domains (for example, contoso.com). For root domains, use A records.
+- If you create a VM and later want to migrate it into a VNet, it is not a simple configuration change. You must redeploy the VM into the VNet. The easiest way to redeploy is to delete the VM, but not any disks attached to it, and then re-create the VM using the original disks in the VNet.
+- You can connect network interfaces in the same VM to different subnets within a virtual network. However, the network interfaces must all be connected to the same virtual network.
+- To be able to access applications on kubernetes , you need a application Load Balancer created by Azure which have public ip.
+- Creating one App Service Plan, you can support up to 10 Web Apps (free tier). 
+- Internet users can connect to the container from any device because of this ARM line: "type": "Public".
+- While resizing, the VM must be in a stopped state, therefore there will be a downtime.
+- To Log network traffic to and from a virtual machine using the Azure portal:
+    1. Create a virtual machine
+    2. Enable Network Watcher
+    3. Register Insights provider
+    4. Enable NSG flow log
+    5. Download flow log
+    6. View flow log
+- Virtual machine scale sets will support 2 distinct orchestration modes:
+    - ScaleSetVM – Virtual machine instances added to the scale set are based on the scale set configuration model. The virtual machine instance lifecycle - creation, update, deletion - is managed by the scale set.
+    - VM (virtual machines) – Virtual machines created outside of the scale set can be explicitly added to the scaleset.  
+-  You can’t use Windows and Linux Apps in the same App Service Plan, beacuse when you create a new App Service plan you have to choose the OS type. You can't mix Windows and Linux apps in the same App Service plan.
+- When the budget thresholds you've created are exceeded, only notifications are triggered.
+- ReadOnly lock means authorized users can read a resource, but they can't delete or update it.
+- The rate limit thresholds in production are:
+    - SMS: No more than 1 SMS every 5 minutes.
+    - Voice: No more than 1 Voice call every 5 minutes.
+    - Email: No more than 100 emails in an hour.
+    - Other actions are not rate limited.
+- The rate limit thresholds for test action group are:
+    - SMS: No more than 1 SMS every 1 minute.
+    - Voice: No more than 1 Voice call every 1 minute.
+    - Email: No more than 2 emails in every 1 minute.
+    - Other actions are not rate limited.
+- The following criteria is important for vault backup, the data source (VM) must be in the same region and subscription. It works with any resource group or any Operating system.
+- Placement Groups is a capability to achieve co-location of your Azure Infrastructure as a Service (IaaS) resources and low network latency among them, for improved application performance.
+- The VMSS should share the same region, even it should be the same zone as proximity groups are located in the same data center.
+- The Linux diagnostic extension helps a user monitor the health of a Linux VM running on Microsoft Azure. It has the following collection and capabilities:
+    - Metrics
+    - Syslog
+    - Files
+- Azure HDInsight is a managed, full-spectrum, open-source analytics service in the cloud for enterprises. You can use open-source frameworks such as Hadoop, Apache Spark, Apache Hive, LLAP, Apache Kafka, Apache Storm, R, and more.
+- Azure Performance Diagnostics VM Extension is used for Windows VM only.
+- Azure Analysis Services is a fully managed platform as a service (PaaS) that provides enterprise-grade data models in the cloud.
+- DNS port is 53, internet users can connect via port 80.
+- Admin user, password, vm size and os are the part of ARM templates. But resource group is not hence needs to be mentioned while deployment.
+- Availability sets are used to protect applications from hardware failures within an Azure data center, availability zones, protect applications from complete Azure data center failures.
+- The VM size property can be modified by a runbook that is triggered by metrics, but you can schedule it monthly.
+- For Windows Server, the temporary disk is mounted as “D:\”.
+- For Linux based VM’s the temporary disk is mounted as “/dev/sdb1”.
+- The Service CIDR is used to assign internal services in the AKS cluster an IP address.
+- VHDx file - A file with the VHDX file extension is a Windows hard disk image file. It acts like a real, physical hard drive, but is stored in a single file (disk-in-a-file) that's located on a physical disk like a hard drive. 
+- The Virtual hard disk is VHDx, it should be formated to VHD before migration from on-premises to Azure. Azure supports only generation 1 VMs that are in the VHD file format and have a fixed sized disk. 
+- If you resize the Scale Set all the VMs get resized at once, thus 4 is the correct answer.
+- Automatic OS updates update 20% of the VMs at once, with a minimum of 1 VM instance at a time. 
+- When you swap deployment slots, Azure swaps the Virtual IP addresses of the source and destination slots, thereby swapping the URLs of the slots. We can easily revert the deployment by swapping back.
+- You can restore files from a VM to the same server operating system, or to the compatible client operating system.
+- For restoring a VM, you can choose 'Create new' or 'Replace existing'.
+- Application Gateway is for http, https and Websocket - Not SMB
+- Application Proxy is also for accessing web applications on-prem - Not SMB. Application Proxy is a feature of Azure AD that enables users to access on-premises web applications from a remote client.
+- A Site-to-Site VPN gateway connection can be used to connect your on-premises network to an Azure virtual network over an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel. This type of connection requires a VPN device, a VPN gateway, located on-premises that has an externally facing public IP address assigned to it.
+- Azure Internal Load Balancer (ILB) provides network load balancing between virtual machines that reside inside a cloud service or a virtual network with a regional scope.
+- Azure Web Application Firewall (WAF) on Azure Application Gateway provides centralized protection of your web applications from common exploits and vulnerabilities. 
+- Multiple virtual hubs can be created in the same region.
+- A public and a private IP address can be assigned to a single network interface.
+- NSG flow logs allow viewing information about ingress and egress IP traffic through a Network security group. Through this, the IP addresses that connect to the ILB can be monitored when the diagnostics are enabled on a Network Security Group.
+- We cannot enable diagnostics on an internal load balancer to check for the IP addresses.
+- If a virtual network has address ranges that overlap with another virtual network or on-premises network, the two networks can't be connected.
+- Vnet peering is possible across regions.
+- HA ports need are not supported by a basic loadbalancer.
+- You can assign NSG to the Subnet of the VNet in the same region where NSG is.
+- A resource can only be created in a virtual network that exists in the same region and subscription as the resource.
+- You can't add address ranges to or delete address ranges from a virtual network's address space once a virtual network is peered with another virtual network. To add or remove address ranges, delete the peering, add or remove the address ranges, then re-create the peering.
+- The DSC extension for Windows requires that the target Virtual Machine is able to communicate with Azure. First you start the VM, because you need VM online to deploy DSC Extension.
+- Azure DNS supports importing and exporting zone files by using the Azure command-line interface (CLI). Zone file import is not currently supported via Azure PowerShell or the Azure portal.
+- PrivateDNSMigrationScript is for migrating legacy Azure DNS private zones to the new Azure DNS private zone resource.
+- Inbound NAT rules allow you to connect to virtual machines (VMs) in an Azure virtual network by using an Azure Load Balancer public IP address and port number.
+- Backend pool endpoints: 
+    - Standard LB: Any virtual machines or virtual machine scale sets in a single virtual network	
+    - Basic LB: Virtual machines in a single availability set or virtual machine scale set
+- You can only link Virtual networks to private DNS zones only and accordingly auto register a VNET only to a private DNS zones.
+- Create a site-to-site VPN to Azure.
+    1. Create a virtual network (Gateway Subnet)
+    2. Create a VPN gateway
+    3. Create a local network gateway
+    4. Create a VPN connection
+    5. Verify the connection
+    6. Connect to a virtual machine
+- If a virtual network has address ranges that overlap with another virtual network or on-premises network, the two networks can't be connected.
+- When you connect VNets from different subscriptions, the subscriptions don't need to be associated with the same Active Directory tenant.
+-  Your VMs should use managed disks if you want to move them to an Availability Zone by using Site Recovery.
+- The location of the RG doesn't influence the choice of the location of VM. The location of the VM should be the same like the VM Scale set (single zone or zone redundant )
+- If you require spokes to connect to each other, consider adding a separate peering connection between those spokes. Suppose you have several spokes that need to connect with each other. In that case, you'll run out of possible peering connections quickly, because the number of virtual network peerings per virtual network is limited. (For more information, see Networking limits. In this scenario, consider using **user-defined routes (UDRs) to force traffic destined to a spoke to be sent to Azure Firewall or a network virtual appliance acting as a router at the hub**. This change will allow the spokes to connect to each other.
+- An application security group is a logical collection of virtual machines (NICs). You join virtual machines to the application security group, and then use the application security group as a source or destination in NSG rules.
+- BasicSKU cannot coexist with ExpressRoute. You must use a non-Basic SKU gateway for both the ExpressRoute gateway and the VPN gateway.
+- A Basic Load Balancer supports virtual machines in a single availability set or virtual machine scale set.
+- When using load-balancing rules with Azure Load Balancer, you need to specify health probes to allow Load Balancer to detect the backend endpoint status. 
+- Before creating a network interface, you must have an existing virtual network in the same location and subscription you create a network interface in.
+- The connection troubleshoot capability enables you to test a connection between a VM and another VM, an FQDN, a
+URI, or an IPv4 address.
+- The IP flow verify capability enables you to specify a source and destination IPv4 address, port, protocol (TCP or UDP), and traffic direction (inbound or outbound). IP flow verify then tests the communication and informs you if the connection succeeds or fails. If the connection fails, IP flow verify tells you which.
+- NIC configured DNS servers takes precedence over VNET configured DNS servers.
+- Locks are designed for any update or removal. It's okay to move the resources across group.
+- If vnet is already connected by ExpressRoute, we presume that the subnet gateway was already created.
+- You can only attach virtual machines that are in the same location and on the same virtual network as the LB. Virtual machines must have a standard SKU public IP or no public IP.
+- The LB needs to be a standard SKU to accept individual VMs outside an availability set or vmss. VMs do not need to have public IPs but if they do have them they have to be standard SKU. Vms can only be from a single network. When they don’t have a public IP they are assigned an ephemeral IP.
+- Also, when adding them to a backend pool, it doesn’t matter in which status are the VMs.
+- Load balancer and the public IP address **SKU must match** when you use them with public IP addresses.
+- To create a VNet to VNet VPN you need to have a special Gateway Subnet.There should be suffient address space for creating gateway subnet.
+- VNet Peering offers low latency connection as it uses Microsoft backbone.
+- VNet gateway uses IPSec VPN tunnel and uses internet.
+- HTTPS probe is only available for Standard Load Balancer.
+- To have previously reserved IP address for a certain Pod, you should use Azure Container Networking Interface (CNI)
+- Connection monitor lets you know the round-trip time to make the connection, in milliseconds. Connection monitor probes the connection every 60 seconds, so you can monitor latency over time.
+- Policy based VPN Gateway do not support P2S connections.
+- A virtual network can be linked to private DNS zone as a registration or as a resolution virtual network.
+    - Registration virtual network: A private DNS zone can have multiple registration virtual networks. However, every virtual network can only have one registration zone associated with it.
+    - Resolution virtual network: One private DNS zone can have multiple resolution virtual networks and a virtual network can have multiple resolution zones associated to it.
+- AzureBastionSubnet addresses A subnet within your VNet address space with a /27 (/26 now) subnet mask.
+- Connection monitor doesn't capture packets, Network Watcher does.
+- To be able to add security questions to the process. you need Global admin role.
+- The Maximum number of devices setting enables you to select the maximum number of devices that a user can have in Azure AD. If a user reaches this quota, they will not be able to add additional devices until one or more of the existing devices are removed. By default, the maximum number of devices per user is 50.
+- Network Watcher - a Suite of tools offering but not limited to the following
+    * Connection Monitor - latency and network issues with IaaS devices over a PERIOD OF TIME
+    * Connection troubleshoot - latency and network issues with IaaS devices ONE-TIME
+    * IP Flow - latency and network issues at the VM LEVEL
+    * Network Performance Monitor - latency and network issues in hybrid, ON-PREM, across environments
+- Backup operation can be done while VM is offline or shutdown.
+- Azure retention policy takes the longest period of retention for each backup. In case of conflict between 2 different policies.
+- You can define only one activity log signal per alert rule. To alert on more signals, create another alert rule.
+- Notification emails are only sent to members of a role who are Azure AD users.
+- Azure Storage Explorer is a free tool from Microsoft that allows you to work with Azure Storage data on Windows, macOS, and Linux. You can use it to upload and download data from Azure blob storage. It’s the best solution, because copies data through Internet and minimizes administrative effort.
+- A Site-to-Site VPN gateway connection is used to connect your on-premises network to an Azure virtual network over an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel. This type of connection requires a VPN device located on-premises that has an externally facing public IP address assigned to it. Site-to-Site VPN connection requires Virtual network gateway, Local network gateway and Gateway Subnet.
+- ExpressRoute connections don't go over the public Internet, the connection is private.
+- `Get-AzRoleDefinition -Name "Reader" | ConvertTo-Json`
