@@ -299,3 +299,21 @@ URI, or an IPv4 address.
 - A Site-to-Site VPN gateway connection is used to connect your on-premises network to an Azure virtual network over an IPsec/IKE (IKEv1 or IKEv2) VPN tunnel. This type of connection requires a VPN device located on-premises that has an externally facing public IP address assigned to it. Site-to-Site VPN connection requires Virtual network gateway, Local network gateway and Gateway Subnet.
 - ExpressRoute connections don't go over the public Internet, the connection is private.
 - `Get-AzRoleDefinition -Name "Reader" | ConvertTo-Json`
+
+## Notes from Sample Questions
+
+- Groups that use dynamic membership rules reduce the overhead of access management by providing attribute-based membership and access to resources. Based on membership rules the membership, and resulting access, can be granted and removed automatically.
+- A user that is assigned the Global reader role is prevented from making any modifications. The role is a read-only version of Global Administrator that allows the user to read settings and administrative information across all services but can't take management actions.
+- Creating Custom roles in Azure can be complex due to thousands of permissions so custom roles can be exported as JSON and then imported into a new custom role. The first step is to export the role to a JSON format. A JSON file can then be imported into another tenant; containing all of the details in the custom role.
+- An action group is a collection of notification preferences defined by the owner of an Azure subscription. Azure Monitor, Service Health and Azure Advisor alerts use action groups to notify users that an alert has been triggered.
+- Tags can be applied by using PowerShell, Azure CLI, and ARM templates.
+- Storage accounts configured with the Premium performance setting only support LRS. 
+- Any storage account already configured with ZRS cannot be changed or directly switched to another replication setting. 
+- If you need to create multiple Azure resources based upon an existing resource, you should export and use a JSON template.
+- To enable support for Azure Disk Encryption, you need to modify the Access policies for the key vault. This provides an option to enable access to Azure Disk Encryption for volume encryption.
+- Recovery Services vault supports Azure Virtual Machines, SQL in Azure VM, Azure Files, SAP HANA in Azure VM, Azure Backup Server, Azure Backup Agent, and DPM. 
+- Backup vault supports Azure Database for PostgreSQL servers, Azure Blobs, and Azure disks.
+- You use Administrative units to logically group Azure AD resources. 
+- Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. FileStorage and general purpose v1 storage accounts do not support lifecycle management.
+- Azure Bastion is a service that provides secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal over TLS. When you connect via Azure Bastion, your virtual machines do not need a public IP address, agent, or special client software. Not requiring a public IP address protects the virtual machine from outside port scanning.
+- The storage replication type cannot be changed after protecting items.It can be changed if it don't contain any items.
