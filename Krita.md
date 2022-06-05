@@ -1,0 +1,24 @@
+# Krita Tutorial Notes
+- Ctrl-Z & Ctrl-Shift-Z for undo and redo changes.
+- Press Spacebar for hand tool - Use to move around the canvas
+- Press Ctrl+Spacebar for zoom tool
+- Shift+Space for rotate the canvas. Press 5 key on numpad to restore the rotation.
+- Press Del key to clear the current layer.
+- Press tab key to go only canvas mode. All other dockers will be hidden, with only canvas and brush.
+- Press m for horizontal mirroring.
+- Press b for brush tool
+- Press s for free hand selection tool
+- Ctrl+H Display/Hide selection
+- Ctrl+T for transforming a layer or selection
+- Press x to flip the selection of colors
+- Press f for fill tool
+- Press g for gradient tool
+- Press e to switch brush to eraser
+- Press k to go to darker shade of the color
+- Press l to go to lighter shade of the color
+- Select a layer and press Ctrl to create a mask on that layer
+- Select layers and press Ctrl+G to group layers
+- Select layers and press Ctrl+E to merge layers
+- Press Ctrl+j for duplicating layers
+- Refer Asaro head for learning head shapes
+- Refer anatomy for sculptors in books
