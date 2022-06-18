@@ -1,0 +1,201 @@
+## 305 Topics
+
+- Application Proxy is a feature of Azure AD that enables users to access on-premises web applications from a remote client. Application Proxy includes both the Application Proxy service which runs in the cloud, and the Application Proxy connector which runs on an on-premises server. You can configure single sign-on to an Application Proxy application.
+- Have reviews recur periodically: You can set up recurring access reviews of users at set frequencies such as weekly, monthly, quarterly or annually, and the reviewers will be notified at the start of each review. Reviewers can approve or deny access with a friendly interface and with the help of smart recommendations.
+- The standard plan does not allow you to use credential passthrough features which is required to ensure that the data engineers can only access folders to which they have permissions. So Premium is required for Data Bricks SKU.
+- App registration needed for SSO/identity
+- Conditional Access policy needed for only allowing company-owned devices
+- IP flow verify helps administrators quickly diagnose connectivity issues from or to the internet and from or to the on-premises environment.
+- Log type for events from Windows event logs: Event
+- Log type for events from Linux system logging: syslog
+- The policy definition or initiative is assigned to any scope of resources that Azure supports, such as management groups, subscriptions, resource groups, or individual resources.
+- Activity logs are kept for 90 days. You can query for any range of dates, as long as the starting date isn't more than 90 days in the past.
+- Through activity logs, you can determine:
+    - what operations were taken on the resources in your subscription
+    - who started the operation
+    - when the operation occurred
+    - the status of the operation
+    - the values of other properties that might help you research the operation
+- CLR is supported on SQL Managed instance and not on Azure SQL Database.
+- The Microsoft Azure Data Box cloud solution lets you send terabytes of data into and out of Azure in a quick, inexpensive, and reliable way. The secure data transfer is accelerated by shipping you a proprietary Data Box storage device. Each storage device has a maximum usable storage capacity of 80 TB and is transported to your datacenter through a regional carrier. The device has a rugged casing to protect and secure data during the transit.
+- Azure Data Factory supports copying data to and from Blob storage by using the account key, a shared access signature, a service principal, or managed identities for Azure resources.
+- A queue allows processing of a message by a single consumer. In contrast to queues, topics and subscriptions provide a one-to-many form of communication in a publish and subscribe pattern. It's useful for scaling to large numbers of recipients. Each published message is made available to each subscription registered with the topic. Publisher sends a message to a topic and one or more subscribers receive a copy of the message, depending on filter rules set on these subscriptions.
+- Block Blob is a premium storage account type for block blobs and append blobs. Recommended for scenarios with high transactions rates, or scenarios that use smaller objects or require consistently low storage latency.
+- You achieve the immutability requirement through a Time-Based Retention Policy at the container-level. That will prevent write and delete operations for all blobs in the container for a given period
+- Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. 
+- Lifecycle management doesn't affect system containers such as the $logs or $web containers.
+- Max file size in Blob Storage. 4.77 TB.
+- Azure SQL Database elastic pools are a simple, cost-effective solution for managing and scaling multiple databases that have varying and unpredictable usage demands.
+- Elastic pool is needed for SLA 99,95 % and auto scale.
+- Azure SQL Database with Hyperscale(support up to 100TB).
+- There are three architectural models that are used in Azure SQL Database:
+    - General Purpose/Standard
+    - Hyperscale
+    - Business Critical/Premium
+- With Cosmos DB's novel multi-region (multi-master) writes replication protocol, every region supports both writes and reads. Only Cosmos DB supports multi-master writes.
+- Concept to remember:
+    - To write into storage, must be in same region.
+    - To write in log analytics space, can be in different region.
+- Replication with Azure Site Recover:
+    - RTO is typically less than 15 minutes.
+    -  RPO: One hour for application consistency and five minutes for crash consistency.
+- Always On availability group RPO: Because replication to the secondary replica is asynchronous, there's some data loss.
+- Azure Files offers four different tiers of storage: premium, transaction optimized, hot, and cool
+- NFS Azure Files only support LRS and ZRS. SMF Files support all four.
+- A basic Azure virtual WAN does not support express route. You have to upgrade to standard.
+- When you want to run code that performs a specific job in your logic apps, you can create your own function by using Azure Functions.
+- You can use Azure AD DS and sync identities needed from Azure AD to Azure AD DS to use legacy protocols like LDAP. Kerberos and NTLM
+- Azure functions in consumption plan cannot access Virtual Network Integration features. Virtual network integration allows your function app to access resources inside a virtual network.
+- The on-premises data gateway acts as a bridge. It provides quick and secure data transfer between on-premises data, which is data that isn't in the cloud, and several Microsoft cloud services. These services include Power BI, Power Apps, Power Automate, Azure Analysis Services, and Azure Logic Apps.
+- By using a gateway, organizations can keep databases and other data sources on their on-premises networks while securely using that on-premises data in cloud services.
+-  API Management **Developer and Premium tiers** support VNet deployment.
+- Parent policy must be in the same region as child policy! You get this information when creating a Firewall Policy. Parent Policy drop down list only shows policies in the same region.
+- vCore tiers allow serverless and auto-pause, which matches perfect to "only used first day of month". Rest of the month, the service is paused and does not generate compute costs.
+- In DTU service tier, you need to add min. 100 DTUs to get possibility for 400GB DB size. Below you only have 250GB.
+- Azure CycleCloud is designed to enable enterprise IT organizations to provide secure and flexible cloud HPC and Big Compute environments to their end users. 
+- Microsoft Purview's solutions in the governance portal provide a unified data governance service that helps you manage your on-premises, multi-cloud, and software-as-a-service (SaaS) data.
+- Azure Lighthouse enables multi-tenant management with scalability, higher automation, and enhanced governance across resources.
+- Immutable storage for Azure Blob Storage enables users to store business-critical data in a WORM (Write Once, Read Many) state. While in a WORM state, data cannot be modified or deleted for a user-specified interval. By configuring immutability policies for blob data, you can protect your data from overwrites and deletes.
+
+## 304 Topics
+
+- Query Performance Insight provides intelligent query analysis for single and pooled databases. It helps identify the top resource consuming and long-running queries in your workload. This helps you find the queries to optimize to improve overall workload performance and efficiently use the resource that you are paying for.
+- Service Map automatically discovers application components on Windows and Linux systems and maps the communication between services. 
+- Azure Data Lake Analytics is an on-demand analytics job service that simplifies big data.
+- Spending limit on Azure account affects all the subscription not just a specific resource group and it is a feature provided for specific subscription types like the free one.
+- The maximum retention time for Log Analytics is 730 days.
+- Azure SQL Database and Azure SQL Managed Instance automatic tuning provides peak performance and stable workloads through continuous performance tuning based on AI and machine learning.
+- Automatic tuning is a fully managed intelligent performance service that uses built-in intelligence to continuously monitor queries executed on a database, and it automatically improves their performance.
+- Log Analytics is a tool in the Azure portal used to edit and run log queries with data in Azure Monitor Logs. You may write a simple query that returns a set of records and then use features of Log Analytics to sort, filter, and analyze them. Or you may write a more advanced query to perform statistical analysis and visualize the results in a chart to identify a particular trend.
+- Microsoft Azure Sentinel is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Sentinel: Detect previously undetected threats and Respond to incidents rapidly.
+- The contents of your key vault are replicated within the region and to a secondary region at least 150 miles away but within the same geography. This maintains high durability of your keys and secrets.
+- Azure Files supports identity-based authentication over Server Message Block (SMB) through two types of Domain Services: on-premises Active Directory Domain Services (AD DS) and Azure Active Directory Domain Services (Azure AD DS)
+- 1. Trusted Root Certification Authorities certificate store on each laptop - Root CA Public Key
+  2. The User's personal store on each laptop - User Private Key
+  3. Azure VPN gateway - Root CA Public Key
+- Why use HMAC and not RBAC for CosmosDB even though RBAC is available for CosmosDB - Azure RBAC support in Azure Cosmos DB applies to control plane operations only. Data plane operations are secured using primary keys or resource tokens which uses HMAC.
+- For customer to access using personal account with MFA - AD B2C
+- For Report users to access using either organization or personal account with MFA - AAD V2 endpoint.
+- Data streamed to a Log Analytics workspace can be consumed by SQL Analytics
+- User-assigned managed identity can be shared. The same user-assigned managed identity can be associated with more than one Azure resource.
+- System-assigned managed identity cannot be shared. It can only be associated with a single Azure resource.
+- API Management Premium tier supports VNet deployment.
+- IdFix identifies errors such as duplicates and formatting problems in your Active Directory Domain Services (AD DS) domain before you synchronize to Office 365.
+- When creating a blueprint definition, you'll define where the blueprint is saved. Blueprints can be saved to a management group or subscription that you have Contributor access to. If the location is a management group, the blueprint is available to assign to any child subscription of that management group.
+- Conditional Access policies are at their most basic an if-then statement combining signals, to make decisions, and enforce organization policies. One of those signals that can be incorporated into the decision-making process is network location.
+- The Azure Instance Metadata Service (IMDS) provides information about currently running virtual machine instances. You can use it to manage and configure your virtual machines.
+- An alert rule can have multiple VMs as target.
+- Management groups can't span AAD tenant, so you need 2 management groups. Blueprints definition can be saved within management group which, in turn, means you need 2 blueprint definitions. Blueprint assignments are at subscription level, therefore you need 4.
+- shared access signature (SAS) is a URI that grants restricted access rights to Azure Storage resources, not applicable to cosmos db.
+- When a blueprint is first created, it's considered to be in Draft mode. When it's ready to be assigned, it needs to be Published.
+- Pass-through Authentication and federation rely on on-premises infrastructure.
+- Modify azure policy effect is used to add, update, or remove properties or tags on a resource during creation or update.
+- Azure Policy creates a managed identity for each assignment, but must have details about what roles to grant the managed identity.
+- Azure Active Directory Seamless Single Sign-On (Azure AD Seamless SSO) automatically signs users in when they are on their corporate devices connected to your corporate network. When enabled, users don't need to type in their passwords to sign in to Azure AD, and usually, even type in their usernames. This feature provides your users easy access to your cloud-based applications without needing any additional on-premises components.
+- Seamless SSO can be combined with either the Password Hash Synchronization or Pass-through Authentication sign-in methods.
+- The storage account and the key vault or managed HSM must be in the same region and in the same Azure Active Directory (Azure AD) tenant, but they can be in different subscriptions.
+- The Azure AD access reviews feature has an API in the Microsoft Graph endpoint.
+- 'Activity Log' is for recording changes of Azure Resources such as create or modify Azure resource. We are asked to generate alert based on Sign in event, which should be 'Logs'.
+- The Authorization Code Grant Type is used by both web apps and native apps to get an access token after a user authorizes an app.
+- To maximize your Key Vault through put rates, here are some recommended guidelines/best practices for maximizing your throughput:
+    1. Ensure you have throttling in place. Client must honor exponential back-off policies for 429's and ensure you are doing retries as per the guidance below.
+    2. Divide your Key Vault traffic amongst multiple vaults and different regions. Use a separate vault for each security/availability domain. If you have five apps, each in two regions, then we recommend 10 vaults each containing the secrets unique to app and region.
+- JIT is for access to the VM, not access to the resource in the portal which is required to start/stop the VM
+- Smart Lockout requires Azure AD P1 or higher
+- Conditional Access Policies requires Azure AD P1 or higher
+- Azure Active Directory Domain Services (AD DS) provides managed domain services such as domain join, group policy, lightweight directory access protocol (LDAP), and Kerberos/NTLM authentication. You use these domain services without the need to deploy, manage, and patch domain controllers (DCs) in the cloud.
+- With Azure Blueprints, the relationship between the blueprint definition (what should be deployed) and the blueprint assignment (what was deployed) is preserved. This connection supports improved tracking and auditing of deployments. Azure Blueprints can also upgrade several subscriptions at once that are governed by the same blueprint.
+- Identity Protection uses the learnings Microsoft has acquired from their position in organizations with Azure AD, the consumer space with Microsoft Accounts, and in gaming with Xbox to protect your users. Microsoft analyses 6.5 trillion signals per day to identify and protect customers from threats.
+- Using Azure Data Factory, you can create and schedule data-driven workflows (called pipelines) that can ingest data from disparate data stores. You can build complex ETL processes that transform data visually with data flows or by using compute services such as Azure HDInsight Hadoop, Azure Databricks, and Azure SQL Database.
+- Get: Gets the specified Azure key vault. List: The List operation gets information about the vaults associated with the subscription.
+- Traffic Analytics is a cloud-based solution that provides visibility into user and application activity in cloud networks.
+- You can only apply the Azure Hybrid licensing model when you choose a vCore-based purchasing model and the provisioned compute tier for your Azure SQL Database. Azure Hybrid Benefit isn't available for service tiers under the DTU-based purchasing model or for the serverless compute tier.
+- DTU is cheaper but you need vCore model to apply hybrid benefits.
+- If your data store is located inside an on-premises network, an Azure virtual network, or Amazon Virtual Private Cloud, you need to configure a self-hosted integration runtime to connect to it from Azure.
+- The server, its pools & databases must be in the same Azure region under the same subscription.
+- If log files are in consistent format, not ETL is required. The files can be copied directly using the AzCopy command.
+- Log files have primarily write-heavy operations. Therefore, they do not benefit from the ReadOnly cache.
+- Distributed transactions for Azure SQL Managed Instance are now generally available. 
+- Function apps support triggers for CosmosDB, logic apps do not.
+- The blobstorage and StorageV1 doesn't support ZRS replication.
+- Azure Data factory with Self Hosted Integration Runtime (installed on premise) can move the data to data lake storage
+-   
+    * Azure Database Migration Service - migrates the database from on-prem to Azure
+    * Azure Data Factory - You can copy data from Azure Blob to Azure SQL Database using Azure Data Factory.
+    * Azure Data Box - physically move the data, has no business here
+    * Data Migration Assistant -- migrates the database from on-prem to Azure (helper)
+- Azure SQL DB does not support CLR stored procedure.
+- Disks are encrypted by using cryptographic keys that are secured in an Azure Key Vault. You control these cryptographic keys and can audit their use.
+- Azure Data Factory can host SSIS packages in Azure.
+- "Support multiple consistency levels" -> Azure Cosmos DB
+- Azure Cosmos DB offers five well-defined levels. From strongest to weakest, the levels are:
+    - Strong
+    - Bounded staleness
+    - Session
+    - Consistent prefix
+    - Eventual
+- Continuous export is only supported for classic Application Insights resources. Workspace-based Application Insights resources must instead use diagnostic settings (recommended new way of handling telemetry export).
+- Purchase reservation blade in Azure portal shows percentage of estimated savings.
+- The Archive tier is not supported as the default access tier for a storage account.
+- Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. 
+- You cannot reserve DTU-based (basic, standard, or premium) databases in SQL Database. Reserved capacity pricing is only supported for features and products that are in General Availability state.
+- Bounded staleness consistency is frequently chosen by globally distributed applications that expect low write latencies but require total global order guarantee. Bounded staleness is great for applications featuring group collaboration and sharing, stock ticker, publish-subscribe/queueing etc.
+- During failover, your key vault is in read-only mode
+- Site Recovery can replicate on-premises VMware VMs, Hyper-V VMs, physical servers (Windows and Linux), Azure Stack VMs to Azure.
+- Geo-Replication is a premium SKU container registry feature
+- Azure Front Door enables you to define, manage, and monitor the global routing for your web traffic by optimizing for best performance and instant global failover for high availability. With Front Door, you can transform your global (multi-region) consumer and enterprise applications into robust, high-performance personalized modern applications, APIs, and content that reaches a global audience with Azure.
+- Front Door works at Layer 7 or HTTP/HTTPS layer and uses anycast protocol with split TCP and Microsoft's global network for improving global connectivity.
+- When you back up a key vault object, such as a secret, key, or certificate, the backup operation will download the object as an encrypted blob. This blob can't be decrypted outside of Azure. To get usable data from this blob, you must restore the blob into a key vault within the same Azure subscription and Azure geography.
+- You install the Recovery Services agent on each Hyper-V host or cluster node.
+- Using an ExpressRoute circuit will use the BPG routes to go out to the Internet.
+- Microsoft does not support any router redundancy protocols (for example, HSRP, VRRP) for high availability configurations. We rely on a redundant pair of BGP sessions per peering for high availability.
+- Virtual network integration across region is supported only on Azure Functions Dedicated plan and Azure Logics Apps ISE.
+- Asynchronous messaging can be implemented in a variety of different ways: with queues, topics, and subscriptions. Azure Service Bus supports asynchronism via a store and forward mechanism.
+- But, the industry is going for AKS, as it the standard container orchestration solution. Companies using Service Fabric are regretting and moving to AKS.
+- Azure Service Fabric is a distributed systems platform that makes it easy to package, deploy, and manage scalable and reliable microservices and containers.
+- Forced tunneling lets you redirect or "force" all Internet-bound traffic back to your on-premises location via a Site-to-Site VPN tunnel for inspection and auditing.
+- The Regulatory compliance dashboard in Azure Security Center is not used for regional compliance. Instead Azure Resource Policy Definitions can be used which can be applied to a specific Resource Group with the App Service instances.
+- Compared to HTTP, AMQP is easy to scale.
+- Azure Container Instances supports the deployment of multiple containers onto a single host using a container group. A container group is useful when building an application sidecar for logging, monitoring, or any other configuration where a service needs a second attached process.
+- Azure Batch works well with intrinsically parallel (also known as "embarrassingly parallel") workloads.
+- An ingress controller is a piece of software that provides reverse proxy, configurable traffic routing, and TLS termination for Kubernetes services. Kubernetes ingress resources are used to configure the ingress rules and routes for individual Kubernetes services. Using an ingress controller and ingress rules, a single IP address can be used to route traffic to multiple services in a Kubernetes cluster.
+- When creating a Batch account, you can choose between two pool allocation modes: Batch service or user subscription. 
+- For user subscription mode Batch accounts, automated OS upgrades can interrupt task progress, especially if the tasks are long-running.
+- VMSS only support 1 region
+- App Gateway will balance the traffic between VMs deployed in the same region.
+- The Azure Web Application Firewall (WAF) rate limit rule for Azure Front Door controls the number of requests allowed from a particular client IP address to the application during a rate limit duration. 
+- Load Balancer distributes inbound flows that arrive at the load balancer's front end to backend pool instances but it does not provide high availability at the regional level.
+- Accelerated networking enables single root I/O virtualization (SR-IOV) to a VM, greatly improving its networking performance. This high-performance path bypasses the host from the datapath, *reducing latency*, jitter, and CPU utilization, for use with the most demanding network workloads on supported VM types.
+- Accelerated Networking is supported on most general purpose and compute-optimized instance sizes with 2 or more vCPUs. These supported series are: D/DSv2 and F/Fs
+-  Front Door is not regional but global, supports WAF and is L7. It supports URL routing and cookie-based affinity.
+- API Management policies to hide the HTTP headers that you do not want to show to your users.
+- Azure B2B uses guest accounts
+- You can secure API Management using the OAuth 2.0 client credentials flow.
+- Azure Traffic Manager includes built-in endpoint monitoring and automatic endpoint failover. This feature helps you deliver high-availability applications that are resilient to endpoint failure, including Azure region failures.
+- Before you can connect to on-premises data sources from Azure Logic Apps, download and install the on-premises data gateway on a local computer.
+- After you install the on-premises data gateway on a local computer and before you can access data sources on premises from your logic apps, you have to create a gateway resource in Azure for your gateway installation
+- Both SQL Server on Azure VM and SQL Managed Instance can support cross-database queries wherein server.dbName.tableName is used. Stretch Database is for migrating cold data transparently and securely to the Azure cloud.
+- Every Azure VPN gateway consists of two instances in an active-standby configuration. For any planned maintenance or unplanned disruption that happens to the active instance, the standby instance would take over (failover) automatically.
+- Use Azure Batch to run large-scale parallel and high-performance computing (HPC) batch jobs efficiently in Azure. It is not used for data transfer/copy.
+- In practice you wouldn't use ADF to copy files unless you need to do some transformation of those files.
+- To rapidly scale application workloads in an AKS cluster, you can use virtual nodes. With virtual nodes, you have quick provisioning of pods, and only pay per second for their execution time. You don't need to wait for Kubernetes cluster autoscaler to deploy VM compute nodes to run the additional pods.
+- we have a P1 license at my job, and we implemented both password writeback and self service PW reset.
+- Password writeback can be used to synchronize password changes in Azure AD back to your on-premises AD DS environment.
+- A queue allows processing of a message by a single consumer. In contrast to queues, topics and subscriptions provide a one-to-many form of communication in a publish and subscribe pattern.
+- Hybrid benefit  is for customers with Software Assurance. 
+- Transactional replication to Azure SQL Database feature allows you to migrate your on-premises SQL Server databases to Azure SQL Databases with minimal downtime.
+- You can configure the Azure AD Connect Health service to send email notifications when alerts indicate that your identity infrastructure is not healthy.
+- In addition we need Hierarchical Namespace because VMs that need access to the storage account use POSIX ACL file-level permissions storage.
+- Private Endpoint securely connect to storage accounts from on-premises networks that connect to the VNet using VPN or ExpressRoutes with private-peering.
+- Private Endpoint secure your storage account by configuring the storage firewall to block all connections on the public endpoint for the storage service.
+- A managed identity, assigned by the system, can be enabled on the VM. You can also assign one or more user-assigned managed identities to the VM. 
+- You can then request tokens for managed identities from IMDS. Use these tokens to authenticate with other Azure services, such as Azure Key Vault.
+- You can use MFA registration policy of the Identification Protection feature. But that is a P2 feature. Conditional access policy is a P1 feature.
+- Deterministic encryption always generates the same encrypted value for any given plain text value. Using deterministic encryption allows point lookups, equality joins, grouping and indexing on encrypted columns. However, it may also allow unauthorized users to guess information about encrypted values by examining patterns in the encrypted column, especially if there's a small set of possible encrypted values, such as True/False, or North/South/East/West region. Deterministic encryption must use a column collation with a binary2 sort order for character columns.
+- Randomized encryption uses a method that encrypts data in a less predictable manner. Randomized encryption is more secure, but prevents searching, grouping, indexing, and joining on encrypted columns.
+- hybrid benefit is available for vcore-based servers and this would be more cost effective than vm-based
+- Azure Site Recovery is used for server recovery and has time outage
+- Auto-failover Group allows you to manage the replication and failover of a group of databases to another region. Also it allows you to automatically recover multiple related databases using a user-defined policy
+- Availability Zones help provide an SLA of 99.99%. Availability Sets only provide an SLA of 99.95%. The other options are Azure App Service Plans.
+- For redundancy in traffic manager, you can use the priority traffic routing method which would automatically failover the web app if it detects a failure in the primary region.
+- When using Virtual Machine Scale Sets with Dedicated Hosts, they must be linked to a Host Group. Thus if we have 3 Host Groups we also need 3 Scale Sets.
