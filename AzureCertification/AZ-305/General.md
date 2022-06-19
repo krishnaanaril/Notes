@@ -199,3 +199,4 @@
 - Availability Zones help provide an SLA of 99.99%. Availability Sets only provide an SLA of 99.95%. The other options are Azure App Service Plans.
 - For redundancy in traffic manager, you can use the priority traffic routing method which would automatically failover the web app if it detects a failure in the primary region.
 - When using Virtual Machine Scale Sets with Dedicated Hosts, they must be linked to a Host Group. Thus if we have 3 Host Groups we also need 3 Scale Sets.
+- Traffic Manager doesn't provide rate limiting.
