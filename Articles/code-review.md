@@ -31,7 +31,7 @@
 11. Respect the scope of the review
 12. Look for opportunities to split up large reviews
 13. Offer sincere praise
-14. Grant approval when reamining fixes are trivial
+14. Grant approval when remaining fixes are trivial
 15. Handle stalemates proactively
 
 ### References
