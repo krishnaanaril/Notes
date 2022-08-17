@@ -2,6 +2,8 @@
 
 ## [Box Model](https://web.dev/learn/css/box-model/)
 
+- Everything displayed by css is a **box**.
+- The four main areas of the box model: *content box, padding box, border box and margin box* (inner to outer).
 - An `inline` element has block margin, but other elements won't respect it. Use `inline-block`, and those elements will respect the block margin, while the element maintains most of the same behaviors it had as an `inline` element. A `block` item will, by default, fill the available inline space, whereas a `inline` and `inline-block` elements will only be as large as their content.
 - Having `content-box` as the value of `box-sizing` means that when you set dimensions, such as a `width` and `height`, they will be applied to the content box. If you then set `padding` and `border`, these values will be added to the content box's size.
 
