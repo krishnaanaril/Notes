@@ -9,6 +9,7 @@
  - BCDR - Business Continuity & Disaster Recovery
  ### C
  - CIDR - Classless Internet Domain Routing
+ - CISO - Chief Information Security Officer
  - CRM - Customer Relationship Management
  - CRR - Cross Region Restore
  ### D
@@ -37,6 +38,7 @@
  - MARS - Microsoft Azure Recovery Services
  - MDM - Mobile Device Management
  - MOF - Managed Object Format
+ - MPLS - MultiProtocol Label Switching
  - MSEE - Microsoft Enterprise Edge routers
  - MTBF - Mean Time Before Failure
  - MTTR - Mean Time To Repair
@@ -53,6 +55,7 @@
  - RTO - Recovery Time Objective
  ### S
  - SAML - Security Assertion Markup Language
+ - SAN - Storage Area Network
  - SAS - Shared Access Signature
  - SATA - Serial Adavanced Technology Attachment
  - SCIM - System for Cross-Domain Identity Management
