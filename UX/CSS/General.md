@@ -1,0 +1,1 @@
+- There are individual properties for CSS transforms, the properties are `translate`, `rotate` and `scale`.
