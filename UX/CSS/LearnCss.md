@@ -87,3 +87,15 @@
 - `flex-grow` specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
 - In case both `flex-basis` (other than auto) and `width` (or height in case of flex-direction: column) are set for an element, `flex-basis` has priority.
 - Use `float` to wrap text around an image.
+
+## [Flexbox](https://web.dev/learn/css/flexbox/)
+- The key to understanding flexbox is to understand the concept of a **main axis** and a **cross axis**. The main axis is the one set by your `flex-direction` property.
+- You should be cautious when using any properties that reorder the visual display away from how things are ordered in the HTML document, as it can negatively impact accessibility. The `row-reverse` and `column-reverse` values are a good example of this.
+- The set of properties can be placed into two groups. Properties for space distribution, and properties for alignment. 
+- The properties which distribute space are:
+    - **justify-content**: space distribution on the main axis.
+    - **align-content**: space distribution on the cross axis.
+    - **place-content**: a shorthand for setting both of the above properties.
+- The properties used for alignment in flexbox:
+    - **align-self**: aligns a single item on the cross axis
+    - **align-items**: aligns all of the items as a group on the cross axis
