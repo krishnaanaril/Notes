@@ -104,3 +104,9 @@
 - A grid is made up of lines, which run horizontally and vertically. If your grid has four columns, it will have five column lines including the one after the last column.
 - A track is the space between two grid lines. A row track is between two row lines and a column track between two column lines.
 - `auto-fill` places as many items into the template as possible, without stretching. Fit makes them fit.
+
+## [Logical Properties](https://web.dev/learn/css/logical-properties/)
+- **Block flow** is the direction in which content blocks are placed. 
+- The **inline flow** is how text flows in a sentence.
+-  With logical properties, `margin-top` becomes `margin-block-start`. This means that regardless of language and text direction, the block flow has appropriate margin rules.
+- Logical properties bring two new units: `vi` and `vb`. A `vi` unit is 1% of the viewport size in the inline direction. The non-logical property equivalent is `vw`. The `vb` unit is 1% of the viewport in the block direction. The non-logical property equivalent is `vh`.
