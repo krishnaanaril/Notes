@@ -80,3 +80,10 @@
 - It's a good idea to use a unitless value for `line-height`, rather than specifying a unit. It denotes a ratio. Defining a unitless `line-height` keeps the line-height relative to the font size.
 - Other angle units include `rad` (radians), `grad` (gradians), and `turn` units, which represent a part of an angle, where `1turn = 360deg`, and `0.5turn = 180deg`.
 - Relative units are more adaptive and fluid because of their contextual awareness, but there's a power and predictability to absolute units that can be foundational for certain designs.
+
+## [Layout](https://web.dev/learn/css/layout/)
+- You can't set an explicit width and height on inline elements. Any block level margin and padding will be ignored by the surrounding elements.
+- Flexbox is a layout mechanism for one-dimensional layouts. Layout across a single axis, either horizontally or vertically. 
+- `flex-grow` specifies how much of the remaining space in the flex container should be assigned to the item (the flex grow factor).
+- In case both `flex-basis` (other than auto) and `width` (or height in case of flex-direction: column) are set for an element, `flex-basis` has priority.
+- Use `float` to wrap text around an image.
