@@ -99,3 +99,8 @@
 - The properties used for alignment in flexbox:
     - **align-self**: aligns a single item on the cross axis
     - **align-items**: aligns all of the items as a group on the cross axis
+
+## [Grid](https://web.dev/learn/css/grid/)
+- A grid is made up of lines, which run horizontally and vertically. If your grid has four columns, it will have five column lines including the one after the last column.
+- A track is the space between two grid lines. A row track is between two row lines and a column track between two column lines.
+- `auto-fill` places as many items into the template as possible, without stretching. Fit makes them fit.
