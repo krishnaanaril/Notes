@@ -61,3 +61,9 @@
     | !important rule | 10000 |
 - In diagrams and specificity calculators, the specificity is often visualized like this: `1-2-1` for `#specialty:hover li.dark`. The left group is `id` selectors. The second group is class, attribute, and pseudo-class selectors. The final group is element and pseudo-element selectors.
 - A matching specificity score sees the newest instance win.
+
+## [Inheritance](https://web.dev/learn/css/inheritance/)
+- Some CSS properties inherit if you don't specify a value for them. 
+- You can make any property inherit its parent's computed value with the `inherit` keyword. 
+- The `initial` keyword sets a property back to that initial, default value.
+- The `unset` property behaves differently if a property is inheritable or not. If a property is inheritable, the `unset` keyword will be the same as `inherit`. If the property is not inheritable, the `unset` keyword is equal to `initial`.
