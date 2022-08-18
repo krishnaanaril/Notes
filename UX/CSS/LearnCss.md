@@ -48,3 +48,16 @@
     - **Specificity**: an algorithm which determines which CSS selector has the strongest match
     - **Origin**: the order of when CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
     - **Importance**: some CSS rules are weighted more heavily than others, especially with the !important rule type
+
+## [Specificity](https://web.dev/learn/css/specificity/)
+- Scoring of each selector type
+    | Selector | Point |
+    |----------|-------|
+    | Universal Selector | 0 |
+    | Element or pseudo-element | 1 |
+    | Class, pseudo-class or attribute | 10 |
+    | Id Selector | 100 |
+    | Inline Style | 1000 |
+    | !important rule | 10000 |
+- In diagrams and specificity calculators, the specificity is often visualized like this: `1-2-1` for `#specialty:hover li.dark`. The left group is `id` selectors. The second group is class, attribute, and pseudo-class selectors. The final group is element and pseudo-element selectors.
+- A matching specificity score sees the newest instance win.
