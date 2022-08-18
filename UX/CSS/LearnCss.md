@@ -75,3 +75,8 @@
     - Saturation is how vibrant the selected hue is. A fully desaturated color (with a saturation of 0%) will appear grayscale.
     - Lightness is the parameter which describes the scale from white to black of added light. A lightness of 100% will always give you white.
 - Second and third parameters of `hsl()` should be in percentages.
+
+## [Sizing Units](https://web.dev/learn/css/sizing/)
+- It's a good idea to use a unitless value for `line-height`, rather than specifying a unit. It denotes a ratio. Defining a unitless `line-height` keeps the line-height relative to the font size.
+- Other angle units include `rad` (radians), `grad` (gradians), and `turn` units, which represent a part of an angle, where `1turn = 360deg`, and `0.5turn = 180deg`.
+- Relative units are more adaptive and fluid because of their contextual awareness, but there's a power and predictability to absolute units that can be foundational for certain designs.
