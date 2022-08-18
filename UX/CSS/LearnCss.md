@@ -34,8 +34,17 @@
     }
     ```
 - You can also use `::selection` to style the content that has been highlighted by a user.
+- A double colon `(::)` is what distinguishes a pseudo-element from a pseudo-class
 - CSS Combinators
     - Descendant combinator 
     - Next Sibling Combinator (+)
     - Subsequent Siblings Combinator (~)
     - Direct descendant Combinator (>)
+
+## [The Cascade](https://web.dev/learn/css/the-cascade/)
+- In CSS, Cascade is the algorithm for solving conflicts where multiple css rules apply to an HTML element.
+- The cascade algorithm is split into 4 distinct stages:
+    - **Position and order of appearance**: the order of which your CSS rules appear
+    - **Specificity**: an algorithm which determines which CSS selector has the strongest match
+    - **Origin**: the order of when CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+    - **Importance**: some CSS rules are weighted more heavily than others, especially with the !important rule type
