@@ -67,3 +67,11 @@
 - You can make any property inherit its parent's computed value with the `inherit` keyword. 
 - The `initial` keyword sets a property back to that initial, default value.
 - The `unset` property behaves differently if a property is inheritable or not. If a property is inheritable, the `unset` keyword will be the same as `inherit`. If the property is not inheritable, the `unset` keyword is equal to `initial`.
+
+## [Color](https://web.dev/learn/css/color/)
+- An alpha value is a percentage of transparency.
+- HSL stands for hue, saturation and lightness. 
+    - Hue describes the value on the color wheel, from 0 to 360 degrees, starting with red (being both 0 and 360).
+    - Saturation is how vibrant the selected hue is. A fully desaturated color (with a saturation of 0%) will appear grayscale.
+    - Lightness is the parameter which describes the scale from white to black of added light. A lightness of 100% will always give you white.
+- Second and third parameters of `hsl()` should be in percentages.

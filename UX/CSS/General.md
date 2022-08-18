@@ -6,3 +6,4 @@
 - These new properties also work with the `will-change` property.
 - The `will-change` CSS property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed.
 - The **stacking context** is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage.
+- `z-index` only works on positioned elements (position:absolute, position:relative, or position:fixed).
