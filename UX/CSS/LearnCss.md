@@ -110,3 +110,11 @@
 - The **inline flow** is how text flows in a sentence.
 -  With logical properties, `margin-top` becomes `margin-block-start`. This means that regardless of language and text direction, the block flow has appropriate margin rules.
 - Logical properties bring two new units: `vi` and `vb`. A `vi` unit is 1% of the viewport size in the inline direction. The non-logical property equivalent is `vw`. The `vb` unit is 1% of the viewport in the block direction. The non-logical property equivalent is `vh`.
+
+## [Spacing](https://web.dev/learn/css/spacing/)
+- The margin shorthand can also be used with one, two, or three values. Adding a fourth value lets you set each individual side. These are applied as follows:
+    - One value will be applied to all sides. `(margin: 20px)`.
+    - Two values: the first value will be applied to the top and bottom sides, and the second value will be applied to the left and right sides. `(margin: 20px 40px)`
+    - Three values: the first value is top, the second value is left and right, and the third value is bottom. `(margin: 20px 40px 30px)`.
+- If you make an element absolutely positioned, using position: absolute, the margin will no longer collapse. The margin also won't collapse if you use the float property, too.
+- If we apply margin to flexbox with column direction, the margins are combined, instead of collapsed.
