@@ -124,3 +124,9 @@
 - You can only insert a `::before` or `::after` element to an element that will accept child elements (elements with a document tree), so elements such as `<img />`, `<video>` and `<input>` won't work.
 - `input[type="checkbox"]` is an exception. It is allowed to have pseudo-element children.
 - You can only use `:first-letter` on block containers. Therefore, it won't work if you try to add it to an element that has `display: inline`.
+
+## [Pseudo-classes](https://web.dev/learn/css/pseudo-classes/)
+- A pseudo-class lets you apply styles based on state changes and external factors. 
+- The `:target` pseudo-class selects an element that has an id matching a URL fragment. 
+-  It's recommended that you use the **LVHA** rule for styling links with pseudo-classes in a particular order: `:link`, `:visited`, `:hover`, `:active`.
+- It's not a good idea to rely solely on color to signify state changes— especially red and green—because colorblind and low-vision users can struggle to see a state change, or even miss it completely. A good idea is to use color to support state changes, along with text changes and icon changes to visually signify change.
