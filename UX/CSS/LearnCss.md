@@ -118,3 +118,9 @@
     - Three values: the first value is top, the second value is left and right, and the third value is bottom. `(margin: 20px 40px 30px)`.
 - If you make an element absolutely positioned, using position: absolute, the margin will no longer collapse. The margin also won't collapse if you use the float property, too.
 - If we apply margin to flexbox with column direction, the margins are combined, instead of collapsed.
+
+## [Pseudo-elements](https://web.dev/learn/css/pseudo-elements/)
+- You can also insert a [counter](https://developer.mozilla.org/docs/Web/CSS/counter()) in the `content` property of `::before` and `::after`.
+- You can only insert a `::before` or `::after` element to an element that will accept child elements (elements with a document tree), so elements such as `<img />`, `<video>` and `<input>` won't work.
+- `input[type="checkbox"]` is an exception. It is allowed to have pseudo-element children.
+- You can only use `:first-letter` on block containers. Therefore, it won't work if you try to add it to an element that has `display: inline`.
