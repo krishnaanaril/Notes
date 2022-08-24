@@ -130,3 +130,7 @@
 - The `:target` pseudo-class selects an element that has an id matching a URL fragment. 
 -  It's recommended that you use the **LVHA** rule for styling links with pseudo-classes in a particular order: `:link`, `:visited`, `:hover`, `:active`.
 - It's not a good idea to rely solely on color to signify state changes— especially red and green—because colorblind and low-vision users can struggle to see a state change, or even miss it completely. A good idea is to use color to support state changes, along with text changes and icon changes to visually signify change.
+
+## [Borders](https://web.dev/learn/css/borders/)
+- The order of values in the border shorthand are `border-width`, `border-style` and then, `border-color`.
+- By defining a single value for a corner with `border-radius`, you are using another shorthand because a border radius is split into two parts: the vertical and horizontal sides. This means that when you set `border-top-left-radius: 1em`, you are setting the **top-left-top** radius and the **top-left-left** radius.
