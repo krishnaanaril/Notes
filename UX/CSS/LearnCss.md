@@ -134,3 +134,9 @@
 ## [Borders](https://web.dev/learn/css/borders/)
 - The order of values in the border shorthand are `border-width`, `border-style` and then, `border-color`.
 - By defining a single value for a corner with `border-radius`, you are using another shorthand because a border radius is split into two parts: the vertical and horizontal sides. This means that when you set `border-top-left-radius: 1em`, you are setting the **top-left-top** radius and the **top-left-left** radius.
+
+## [Shadows](https://web.dev/learn/css/shadows/)
+- The `drop-shadow()` CSS function applies a drop shadow effect to the input image.
+- You can add as many shadows as you like with box-shadow. Add a comma separated collection of value sets to achieve this.
+- When you add a `box-shadow` it is clipped to the shape of your box, but `text-shadow` has no clipping. This means that if your text is fully or semi transparent, the shadow is visible through it.
+- The `drop-shadow` filter has the same values as `box-shadow` but the `inset` keyword and `spread` value are not allowed. You can add as many shadows as you like, by adding multiple instances of `drop-shadow` values to the `filter` property.
