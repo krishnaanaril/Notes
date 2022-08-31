@@ -1,0 +1,8 @@
+- **All declarations** (`var`, `let`, `const`, `function`, `function*`, class) are "hoisted" in JavaScript.
+- The difference between `var`/`function`/`function*` declarations and `let`/`const`/`class` declara­tions is the initialisation. The former are initialised with `undefined` while the late is *uninitialised*.
+- `let` and `const` are hoisted (like `var`, `class` and `function`), but there is a period between entering scope and being declared where they cannot be accessed. This period is the **temporal dead zone (TDZ)**.
+- ECMAScript 6 offers **tail call optimization**, where you can make some function calls without growing the call stack.
+- The JavaScript **event loop** takes the first call in the callback queue and adds it to the call stack as soon as it's empty.
+- The **job queue**, also known as the *promise queu*e, has priority over the callback queue. The event loop will take calls from the promise queue first before processing the callback queue.
+- Callback queue is also known as **Task** queue. Job queue is also know as **Microtask** queue.
+- With arrow functions, the `this` keyword refers to its current surrounding scope, unlike regular functions!
