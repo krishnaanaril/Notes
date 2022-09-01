@@ -6,3 +6,24 @@
 - The **job queue**, also known as the *promise queu*e, has priority over the callback queue. The event loop will take calls from the promise queue first before processing the callback queue.
 - Callback queue is also known as **Task** queue. Job queue is also know as **Microtask** queue.
 - With arrow functions, the `this` keyword refers to its current surrounding scope, unlike regular functions!
+- In JavaScript, all object keys are strings (unless it's a Symbol).
+- Neither static methods nor static properties can be called on instances of the class.
+- If you want a method to be available to all object instances, you have to add it to the prototype property.
+-  When using `new`, `this` refers to the new empty object we create. However, if you don't add `new`, `this` refers to the global object!
+- All objects have prototypes, except for the base object. 
+- A very few objects, including `Object.prototype` itself, do not inherit from anything. This will only occur if the object is explicitly created with `Object.create(null)`.
+- The strings and placeholders get passed to a function — either a default function, or a function you supply. To supply a function of your own, precede the template literal with a function name; the result is called a **tagged template**.
+- When testing equality, primitives are compared by their value, while objects are compared by their reference. JavaScript checks if the objects have a reference to the same location in memory.
+- An array is an object type.
+- The data stored in `sessionStorage` is removed after closing the tab.
+- With the `var` keyword, you can declare multiple variables with the same name.
+- If you have two keys with the same name, the key will be replaced. It will still be in its first position, but with the last specified value.
+- During event propagation, there are 3 phases: capturing, target, and bubbling. 
+- You can stop bubbling by `event.stopPropagation`.
+- The `apply()` method calls the specified function with a given `this` value, and arguments provided as an array (or an array-like object).
+- The `call()` method calls the function with a given `this` value and arguments provided individually.
+- The `bind()` method creates a new function that, when called, has its `this` keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+- There are only 7 built-in types: `null`, `undefined`, `boolean`, `number`, `string`, `object`, and `symbol`. "function" is not a type, since functions are objects, it's of type "object".
+- `setInterval()` returns a unique id. This id can be used to clear that interval with the `clearInterval()` function.
+- Regular functions cannot be stopped mid-way after invocation. However, a generator function can be "stopped" midway, and later continue from where it stopped.
+- With a `for-in` loop, we can iterate through object keys.
