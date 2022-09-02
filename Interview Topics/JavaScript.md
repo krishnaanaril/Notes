@@ -27,3 +27,10 @@
 - `setInterval()` returns a unique id. This id can be used to clear that interval with the `clearInterval()` function.
 - Regular functions cannot be stopped mid-way after invocation. However, a generator function can be "stopped" midway, and later continue from where it stopped.
 - With a `for-in` loop, we can iterate through object keys.
+- Arguments are passed by value, unless their value is an object, then they're passed by reference.
+- An exception can be a string, a number, a boolean or an object.
+- When we try to invoke something that is not a `function`, a `TypeError` is thrown.
+- An imported module is read-only: you cannot modify the imported module. Only the module that exports them can change its value.
+- The `delete` operator returns a boolean value: `true` on a successful deletion, else it'll return `false`.
+- Variables declared with the `var`, `const` or `let` keyword cannot be deleted using the `delete` operator.
+- With the `defineProperty` method, we can add new properties to an object, or modify existing ones. When we add a property to an object using the `defineProperty` method, they are by default not enumerable. The `Object.keys` method returns all enumerable property names from an object.
