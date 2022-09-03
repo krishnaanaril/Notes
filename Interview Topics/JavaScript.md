@@ -34,3 +34,9 @@
 - The `delete` operator returns a boolean value: `true` on a successful deletion, else it'll return `false`.
 - Variables declared with the `var`, `const` or `let` keyword cannot be deleted using the `delete` operator.
 - With the `defineProperty` method, we can add new properties to an object, or modify existing ones. When we add a property to an object using the `defineProperty` method, they are by default not enumerable. The `Object.keys` method returns all enumerable property names from an object.
+- The first argument that the `reduce` method receives is the *accumulator*. The second argument is the *current value*.
+- In a derived class, you cannot access the `this` keyword before calling `super`. If you try to do that, it will throw a `ReferenceError`. 
+- With the `import` keyword, all imported modules are *pre-parsed*. This means that the imported modules get run *first*, the code in the file which imports the module gets executed *after*.
+- An async function always returns a promise. 
+- When we create the variable `shape` and set it equal to the frozen object `box`, `shape` also refers to a frozen object. 
+- You can check whether an object is frozen by using `Object.isFrozen`.
