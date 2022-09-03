@@ -40,3 +40,19 @@
 - An async function always returns a promise. 
 - When we create the variable `shape` and set it equal to the frozen object `box`, `shape` also refers to a frozen object. 
 - You can check whether an object is frozen by using `Object.isFrozen`.
+- With a `for-in` loop, we can iterate over enumerable properties. In an array, the enumerable properties are the "keys" of array elements, which are actually their indexes.
+- With a `for-of` loop, we can iterate over iterables.
+- By default, arguments have the value of `undefined`.
+- You can set a default parameter's value equal to another parameter of the function, as long as they've been defined before the default parameter.
+- Calling a function constructor with `new` results in the creation of an instance of `function`, `typeof` keyword returns "object" for an instance.
+- Regular functions have a `prototype` property, which is an `object` (prototype object) with a `constructor` property. Arrow functions however do not have this `prototype` property. `undefined` gets returned when trying to access the `prototype` property.
+- The rest parameter's value is an array containing all remaining arguments, and **can only be the last parameter**.
+- In JavaScript, we don't have to write the semicolon (;) explicitly, however the JavaScript engine still adds them after statements. This is called **Automatic Semicolon Insertion**. 
+- We can set classes equal to other classes/function constructors. 
+- A `Symbol` is not enumerable. The `Object.keys` method returns all enumerable key properties on an object. The `Symbol` won't be visible, and an empty array is returned. 
+- With arrow functions, we don't have to write curly brackets if we just return one value. However, if you want to instantly return an object from an arrow function, you have to write it between parentheses.
+- **TypeErrors** get thrown when a value is not of the expected type.
+- **SyntaxErrors** get thrown when you've written something that isn't valid JavaScript.
+- **ReferenceErrors** get thrown when JavaScript isn't able to find a reference to a value that you're trying to access.
+- With the JSON.parse() method, we can parse JSON string to a JavaScript value.
+- With the `yield` keyword, we yield values in a generator function. With the `yield*` keyword, we can yield values from another generator function, or iterable object (for example an array).
