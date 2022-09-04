@@ -56,3 +56,17 @@
 - **ReferenceErrors** get thrown when JavaScript isn't able to find a reference to a value that you're trying to access.
 - With the JSON.parse() method, we can parse JSON string to a JavaScript value.
 - With the `yield` keyword, we yield values in a generator function. With the `yield*` keyword, we can yield values from another generator function, or iterable object (for example an array).
+- Functions are objects, which is why two functions are never strictly equal, even if they are identical: they have a reference to a different spot in memory.
+- Setters don't hold an actual value, their purpose is to modify properties. When calling a setter method, `undefined` gets returned.
+- With the `Intl.NumberFormat` method, we can format numeric values to any locale.
+- With the `Number.isNaN` method, you can check if the value you pass is a numeric value and equal to `NaN`.
+- With the `isNaN` method, you can check if the value you pass is not a number. 
+- The `Proxy` object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
+- With `Object.seal` we can prevent new properties from being added, or existing properties to be removed. However, you can still modify the value of existing properties.
+- The `Object.freeze` method freezes an object. No properties can be added, modified, or removed. 
+However, it only shallowly freezes the object, meaning that only direct properties on the object are frozen.
+- In ES2020, we can add private variables in classes by using the `#`. We cannot access these variables outside of the class.
+- The `const` keyword simply means we cannot redeclare the value of that variable, it's *read-only*. However, the value itself isn't immutable.
+- The `slice` method does not modify the original array, but returns the value that it sliced off the array.
+- The `Promise.all` method runs the passed promises in parallel. If one promise fails, the `Promise.all` method *rejects* with the value of the rejected promise. 
+- The `fromEntries` method turns a 2d array into an object. The first element in each subarray will be the key, and the second element in each subarray will be the value.
