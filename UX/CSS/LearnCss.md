@@ -160,3 +160,9 @@
     - A **stacking context** is a group of elements that have a common parent and move up and down the z axis together.
     - The `z-index` of elements inside of a stacking context are always relative to the parent's current order in its own stacking context.
     - You can create a new stacking context by adding a value for properties which create a new composite layer such as `opacity`, `will-change` and `transform`. 
+
+    ## [Functions](https://web.dev/learn/css/functions/)
+    - The arguments passed into **functional selectors** are CSS selectors, which are then evaluated. If there is a match with elements, the rest of the CSS rule will be applied to them.
+    - The `calc()` function can be nested inside another `calc()` function. You can also pass custom properties in a `var()` function as part of an expression.
+    - The `clip-path`, `offset-path` and `shape-outside` CSS properties use shapes to visually clip your box or provide a shape for content to flow around.
+    - `perspective` property —which is part of the transform family of properties—to alter the distance between the user and the Z plane. This gives the feeling of distance and can be used to create a depth of field in your designs.
