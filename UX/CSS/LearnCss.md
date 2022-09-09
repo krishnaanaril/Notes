@@ -140,3 +140,15 @@
 - You can add as many shadows as you like with box-shadow. Add a comma separated collection of value sets to achieve this.
 - When you add a `box-shadow` it is clipped to the shape of your box, but `text-shadow` has no clipping. This means that if your text is fully or semi transparent, the shadow is visible through it.
 - The `drop-shadow` filter has the same values as `box-shadow` but the `inset` keyword and `spread` value are not allowed. You can add as many shadows as you like, by adding multiple instances of `drop-shadow` values to the `filter` property.
+
+## [Focus](https://web.dev/learn/css/focus/)
+- The `<main>` has a `tabindex="-1"` attribute value, which means it can be programmatically focused. 
+-  If `tabindex` on a HTML element is set to `0`, it can receive focus via the tab key and it will honour the global tab index, which is defined by the document source order.
+- If you set `tabindex` to `-1`, it can only receive focus programmatically.
+- Certain elements are automatically focusable; all form elements, buttons and links.
+- **Global tab index** is defined by the document source order.
+- Creating a focus state that has contrast with an element's default state is incredibly important. The default browser styles do this already for you, but if you want to change this behaviour, remember the following:
+    - Avoid using `outline: none` on an element that can receive keyboard focus
+    - Avoid replacing `outline` styles with `box-shadow` as they don't show up in Windows High Contrast Mode
+    - Only set a positive value for `tabindex` on an HTML element if you absolutely have to
+    - Make sure the focus state is very clear vs the default state
