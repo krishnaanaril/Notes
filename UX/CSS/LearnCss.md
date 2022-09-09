@@ -152,3 +152,11 @@
     - Avoid replacing `outline` styles with `box-shadow` as they don't show up in Windows High Contrast Mode
     - Only set a positive value for `tabindex` on an HTML element if you absolutely have to
     - Make sure the focus state is very clear vs the default state
+
+    ## [Z-index and stacking contexts](https://web.dev/learn/css/z-index/)
+    - Elements will appear above another element if they have a higher `z-index` value. 
+    - If no `z-index` is set on your elements then the default behaviour is that document source order dictates the Z axis. This means that elements further down the document sit on top of elements that appear before them.
+    - In normal flow, if you set a specific value for `z-index` and it isn't working, you need to set the element's position value to anything other than `static`.
+    - A **stacking context** is a group of elements that have a common parent and move up and down the z axis together.
+    - The `z-index` of elements inside of a stacking context are always relative to the parent's current order in its own stacking context.
+    - You can create a new stacking context by adding a value for properties which create a new composite layer such as `opacity`, `will-change` and `transform`. 
