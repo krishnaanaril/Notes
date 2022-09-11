@@ -171,3 +171,10 @@
     - You can add as many colors and color stops as you like in a `linear-gradient()`, and you can layer gradients on top of each other by separating each gradient with a comma.
     - You can add as many color stops as you want in `conic-gradient()`, like with other gradient types. A good use case for this capability, with conic gradients is rendering pie charts with CSS.
     - They could be the same color and appear solid, but yes, at least 2 colors are required to create a gradient.
+
+    ## [Animations](https://web.dev/learn/css/animations/)
+    - Inside the keyframes rule, `from` and `to` are keywords that represent `0%` and `100%`, which are the start of the animation and end.
+    - Values appear to curve with easing functions because easing is calculated using a **bézier curve**, which is used to model velocity. 
+    - The `steps()` easing function lets you break the timeline into defined, equal intervals.
+    - Users can define in their operating system that they prefer to reduce motion experienced when they interact with applications and websites. This preference can be detected using the `prefers-reduced-motion` media query.
+    - The browser will take the current state of the element as a keyframe, so at minimum, 1 keyframe is required inside a `@keyframe` animation.
