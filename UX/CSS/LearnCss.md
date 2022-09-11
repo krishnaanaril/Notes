@@ -166,3 +166,8 @@
     - The `calc()` function can be nested inside another `calc()` function. You can also pass custom properties in a `var()` function as part of an expression.
     - The `clip-path`, `offset-path` and `shape-outside` CSS properties use shapes to visually clip your box or provide a shape for content to flow around.
     - `perspective` property —which is part of the transform family of properties—to alter the distance between the user and the Z plane. This gives the feeling of distance and can be used to create a depth of field in your designs.
+
+    ## [Gradients](https://web.dev/learn/css/gradients/)
+    - You can add as many colors and color stops as you like in a `linear-gradient()`, and you can layer gradients on top of each other by separating each gradient with a comma.
+    - You can add as many color stops as you want in `conic-gradient()`, like with other gradient types. A good use case for this capability, with conic gradients is rendering pie charts with CSS.
+    - They could be the same color and appear solid, but yes, at least 2 colors are required to create a gradient.
