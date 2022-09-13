@@ -178,3 +178,8 @@
     - The `steps()` easing function lets you break the timeline into defined, equal intervals.
     - Users can define in their operating system that they prefer to reduce motion experienced when they interact with applications and websites. This preference can be detected using the `prefers-reduced-motion` media query.
     - The browser will take the current state of the element as a keyframe, so at minimum, 1 keyframe is required inside a `@keyframe` animation.
+
+    ## [Filters](https://web.dev/learn/css/filters/)
+    - If you pass an angle to `hue-rotate`, such as degrees or turns, it shifts the hue of all the element's colors, changing the part of the color wheel it references. 
+    - The difference between `backdrop-filter` and filter is that the `backdrop-filter` property only applies the filters to the background, where the `filter` property applies it to the whole element.
+    - The `url` filter allows you to apply an SVG filter from a linked SVG element or file. 
