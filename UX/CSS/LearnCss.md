@@ -183,3 +183,8 @@
     - If you pass an angle to `hue-rotate`, such as degrees or turns, it shifts the hue of all the element's colors, changing the part of the color wheel it references. 
     - The difference between `backdrop-filter` and filter is that the `backdrop-filter` property only applies the filters to the background, where the `filter` property applies it to the whole element.
     - The `url` filter allows you to apply an SVG filter from a linked SVG element or file. 
+
+    ## [Blend Modes](https://web.dev/learn/css/blend-modes/)
+    - **Duotone** is a popular color treatment for photography which makes an image look like it is only made up of two contrasting colors: one for highlights and the other for lowlights.
+    - The `mix-blend-mode` applies blending to a whole element and the `background-blend-mode` applies blending to the background of an element.
+    - Blend modes fall into two categories: **separable and non-separable**. A separable blend mode considers each color component, such as RGB, individually. A non-separable blend mode considers all color components equally.
