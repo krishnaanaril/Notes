@@ -16,6 +16,13 @@ shard.
     - Scale your data tier by sharding
     - Split tiers into individual services
     - Monitor your system and use automation tool
+- List of popular rate limiting algorithms:
+   - Token bucket
+   - Leaking bucket
+   - Fixed window counter
+   - Sliding window log
+   - Sliding window counter
+- **Consistent hashing** is a commonly used technique to distribute requests/data evenly and efficiently across servers.
 
 ## Things to learn
 - Multi-master replication
@@ -28,3 +35,4 @@ shard.
 - Dynamic content caching
 - GeoDNS
 - BGP
+- rate limiting algorithms
