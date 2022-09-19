@@ -188,3 +188,12 @@
     - **Duotone** is a popular color treatment for photography which makes an image look like it is only made up of two contrasting colors: one for highlights and the other for lowlights.
     - The `mix-blend-mode` applies blending to a whole element and the `background-blend-mode` applies blending to the background of an element.
     - Blend modes fall into two categories: **separable and non-separable**. A separable blend mode considers each color component, such as RGB, individually. A non-separable blend mode considers all color components equally.
+
+    ## [Lists](https://web.dev/learn/css/lists/)
+    - The `<dl>` HTML element represents a description list. The element encloses a list of groups of terms (specified using the `<dt>` element) and descriptions (provided by `<dd>` elements). Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
+    - `list-style-position` allows you to move your bullet point to either `inside` or `outside` the list-item's contents. The default `outside` means the bullet point is not included in the list items contents while `inside` moves the first element among the list item's contents.
+
+    ## [Transitions](https://web.dev/learn/css/transitions/)
+    - **Interpolation** is the process of creating "in-between" steps that smoothly transition from one state to another.
+    - In general, it's only possible to transition elements that can have a "middle state" between their start and final states.
+    - The `transform` CSS property is commonly transitioned because it is a GPU-accelerated property that results in smoother animation that also consumes less battery.
