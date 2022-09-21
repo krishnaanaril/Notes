@@ -30,3 +30,4 @@ Memory is compacted only if a collection discovers a significant number of unrea
 - Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation.
 - In .NET Core and in .NET Framework 4.5.1 and later, you can use the GCSettings.LargeObjectHeapCompactionMode property to compact the large object heap on demand.
 - It is possible for a base class to only reference managed objects, and implement the dispose pattern. In these cases, a finalizer is unnecessary. A finalizer is only required if you directly reference unmanaged resources.
+- The `SafeHandle` class provides a finalizer, so you do not have to write one yourself.
