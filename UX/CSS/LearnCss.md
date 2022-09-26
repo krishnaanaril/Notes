@@ -195,5 +195,6 @@
 
     ## [Transitions](https://web.dev/learn/css/transitions/)
     - **Interpolation** is the process of creating "in-between" steps that smoothly transition from one state to another.
+    - By default, CSS will transition your elements at a constant speed `(transition-timing-function: linear)`. Linear transitions can end up looking somewhat artificial, though: in real life, objects have weight and can't stop and start instantly.
     - In general, it's only possible to transition elements that can have a "middle state" between their start and final states.
     - The `transform` CSS property is commonly transitioned because it is a GPU-accelerated property that results in smoother animation that also consumes less battery.
