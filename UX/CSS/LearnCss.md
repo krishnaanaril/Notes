@@ -198,3 +198,9 @@
     - By default, CSS will transition your elements at a constant speed `(transition-timing-function: linear)`. Linear transitions can end up looking somewhat artificial, though: in real life, objects have weight and can't stop and start instantly.
     - In general, it's only possible to transition elements that can have a "middle state" between their start and final states.
     - The `transform` CSS property is commonly transitioned because it is a GPU-accelerated property that results in smoother animation that also consumes less battery.
+
+    ## [Overflow]()
+    - Use the `text-overflow` property on any element that contains text node(s), for example a paragraph, `<p>`. It specifies how the text appears when it doesn’t fit in the available space of the element.
+    - The `overflow` shorthand sets both `overflow-x` and `overflow-y` styles in one line: `overflow: hidden scroll`;
+    - The difference between `clip` and `hidden` is that the `clip` keyword also forbids all scrolling, including programmatic scrolling.
+    - Using the `overflow` property with a value other than `visible` creates a **block formatting context**.
