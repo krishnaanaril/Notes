@@ -49,7 +49,12 @@
 ## Chapter 6 - Bend their reality
 
 - Know the emotional drivers and you can frame the benefits of any deal in language that will resonate.
-- Prospect theory (proposed by Daniel Kahneman)
+- Prospect theory (proposed by Daniel Kahneman) argues that people are drawn to sure things over probabilities, even though probability is a better choice. That's called the *Certainity Effect*
+- In a tough negotiation, 
 
 ## Acronymns
 - BATNA - Best Alternative To a Negotiated Agreement
+
+## Other similar notes
+- [Note 1](https://github.com/mgp/book-notes/blob/master/never-split-the-difference.markdown)
+- [Note 2](https://github.com/florian/reading-notes/blob/master/books/07_Never_Split_the_Difference/11_Appendix.md)
