@@ -81,8 +81,59 @@
 - When you are attacked in a negotiation, pause and avoid angry emotional reactions. Instead, ask your counterpart a calibrated question.
 - There is always a teaam on the other side. If you are not influencing those behind the table, you are vulnerable.
 
+## Chapter 8 - Guarantee Execution
+
+- Ask caliberated "How" questions, and ask them again and again. Asking "How" keep your counterparts engaged but off balance.
+- Use "How" questions to shape the negotiating environment. You  do this by using "How can I do that?" as a gentle version of "No".
+- Always identify the motivation of players "behind the table".
+- Incongruence between the words and nonverbal signs will show when your counterpart is lying or uncomfortable with a deal.
+- Test if your counterpart's "Yes" is real or coutnerfeit, using Rule of Three: use calibrated questions, summaries and labels to get your counterpart to reaffirm their agreement at least three times. It's really hadrd to repeatedly lie or fake conviction.
+- If you're hearing a lot of "I", "me" and "my", the real power to decide probably lies elsewhere. Picking up a lot of "we", "they" and "them", it's more likely you're dealing directly with a savvy decision maker keeping his options open.
+- Use your own name to make yourself a real person to the other side and even get your  won personal discount. 
+- Humour and humanity are the best ways to break the ice and remove roadblocks.
+
+## Chapter 9 - Bargain Hard
+
+- Top negotiators know that conflict is often the path to great deals. Conflict brings out truth, creativity and resolution.
+- Identify your counterpart's negotiating style. Once you know whether they are Accommodator, Assertive or Analyst, you'll know the correct way to approach them.
+- Preparation is the key. Design an ambitious but legitimate goal and then game out the labels, caliberated questiosn and responses you'll use to get there.
+- Get ready to take a punch. So prepare your dodging tactics to avoid getting sucked into the compromise trap.
+- Set boundaries, and learn to take a punch or punch back, without anger. The guy across the table is not the problem; the situation is.
+- Prepare an Ackerman plan. Remember 65, 85, 95, 100 percent. Decreasing raises and ending on non-round numbers will get your counterpart to believe that he's squeezing for all you're worth when you're really getting to the number you want.
+
+## Chapter 10 - Find the Black Swan
+
+- Let what you know - *your known knows* - guide you but not blind you. Every case in new so remain flexible and adaptable.
+- Black swans are leverage multipliers. Remember the three types of leverage:   
+    1. Positive - the ability to give someone what they want.
+    2. Negative - the ability to hurt someone.
+    3. Normative - using your counterpart's norms to bring them around.
+- Work to understand the other sides' religion/emotions. That's where the Black Swans live.
+- Review everything you'll hear from your counterpart. You may not hear everything the first time.
+- Explore the similarity principle. People tend to concede to someone they share a cultural similarity with.
+- When someone seems irrational or crazy they most likely aren't. Faced with this situation, search for constraints, hidden desires and bad information.
+- Get face time with your counterpart. Pay special attention to your counterpart's verbal and non-verbal communication at unguarded moments.
+
+## Appendix - Prepare a negotiation onesheet.
+
+- It'll have five short sections.
+    1. **Section I - The Goal**: Think through best/worst-case scenarios but only write down a specific goal that represents the best case. Pelopel who expect more (and articulate it) get more. Here are four steps for setting your goal.
+        - Set an optimistic but reasonable goal and define it clearly
+        - Write it down
+        - Discuss your goal with a collegue (this makes it harder to wimp out)
+        - Carry the written goal into the negotiation.
+    2. **Section II - Summary**: Summarize and write out in just a couple of sentences the known facts that've led up to the negotiation. You must be able to summarize a situation in a way that your counterpart will respons with a "That's right". If they don't you havne't done it right.
+    3. **Section III - Labels/Accusation Audit**: Prepare three to five labels to perform an accusation audit.
+    4. **Section IV - Calibrated questions**: Prepare three to five calibrated questions to reveal value to you and your counterpart and identify and overcome potnetial deal killers. Some examples are:
+        - Questions to identify behind-the-table deal killers
+        - Questions to identify and diffuse deal-killing issues
+        - Questions to use to unearth the deal-killing issues
+    5. **Section V - Noncash offers**: Prepare a list of noncash items possessed by your counterpart that would be valuable.
+
+
 ## Acronymns
 - BATNA - Best Alternative To a Negotiated Agreement
+- ZOPA - Zone Of Possible Agreement
 
 ## Other similar notes
 - [Note 1](https://github.com/mgp/book-notes/blob/master/never-split-the-difference.markdown)
