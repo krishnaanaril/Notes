@@ -50,7 +50,36 @@
 
 - Know the emotional drivers and you can frame the benefits of any deal in language that will resonate.
 - Prospect theory (proposed by Daniel Kahneman) argues that people are drawn to sure things over probabilities, even though probability is a better choice. That's called the *Certainity Effect*
-- In a tough negotiation, 
+- In a tough negotiation, It is not enough to show the other party that you can deliver the thing they want. To get real leverage, you have to persuade them that they have something concrete to lose if the deal falls though. People will take more risks to avoid a loss than to realize a gain.
+- Bend their reality
+    1. Anchor their emotions
+    2. Let the other guy go first...most of the time.
+    3. Establish a range
+    4. Pivot to nonmonetary terms
+    5. When you do talk numbers, use odd ones.
+    6. Surprise with a gift.
+- **Anchor their emotions** - Start with an accusation audit of all their fears. By anchoring their emotions in preparation for a loss, you inflame the other side's loss aversion so that they'll jump at the chance to avoid it.
+- **Let the other guy go first...most of the time.** - You've got to be careful why you let the other guy anchor. Find a balance in anchoring, otherwise it'll ruin your reputation.
+- **Establish a range** - If you offer a range expect them to come in at the low end.
+- **Pivot to nonmonetary terms** - Make your counterpart brainstorm to see what valuable nonmonetary gems they might've that are cheap to them but valuable to me.
+- **When you do talk numbers, use odd ones.** - Numbers that end in 0 inevitably feel like temporary placeholders.
+- **Surprise with a gift.** - You can get your counterpart into a mood of generosity by staking an extreme anchor and then, after their inevitable first rejection, offering them a wholly unrelated suprise gift. They will suddenly come up on their offer, or they'll look to repay your kindness in the future. People feel obliged to repay debts of kindness.
+- How to negotiate a better salary?
+    - Be pleasantly persistent on nonsalary terms - The more you talk about nonsalary terms, the more likely you are to hear the full range of their options. If they can't meet your nonsalary requests, they may even counter with more money.
+    - Salary terms without success terms is russian roulette - Once you've negotiated a salary, make sure to defien success for your position - as well as metrics for your next raise.
+    - Spark their interest in your success and gain an unofficial mentor - What does it take to be successful here?
+- All negotiations are defined by a networkof subterranean desiers and needs. Don't let yourself be fooled by the surface.
+- Approaching deadlines entice people to rusht he negotiating process and do impulsive things that are against their best interests.
+
+## Chapter 7 - Create the illusion of control
+
+- Don't try to force your opponent to admit that you are right. Aggressive confrontation is the enemy of constructive negotiation.
+- Avoid questions that can be answered with "Yes" or tiny pieces of information. You'll be expected to give something back.
+- Ask calibrated questions that start with the words "How" or "What". By implicitly asking the other party for help, these questions will give your counterpart an illusion of control and will inspire them to speak at length, revelaing importnat information.
+- Don't ask questions that start with "Why". "Why" is always an accusation, in any language.
+- Calibrate your questions to point your counterpart toward solving your problem.
+- When you are attacked in a negotiation, pause and avoid angry emotional reactions. Instead, ask your counterpart a calibrated question.
+- There is always a teaam on the other side. If you are not influencing those behind the table, you are vulnerable.
 
 ## Acronymns
 - BATNA - Best Alternative To a Negotiated Agreement
