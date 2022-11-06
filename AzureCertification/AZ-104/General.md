@@ -317,3 +317,7 @@ URI, or an IPv4 address.
 - Lifecycle management policies are supported for block blobs and append blobs in general-purpose v2, premium block blob, and Blob Storage accounts. FileStorage and general purpose v1 storage accounts do not support lifecycle management.
 - Azure Bastion is a service that provides secure and seamless RDP/SSH connectivity to your virtual machines directly from the Azure portal over TLS. When you connect via Azure Bastion, your virtual machines do not need a public IP address, agent, or special client software. Not requiring a public IP address protects the virtual machine from outside port scanning.
 - The storage replication type cannot be changed after protecting items.It can be changed if it don't contain any items.
+- **Managed identities** eliminate the need of developes to manage credentials like secretes, certificats and keys.
+- There are two types of managed identities:
+    - System assigned
+    - User assigned
