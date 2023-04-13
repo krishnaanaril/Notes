@@ -52,5 +52,18 @@
     6.	Mappings
     7.	Constraints
 
+## Chapter 3: Knowledge in the Head and in the World
+
+-	Precise behaviour can emerge rom imprecise knowledge for four reasons:
+    - Knowledge is both in the head and in the world
+    - Great precision is not required
+    - Natural constraints exist in the world
+    - Knowledge of cultural constraints and conventions exists in the head.
+-	Knowledge in the head is knowledge in memory: internal knowledge. If we examine how people use their memories and how they retrieve knowledge, we discover mainly two categories:
+    - Memory for arbitrary things
+    - Memory for meaningful things
+-	Knowledge in the world, external knowledge, is a valuable tool for remembering, but only if it is available at the right place at the right time. Otherwise we must use the knowledge in the head.
+
+
 
 
