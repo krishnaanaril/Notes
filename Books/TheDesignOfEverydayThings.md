@@ -20,4 +20,37 @@
 - Designers expect the user’s conceptual model to be identical to their own, but because they cannot communicate directly with the user, the burden of communication is with the system image.
 - The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn, harder to use. This is the paradox of technology and the challenge for the designer.
 
+## Chapter 2: The Psychology of Everyday Actions
+
+-	When people use something, they face two gulfs: the **Gulf of Execution**, where they try to figure out how it operates, and the **Gulf of Evaluation**, where they try to figure out what happened. The role of the designer is to help people bridge the two gulfs.
+-	Seven stages of action: one for goals, three for execution, and three for evaluation. 
+    1.	Goal (form the goal)
+    2.	Plan (the action)
+    3.	Specify (an action sequence)
+    4.	Perform (an action sequence)
+    5.	Perceive (the state of the world)
+    6.	Interpret (the perception)
+    7.	Compare (the outcome with the goal)
+-	Both the positive, relaxed state and the anxious, negative, and tense state are valuable and powerful tools for human creativity and action. The extremes of both states, however, can be dangerous.
+- A useful approximate model of human cognition and emotion is to consider three levels of processing: **visceral**, **behavioural**, and **reflective**.
+- The *visceral* system allows us to respond quickly and subconsciously, without conscious awareness or control. Great designers use their aesthetic sensibilities to drive these visceral responses. 
+- The *behavioural* level is the home of learned skills, triggered by situations that match the appropriate patterns. Even though we are usually aware of our actions, we are often unaware of the details.
+- The *reflective* level is the home of conscious cognition. As a consequence, this is where the deep understanding develops, where reasoning and conscious decision-making takes place. 
+-	*Learned helplessness* refers to the situation in which people experience repeated failure at a task. As a result, they decide that the task cannot be done, at lest not by them: they are helpless. They stop trying. 
+-	We need to remove the word *failure* from our vocabulary, replacing it with *learning experience*. 
+-	Some advice from the author:
+    - Do not blame people when they fail to use your products properly. 
+    - Take people’s difficulties as signifiers of where the product can be improved.
+    - Eliminate all error messages from electronic or computing systems. Instead provide help and guidance.
+    - Think positively, for yourself and for the people you interact with.
+-	The insights from the seven stages of action lead us to seven fundamental principles of design:
+    1.	Discoverability
+    2.	Feedback
+    3.	Conceptual Model
+    4.	Affordances
+    5.	Signifiers
+    6.	Mappings
+    7.	Constraints
+
+
 
