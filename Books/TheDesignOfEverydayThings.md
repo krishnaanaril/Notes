@@ -64,6 +64,30 @@
     - Memory for meaningful things
 -	Knowledge in the world, external knowledge, is a valuable tool for remembering, but only if it is available at the right place at the right time. Otherwise we must use the knowledge in the head.
 
+## Chapter 4: Knowing What to Do: Constraints, Discoverability and Feedback
+
+- Constraints are powerful clues, limiting the set of possible actions. The thoughtful use of constraints in design lets people readily determine the proper course of action, even in novel situation.
+- There are four kinds of constraints:
+    - Physical
+    - Cultural
+    - Semantic
+    - Logical
+- Constraints that force the desiered behaviour:
+    - **Forcing functions** are a form of physical constraint: situations in which the actions are constrained so that failure at one stage prevents the next step from happening. 
+    -	An **interlock** forces the operations to take place in proper sequence. 
+    -	A **lock-in** keeps an operation active, preventing someone from prematurely stopping it. 
+    -	A **lock-out** prevents someone from entering a space that is dangerous or prevent an event from occurring. 
+    -	Sometimes everything that is needed cannot be made visible, then we can make use of sounds.
+-	Sound is tricky. It can annoy and distract as easily as it can aid. 
+-	The principles that should be used to design sound in electric vehicles
+    - **Alerting**: indicates the presence of the vehicle
+    - **Orientation**: indicates the direction of the vehicle and rough idea of its speed
+    - **Lack of annoyance**: 
+    - **Standardization vs Individualization**: Standardization is necessary to identify that it is a vehicle. Individualization helps in safety and marketing. 
+
+
+
+
 
 
 
