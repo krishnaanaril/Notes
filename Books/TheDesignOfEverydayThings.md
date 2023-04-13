@@ -94,7 +94,14 @@
 -	There are two major classes of slips: **action-based and memory-lapse**
 -	In action-based slips, the wrong action is performed. In lapses, memory fails, so the intended action is not done, or its results are not evaluated.
 -	A mistake occurs when the wrong goal is established, or the wrong plan is formed. 
+- Classification of slips: **Capture slips, Description-similarity slips, memory-lapse slips and mode-error slips**.
 -	Mistakes have three major classes: **rule-based, knowledge-based and memory-lapse.**
+- **Checklists** are powerful tools, proven to increase the accuracy of behaviour and to reduce error, particularly slips and memory lapses. They are especially important in situations with multiple, complex requirements, and even more so where there are interruptions. 
+- It is always better to have two people do checklists together as a team: one to read the instructions, the other to execute it. 
+- Solutions for preventing errors and for detecting and correcting them: 
+    - Adding constraints to block errors
+    - Undo: Provision to undo the action that caused error
+    - Confirmation and error messages
 
 
 
