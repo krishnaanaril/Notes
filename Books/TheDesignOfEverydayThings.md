@@ -83,7 +83,19 @@
     - **Alerting**: indicates the presence of the vehicle
     - **Orientation**: indicates the direction of the vehicle and rough idea of its speed
     - **Lack of annoyance**: 
-    - **Standardization vs Individualization**: Standardization is necessary to identify that it is a vehicle. Individualization helps in safety and marketing. 
+    - **Standardization vs Individualization**: Standardization is necessary to identify that it is a vehicle. Individualization helps in safety and marketing.
+
+## Chapter 5: Human Error? No, Bad Design
+
+-	*Root cause analysis* is intended to determine the underlying cause of an incident, not the proximate cause. The tendency to stop seeking reasons as soon as a human error is found is widespread. 
+-	**Five Whys**: Basically, it means that when searching for a reason, even after you have found one, do not stop: ask why was the case. And the ask why again. It does not guarantee success though.
+-	There are two major classes of errors: **slips and mistakes**.
+-	A slip occurs when a person intends to do one action and ends up doing something else. 
+-	There are two major classes of slips: **action-based and memory-lapse**
+-	In action-based slips, the wrong action is performed. In lapses, memory fails, so the intended action is not done, or its results are not evaluated.
+-	A mistake occurs when the wrong goal is established, or the wrong plan is formed. 
+-	Mistakes have three major classes: **rule-based, knowledge-based and memory-lapse.**
+
 
 
 
