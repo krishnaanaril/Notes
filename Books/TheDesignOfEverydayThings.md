@@ -103,6 +103,22 @@
     - Undo: Provision to undo the action that caused error
     - Confirmation and error messages
 
+## Chapter 6: Design Thinking
+-	A brilliant solution to the wrong problem can be worse than no solution at all: solve the correct problem.
+-	The Double-Diamond Model of Design: Start with an idea, and through the initial design research, expand the thinking to explore the fundamental issues. Only then is it time to converge upon the real, underlying problem. Similarly, use design research tools to explore a wide variety of solutions before converging upon one. 
+-	There are four different activities in the human -centered design process
+    - Observation
+    - Idea generation (ideation)
+    - Prototyping
+    - Testing
+-	Design and marketing are two important parts of the product development group. The two fields are complementary, but each has a different focus.  Design wants to know what people really need and how they will use the product or service under consideration. Marketing wants to know what people will buy, which includes learning how they make their purchasing decisions.
+-	There are many ways of generating ideas: many of these methods fall under the heading of “brainstorming”. There are two major rules usually followed plus one.
+    - Generate numerous ideas
+    - Be creative without regard for constraints
+    - Question everything
+-	Difference between tasks and activities: An activity is a collected set of tasks.
+
+
 
 
 
