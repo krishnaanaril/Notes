@@ -118,6 +118,15 @@
     - Question everything
 -	Difference between tasks and activities: An activity is a collected set of tasks.
 
+## Chapter 7: Design in the World of Business
+
+-	Creeping featurism is the tendency to add to the number of features of a product, often extending the number beyond all reasons.
+-	Technologies change rapidly, but people and culture changes slowly.
+-	There are two major forms of product innovations: 
+    - Incremental Innovation
+    - Radical Innovation
+
+
 
 
 
