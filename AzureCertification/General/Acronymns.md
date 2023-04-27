@@ -40,7 +40,7 @@
  - MOF - Managed Object Format
  - MPLS - MultiProtocol Label Switching
  - MSEE - Microsoft Enterprise Edge routers
- - MTBF - Mean Time Before Failure
+ - MTBF - Mean Time Between Failures
  - MTTR - Mean Time To Repair
  ### N
  - NSG - Network Security Groups
