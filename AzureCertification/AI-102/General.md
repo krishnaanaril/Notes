@@ -45,3 +45,17 @@ Speech channel, that is optimized for voice-in, voice-out interaction with bots.
 - Document extraction, is a skill that extracts specific pieces of information from documents, but it does not address the challenge of recognizing and extracting text from handwritten letters.
 - You can detect head gestures like nodding and head shaking by tracking HeadPose changes in real time. You can use this feature as a custom liveness detector.
 - Liveness detection is the task of determining that a subject is a real person and not an image or video representation. A head gesture detector could serve as one way to help verify liveness, especially as opposed to an image representation of a person.
+- The overall image quality regarding whether the image being used in the detection is of sufficient quality to attempt face recognition on. The value is an informal rating of low, medium, or high. Only "high" quality images are recommended for person enrollment, and quality at or above "medium" is recommended for identification scenarios.
+- To minimize the time it takes to build the index for the documents and images in the Azure Storage account, the best approach would be to use parallel indexing.
+- Configuring parallel indexing allows you to process multiple documents or images simultaneously.
+- Smart Labeler to generate suggested tags for images. This lets you label a large number of images more quickly when training a Custom Vision model. But the exisiting model need to be extended and retrained.
+- Requests to Translator are, in most cases, handled by the datacenter that is closest to where the request originated. If there's a datacenter failure when using the global endpoint, the request may be routed outside of the geography.
+- To enable active learning, you must log user queries. This is accomplished by calling the endpoint query with the log=true query string parameter and value.
+- A voice training dataset includes audio recordings, and a text file with the associated transcriptions. Each audio file should contain a single utterance (a single sentence or a single turn for a dialog system), and be less than 15 seconds long.
+- A collection (.zip) of audio files (.wav) as individual utterances. Each audio file should be 15 seconds or less in length, paired with a formatted transcript (.txt).
+- Bot Framework Emulator is a desktop application that allows bot developers to test and debug bots, either locally or remotely.
+- **ngrok** is a cross-platform application that can create a tunneling or forwarding URL, so that internet requests reach your local machine. Use ngrok to forward messages from external channels on the web directly to your local machine to allow debugging, as opposed to the standard messaging endpoint configured in the Azure portal.
+- The optional settings for a Q&A pair include:
+    - Alternate forms of the question
+    - Metadata
+    - Multi-turn prompts
