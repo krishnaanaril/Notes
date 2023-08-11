@@ -1,4 +1,4 @@
-# 102 Topics
+# AI 102 Topics
 
 - The Language Understanding (LUIS) container loads your trained or published Language Understanding model.
 - QnA Maker is a cloud-based Natural Language Processing (NLP) service that allows you to create a natural conversational layer over your data. It is used to find the most appropriate answer for any input from your custom knowledge base (KB) of information.
