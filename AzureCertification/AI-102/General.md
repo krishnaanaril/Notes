@@ -86,3 +86,6 @@ Speech channel, that is optimized for voice-in, voice-out interaction with bots.
 - Category1 refers to potential presence of language that may be considered sexually explicit or adult in certain situations.
 - A trace activity is an activity that your bot can send to the Bot Framework Emulator. You can use trace activities to interactively debug a bot, as they allow you to view information about your bot while it runs locally.
 - Direct Line Speech provides an integrated speech and bot experience without requiring additional development. It combines both the speech-to-text and text-to-speech capabilities with the bot's logic to handle spoken requests and generate spoken responses.
+-  An activity handler is the correct choice for configuring the bot to respond to events by using custom text responses.
+- Azure Cognitive Service for Language is a cloud-based service that provides Natural Language Processing (NLP) features for understanding and analyzing text. Use this service to help build intelligent applications using the web-based Language Studio, REST APIs, and client libraries.
+- Natural language processing (NLP) has many uses: sentiment analysis, topic detection, language detection, key phrase extraction, and document categorization.
