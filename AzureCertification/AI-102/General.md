@@ -59,3 +59,22 @@ Speech channel, that is optimized for voice-in, voice-out interaction with bots.
     - Alternate forms of the question
     - Metadata
     - Multi-turn prompts
+- Use Content Moderator's text moderation models to analyze text content, such as chat rooms, discussion boards, chatbots, e-commerce catalogs, and documents. The service response includes the following information:
+    - Profanity: term-based matching with built-in list of profane terms in various languages
+    - Classification: machine-assisted classification into three categories
+    - Personal data
+    - Auto-corrected text
+    - Original text
+    - Language
+- Question answering provides multi-turn prompts and active learning to help you improve your basic question and answer pairs.
+- Multi-turn `prompts` give you the opportunity to connect question and answer pairs. This connection allows the client application to provide a top answer and provides more questions to refine the search for a final answer.
+- You can use the `tts.speech.microsoft.com/cognitiveservices/voices/list` endpoint to get a full list of voices for a specific region or endpoint.
+- Within a search service, synonym maps are a global resource that associate equivalent terms, expanding the scope of a query without the user having to actually provide the term. For example, assuming "dog", "canine", and "puppy" are mapped synonyms, a query on "canine" will match on a document containing "dog".
+- Azure Video Indexer supports automatic speech recognition through integration with the Microsoft Custom Speech Service. You can customize the Language model by uploading adaptation text, namely text from the domain whose vocabulary you'd like the engine to adapt to. Once you train your model, new words appearing in the adaptation text will be recognized, assuming default pronunciation, and the Language model will learn new probable sequences of words.
+- The identity information you need to add depends on the bot's application type. Provide the following values in your configuration file.
+    - MicrosoftAppId  -The bot's app ID.
+    - MicrosoftAppPassword/App secret - The bot's app password.
+- Properties associated with the active dialog. Properties in the dialog scope are kept until the dialog ends.
+- Content Moderator's machine-assisted text classification feature supports English only, and helps detect potentially undesired content. The flagged content may be assessed as inappropriate depending on context. It conveys the likelihood of each category. The feature uses a trained model to identify possible abusive, derogatory or discriminatory language. This includes slang, abbreviated words, offensive, and intentionally misspelled words.
+- Category1 refers to potential presence of language that may be considered sexually explicit or adult in certain situations.
+- A trace activity is an activity that your bot can send to the Bot Framework Emulator. You can use trace activities to interactively debug a bot, as they allow you to view information about your bot while it runs locally.
