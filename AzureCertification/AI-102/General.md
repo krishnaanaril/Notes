@@ -59,6 +59,13 @@ Speech channel, that is optimized for voice-in, voice-out interaction with bots.
     - Alternate forms of the question
     - Metadata
     - Multi-turn prompts
+
+
+## Other notes
+
+- Form Recognizer is renamed to Azure AI Dcoument Intelligence.
+- **Bot Framework Composer**, built on the Bot Framework SDK, is an open-source IDE for developers to author, test, provision, and manage conversational experiences. From Composer, you can test your bot and publish it to Azure.
+- **Conversational language understanding (CLU)**, a feature of Azure Cognitive Service for Language, is the updated version of LUIS. 
 - Use Content Moderator's text moderation models to analyze text content, such as chat rooms, discussion boards, chatbots, e-commerce catalogs, and documents. The service response includes the following information:
     - Profanity: term-based matching with built-in list of profane terms in various languages
     - Classification: machine-assisted classification into three categories
