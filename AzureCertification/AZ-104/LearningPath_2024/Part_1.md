@@ -26,3 +26,17 @@
     2. Microsoft Entra Privileged Identity Management
 - By using Microsoft Entra Domain Services, you can freely migrate applications that use LDAP, NTLM, or the Kerberos protocols from your on-premises infrastructure to the cloud. 
 -  Microsoft Entra ID P2 edition provides additional identity protection features, such as risk-based conditional access.
+
+## Configure user and group accounts
+
+- Every user who wants access to Azure resources needs an Azure user account.
+- Microsoft Entra ID supports three types of user accounts:
+    - Cloud Identity
+    - Directory-synchronized identity - User accounts that have a directory-synchronized identity are defined in an on-premises Active Directory.
+    - Guest user - Guest user accounts are defined outside Azure.
+- A user with Global administrator or User administrator privileges can preset profile data in user accounts.
+- Non-admin users can set some of their own profile data, but they can't change their display name or account name.
+- Restore operations for a deleted account are available up to 30 days after an account is removed. After 30 days, a deleted user account can't be restored.
+- Azure PowerShell can be used for bulk upload of user accounts.
+- **Security groups** are used to manage member and computer access to shared resources for a group of users. 
+- **Microsoft 365 groups** provide collaboration opportunities.
