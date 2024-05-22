@@ -40,3 +40,17 @@
 - Azure PowerShell can be used for bulk upload of user accounts.
 - **Security groups** are used to manage member and computer access to shared resources for a group of users. 
 - **Microsoft 365 groups** provide collaboration opportunities.
+
+## Configure Subscriptions
+
+- An Azure subscription is a logical unit of Azure services that's linked to an Azure account. 
+- Every Azure subscription can be associated with a Microsoft Entra ID.
+- You can apply tags to your Azure resources to logically organize them by categories. Tags are useful for sorting, searching, managing, and doing analysis on your resources.
+- Azure has several options that can help you gain significant cost savings for your organization.
+    - Reservations: Pay in advance
+    - Azure Hybrid Benefits
+    - Azure Credis
+    - Azure regions
+- Regions preserve data residency, and offer comprehensive compliance and resiliency options for customers.
+
+## Configure Azure Policy
