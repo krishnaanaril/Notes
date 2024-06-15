@@ -53,4 +53,3 @@
     - Azure regions
 - Regions preserve data residency, and offer comprehensive compliance and resiliency options for customers.
 
-## Configure Azure Policy

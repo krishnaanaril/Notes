@@ -1,4 +1,4 @@
-# Muual Funds
+# Mutual Funds
 
 ## Evaluation Criterias
 - Sharpe ratio
