@@ -23,3 +23,7 @@
 - Liked the analogy of sequence and pacing of elements with that of music beats.
 
 ## Typographic Classifications
+
+- Difference between Typeface and Font: Typeface is the artwork and Font is the file. 
+- Typography is the decisions we take regarding a typeface.
+- Glyph is the individual element in a typeface.
