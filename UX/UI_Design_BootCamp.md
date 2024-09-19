@@ -29,3 +29,11 @@
 - Glyph is the individual element in a typeface.
 - Some communication is a non-verbal. Typography is an emotional communication.
 - There are three types of serif font. Old-style, transitional and modern.
+
+## Selecting Typefaces
+
+- Websites for inspiration:
+    - https://www.designspiration.com/
+    - https://www.typewolf.com/
+    - https://typespiration.com/
+    - https://fontsinuse.com/
