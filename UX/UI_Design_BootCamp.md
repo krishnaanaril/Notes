@@ -27,3 +27,5 @@
 - Difference between Typeface and Font: Typeface is the artwork and Font is the file. 
 - Typography is the decisions we take regarding a typeface.
 - Glyph is the individual element in a typeface.
+- Some communication is a non-verbal. Typography is an emotional communication.
+- There are three types of serif font. Old-style, transitional and modern.
