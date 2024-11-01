@@ -22,6 +22,7 @@ attractive notation.
 ## Chapter 2 - Function Purity
 
 - PLINQ is an implementation of LINQ to Objects that works in parallel.
+- Side effects include state mutation, throwing exceptions, and I/O.
 - Static methods can cause problems if they do either of the following:
     - Act on mutable static fields
     - Perform I/O
@@ -29,7 +30,54 @@ attractive notation.
     - Make pure functions static.
     - Avoid mutable static fields.
     - Avoid direct calls to static methods that perform I/O.
+- Unlike other side effects, I/O can’t be avoided, but you can still isolate the parts of your
+application that perform I/O in order to reduce the footprint of impure code.
 
+## Chapter 3 - Designing function signatures and types
+
+- If you need to constrain the inputs of your functions, it’s usually better to define a custom type.
+- A function is honest if its behavior can be predicted by its signature: it returns a value of the declared type; no throwing exceptions, and no null return values.
+- **“honesty”** is an informal term, less technical and less rigorously defined than purity, but still useful.
+- Indexers are, of course, just normal functions—the `[]` syntax is just sugar—so both indexers are
+functions of type string → string, and both are *dishonest*.
+- There’s an important distinction to make between total and partial functions:
+    - Total functions are mappings that are defined for every element of the domain.
+    - Partial functions are mappings that are defined for some, but not all, elements of the
+    domain.
+- Make your function signatures as specific as possible. This will make them easier to consume and less error-prone.
+- Make your functions honest. An honest function always does what its signature says, and given an input of the expected type, it yields an output of the expected type—no `Exceptions`, no `nulls`.
+- Use custom types rather than ad hoc validation code to constrain the input values of a
+function, and use smart constructors to instantiate these types.
+- Use the `Option` type to express the possible absence of a value. An `Option` can be in one of
+two states:
+    - `None`, indicating the absence of a value
+    - `Some`, a simple container wrapping a a non-null value
+- To execute code conditionally, depending on the state of an Option, use Match with the
+functions you’d like to evaluate in the `None` and `Some` cases.
+
+## Chapter 4 - Patterns in functional programming
+
+- In FP, a type for which such a `Map` function is defined is called a `functor`.
+- Similarly, `monads` are types for which a `Bind` function is defined.
+- Structures like `Option<T>` and `IEnumerable<T>` can be seen as containers or abstractions, allowing you to work more effectively with the underlying values of type T.
+- You can distinguish between regular values, say, T, and elevated values, like `Option<T>` or `IEnumerable<T>`.
+- Some of the core functions of FP allow you to work effectively with elevated values:
+    - `Return` is a function that takes a regular value and lifts it into an elevated value.
+    - `Map` applies a function to the inner value(s) of a structure, and returns a new structure wrapping the result.
+    - `ForEach` is a side-effecting variant of Map that takes an action, which it performs for each of the container’s inner values.
+    - `Bind` maps an Option-returning function onto an Option and flattens the result to avoid producing a nested Option—and similarly for IEnumerable and other structures.
+    - `Where` filters the inner value(s) of a structure according to a given predicate.
+- Types for which `Map` is defined are called `functors`. Types for which `Return` and `Bind` are defined are called `monads`.
+
+## Chapter 5 - Designing programs with function composition
+
+- Function composition means combining two or more functions into a new function, and it’s widely used in FP.
+- In C#, the extension method syntax allows you to use function composition by chaining methods.
+- Functions lend themselves to being composed if they are pure, chainable, and shape-preserving.
+- Workflows are sequences of operations that can be effectively expressed in your programs through function pipelines: one function for each step of the workflow, with the output of each function fed into the next.
+- The LINQ library has a rich set of easily composable functions to work with IEnumerables, and you can use it as inspiration to write your own APIs.
+- Functional code prefers expressions over statements, unlike imperative code.
+- Relying on expressions leads to your code becoming more declarative, and hence more readable.
 
 ## Others
 
