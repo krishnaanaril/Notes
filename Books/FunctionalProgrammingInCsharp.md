@@ -79,6 +79,23 @@ functions you’d like to evaluate in the `None` and `Some` cases.
 - Functional code prefers expressions over statements, unlike imperative code.
 - Relying on expressions leads to your code becoming more declarative, and hence more readable.
 
+## Chapter 6 -  Functional error handling
+
+- Use `Either` to represent the result of an operation with two different possible outcomes, typically success or failure. An `Either` can be in one of two states:
+    - `Left` indicates failure and contains error information for an unsuccessful operation.
+    - `Right` indicates success and contains the result of a successful operation.
+- Interact with `Either` using the equivalents of the core functions already seen with Option:
+    - `Map` and `Bind` apply the mapped/bound function if the `Either` is in the Right state; otherwise they just pass along the Left value.
+    - `Match` works similarly to how it does with Option, allowing you to handle the Right and Left cases differently.
+    - `Where` is not readily applicable, so `Bind` should be used in its stead for filtering, while providing a suitable Left value.
+- `Either` is particularly useful for combining several validation functions with Bind, or, more generally, for combining several operations, each of which can fail.
+- Because `Either` is rather abstract, and because of the syntactic overhead of its two generic arguments, in practice it’s better to use a particularized version of `Either`, such as
+Validation and Exceptional.
+- When working with functors and monads, prefer using functions that stay within the abstraction, like `Map` and `Bind`. Use the downward-crossing `Match` function as little or as late
+as possible.
+
+
+
 ## Others
 
 - Use higher-order functions with LINQ and avoid writing your own for-loops.Try to avoid unnecessary repetition. For many things, there are generic algorithms. Use LINQ and other Algorithms to create powerful abstractions. If there is not an algorithm available, try to be generic and write your own algorithms.
