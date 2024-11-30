@@ -94,6 +94,17 @@ Validation and Exceptional.
 - When working with functors and monads, prefer using functions that stay within the abstraction, like `Map` and `Bind`. Use the downward-crossing `Match` function as little or as late
 as possible.
 
+## Chapter 7 - Structuring an application with function
+
+- Partial application is always about going from general to specific. It allows you to define very general functions and then fine tune their behavior by giving them arguments.
+- **Partial application** means giving a function its arguments piecemeal, effectively creating a more specialized function with each argument given.
+- **Currying** means changing the signature of a function so that it will take its arguments one at a time.
+- Partial application enables you to write highly general functions by parameterizing their behavior, and then supplying arguments to obtain increasingly specialized functions.
+- The order of arguments matters: you give the leftmost argument first, so that a function should declare its arguments from general to specific.
+- When working with multi-argument functions in C#, method resolution can be problematic and lead to syntactic overhead. This can be overcome by relying on Funcs rather than on
+methods.
+- You can inject the dependencies required by your functions by declaring them as arguments. This allows you to compose your application entirely of functions, without
+compromising on the separation of concerns, decoupling, and testability.
 
 
 ## Others
