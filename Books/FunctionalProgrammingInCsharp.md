@@ -106,6 +106,34 @@ methods.
 - You can inject the dependencies required by your functions by declaring them as arguments. This allows you to compose your application entirely of functions, without
 compromising on the separation of concerns, decoupling, and testability.
 
+## Chapter 8 - Working effectively with multi-argument functions
+
+- A monad is a type, `M`, for which the following functions are defined:
+    - `Return`, which takes a regular value of type `T` and lifts it into a monadic value of type `M<T>`
+    - `Bind`, which takes a monadic value, `m`, and a world-crossing function, `f`, and “extracts” from `m` its inner value `t` and applies `f` to it
+- `Return` and `Bind` should have the following three properties:
+    1. Right identity
+    2. Left identity
+    3. Associativity
+- The `Apply` function can be used to perform function application in an elevated world, such as the world of Option.
+- Multi-argument functions can be lifted into an elevated world with Return, and then arguments can be supplied with Apply.
+- Types for which Apply can be defined are called applicatives. Applicatives are more powerful than functors, but less powerful than monads.
+- Because monads are more powerful, you can also use nested calls to Bind to perform function application in an elevated world.
+- LINQ provides a lightweight syntax for working with monads that reads better than nesting calls to Bind.
+- To use LINQ with a custom type, you must implement the LINQ query pattern, particularly providing implementations of Select and SelectMany with appropriate signatures.
+- For several monads, Bind has short-circuiting behavior (the given function won’t be applied in some cases), but Apply doesn’t (it’s not given a function, but rather an elevated value). For this reason, you can sometimes embed desirable behavior into applicatives, such as collecting validation errors in the case of Validation.
+- FsCheck is a framework for property-based testing. It allows you to run a test with a large number of randomly generated inputs, giving high confidence that the test’s assertions hold for any input
+
+## Chapter 9 - Thinking about data functionally
+
+- The FP paradigm discourages state mutation, preventing several drawbacks associated with state mutation, such as lack of thread safety, coupling, and impurity.
+- Things that don’t change are represented with immutable objects.
+- In FP, things that change are also represented with immutable objects; these immutable snapshots represent an entity’s state at a given point. Change is represented by creating a new snapshot with the desired changes.
+- Enforcing immutability in C# is doable, but laborious; using immutability by convention, or modeling domain objects in F# are alternatives worth considering.
+- Like objects, collections should also be immutable, so that existing collections are never altered, but rather new collections are created with the desired changes.
+- Immutable collections can be safe as well as efficient, because an updated version shares much of its structure with the original collection without affecting it.
+
+
 
 ## Others
 
