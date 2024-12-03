@@ -133,7 +133,9 @@ compromising on the separation of concerns, decoupling, and testability.
 - Like objects, collections should also be immutable, so that existing collections are never altered, but rather new collections are created with the desired changes.
 - Immutable collections can be safe as well as efficient, because an updated version shares much of its structure with the original collection without affecting it.
 
+## Chapter 10 - Event sourcing: a functional approach to persistence
 
+- The traditional functions of a relational DB are the CRUD operations: create, read, update, and delete. The functional approach to data storage is CRA: create, read, append.
 
 ## Others
 
