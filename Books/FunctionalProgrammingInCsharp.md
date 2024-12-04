@@ -136,6 +136,23 @@ compromising on the separation of concerns, decoupling, and testability.
 ## Chapter 10 - Event sourcing: a functional approach to persistence
 
 - The traditional functions of a relational DB are the CRUD operations: create, read, update, and delete. The functional approach to data storage is CRA: create, read, append.
+- Thinking functionally about data also encompasses storage. Instead of mutating stored data, consider the database as a big immutable collection: you can append new data, but never overwrite existing data.
+- There are two main approaches to immutable storage:
+    - *Event-based*—The DB is an ever-growing collection of events.
+    - *Assertion-based*—The DB is an ever-growing collection of facts.
+- Event sourcing means persisting event data as events occur. The state of an entity need not be stored, because it can always be computed as the “sum” of all events that affected the entity.
+- An event-sourced system naturally separates the concerns of reading and writing data, enabling a CQRS architecture that separates between
+    - The command side, where commands are received, validated, and turned into events that are persisted and published.
+    - The query side, where events are combined to create view models, which are served to clients and, optionally, cached for better performance.
+- Event-sourced systems have several main components:
+    - *Commands*—Simple, immutable data objects encapsulating a request from a client program.
+    - *Events*—Simple, immutable data objects capturing what happened.
+    - *States*—Data objects representing the state of an entity at a certain point in time.
+    - *State transitions*—Functions that take a state and an event, and produce a new state.
+    - *View models*—Data objects for populating views. They’re computed from events.
+    - *Event handlers*—These subscribe to events to perform business logic (on the command side) or to update view models (on the query side).
+
+## Chapter 11 - Lazy computations, continuations, and the beauty of monadic composition
 
 ## Others
 
