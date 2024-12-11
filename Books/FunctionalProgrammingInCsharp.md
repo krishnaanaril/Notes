@@ -2,17 +2,14 @@
 
 ## Chapter 1
 
-- What exactly is functional programming? At a very high level, it’s a programming style that
-emphasizes functions while avoiding state mutation. 
-- The reason you see both the functional and nonfunctional approaches in the framework is
-historical: `List<T>.Sort` predates LINQ, which marked a decisive turn in a functional direction.
+- What exactly is functional programming? At a very high level, it’s a programming style that emphasizes functions while avoiding state mutation. 
+- The reason you see both the functional and nonfunctional approaches in the framework is historical: `List<T>.Sort` predates LINQ, which marked a decisive turn in a functional direction.
 - There are several language constructs in C# that you can use to represent functions:
     - Methods
     - Delegates
     - Lambda expressions
     - Dictionaries
-- If your function is short and you don’t need to reuse it elsewhere, lambdas offer the most
-attractive notation.
+- If your function is short and you don’t need to reuse it elsewhere, lambdas offer the most attractive notation.
 - Use function pointers in LINQ clauses for better readablility. 
 - HOFs also have some drawbacks:
     - You’ve increased stack use. There’s a performance impact, but it’s negligible.
@@ -30,24 +27,21 @@ attractive notation.
     - Make pure functions static.
     - Avoid mutable static fields.
     - Avoid direct calls to static methods that perform I/O.
-- Unlike other side effects, I/O can’t be avoided, but you can still isolate the parts of your
-application that perform I/O in order to reduce the footprint of impure code.
+- Unlike other side effects, I/O can’t be avoided, but you can still isolate the parts of your application that perform I/O in order to reduce the footprint of impure code.
 
 ## Chapter 3 - Designing function signatures and types
 
 - If you need to constrain the inputs of your functions, it’s usually better to define a custom type.
 - A function is honest if its behavior can be predicted by its signature: it returns a value of the declared type; no throwing exceptions, and no null return values.
 - **“honesty”** is an informal term, less technical and less rigorously defined than purity, but still useful.
-- Indexers are, of course, just normal functions—the `[]` syntax is just sugar—so both indexers are
-functions of type string → string, and both are *dishonest*.
+- Indexers are, of course, just normal functions—the `[]` syntax is just sugar—so both indexers are functions of type string → string, and both are *dishonest*.
 - There’s an important distinction to make between total and partial functions:
     - Total functions are mappings that are defined for every element of the domain.
     - Partial functions are mappings that are defined for some, but not all, elements of the
     domain.
 - Make your function signatures as specific as possible. This will make them easier to consume and less error-prone.
 - Make your functions honest. An honest function always does what its signature says, and given an input of the expected type, it yields an output of the expected type—no `Exceptions`, no `nulls`.
-- Use custom types rather than ad hoc validation code to constrain the input values of a
-function, and use smart constructors to instantiate these types.
+- Use custom types rather than ad hoc validation code to constrain the input values of a function, and use smart constructors to instantiate these types.
 - Use the `Option` type to express the possible absence of a value. An `Option` can be in one of
 two states:
     - `None`, indicating the absence of a value
@@ -153,6 +147,14 @@ compromising on the separation of concerns, decoupling, and testability.
     - *Event handlers*—These subscribe to events to perform business logic (on the command side) or to update view models (on the query side).
 
 ## Chapter 11 - Lazy computations, continuations, and the beauty of monadic composition
+-  C# is a language with strict or eager evaluation—expressions are evaluated as soon as they’re bound to a variable. Although strict evaluation is more common, there are languages—notably Haskell—that use lazy evaluation, so that expressions are evaluated only as needed.
+- If you’re not sure whether a value will be required, and it may be expensive to compute it, pass the value lazily by wrapping it in a function that will compute the value.
+- Types for which two instances can always be combined into one are called monoids.
+- Laziness means deferring a computation until its result is needed. It’s especially useful when the result may not be required in the end.
+- Lazy computations can be composed to create more complex computations that can then  be triggered as needed.
+- When dealing with an exception-based API, you can use the `Try` delegate type. The Run function safely executes the code in the `Try` and returns the result wrapped in an `Exceptional`.
+- HOFs in the form `(T → R) → R` (that is, functions that take a callback or continuation) can also be composed monadically, enabling you to use flat LINQ expressions rather than deeply nested callbacks.
+
 
 ## Others
 
