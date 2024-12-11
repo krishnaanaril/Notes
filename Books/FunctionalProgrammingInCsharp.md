@@ -155,6 +155,12 @@ compromising on the separation of concerns, decoupling, and testability.
 - When dealing with an exception-based API, you can use the `Try` delegate type. The Run function safely executes the code in the `Try` and returns the result wrapped in an `Exceptional`.
 - HOFs in the form `(T → R) → R` (that is, functions that take a callback or continuation) can also be composed monadically, enabling you to use flat LINQ expressions rather than deeply nested callbacks.
 
+## Chapter 12 - Stateful programs and stateful computations
+
+- *Stateful computations* are functions that take a state (as well as, potentially, other arguments), and return a new state (along with, potentially, a return value). They’re also called state transitions.
+- When writing stateful programs, you can avoid changing state as a side effect by always passing the state explicitly as part of a function’s input and output.
+- Stateful computations are functions in the form `S → (T, S)`. That is, they take some state and return a value as well as an updated state.
+- Stateful computations can be composed monadically, to reduce the syntactic burden of passing the state from one computation to the next.
 
 ## Others
 
