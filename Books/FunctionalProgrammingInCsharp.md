@@ -162,6 +162,16 @@ compromising on the separation of concerns, decoupling, and testability.
 - Stateful computations are functions in the form `S → (T, S)`. That is, they take some state and return a value as well as an updated state.
 - Stateful computations can be composed monadically, to reduce the syntactic burden of passing the state from one computation to the next.
 
+## Chapter 13 - Working with asynchronous computations
+- `Traverse` is one of the slightly more esoteric core functions in FP, and it allows you to work with lists of elevated values. 
+- Task<T> represents a computation that will asynchronously deliver a T.
+- Tasks should be used whenever the underlying operation may have significant latency, such as most I/O operations.
+- Task-returning functions can be composed with `Map`, `Bind`, and several other combinators to specify error handling or multiple retries.
+- If Tasks are independent, they can be run in parallel. You can use Task as an applicative, and providing several Tasks with Apply runs them in parallel.
+- If you have two monads, A and B, you may like to stack them up in values like `A<B<T>>`, to combine the effects of each monad.
+- Traverse can be used to invert the order of monads in the stack. 
+- Implementing the query pattern for such a stack allows you to combine As, Bs, and` A<B<>>`s with relative ease. Still, stacked monads tend to be cumbersome, so use them sparingly
+
 ## Others
 
 - Use higher-order functions with LINQ and avoid writing your own for-loops.Try to avoid unnecessary repetition. For many things, there are generic algorithms. Use LINQ and other Algorithms to create powerful abstractions. If there is not an algorithm available, try to be generic and write your own algorithms.
