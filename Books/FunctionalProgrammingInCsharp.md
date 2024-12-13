@@ -172,6 +172,28 @@ compromising on the separation of concerns, decoupling, and testability.
 - Traverse can be used to invert the order of monads in the stack. 
 - Implementing the query pattern for such a stack allows you to combine As, Bs, and` A<B<>>`s with relative ease. Still, stacked monads tend to be cumbersome, so use them sparingly
 
+## Chapater 14 - Data streams and the Reactive Extensions
+- To ease backpressure, Rx provides several operators:
+    - Throttle
+    - Sample
+    - Buffer
+    - Window
+    - Debounce
+- `IObservable<T>` represents a stream of Ts: a sequence of values in time.
+- An `IObservable` produces messages according to the grammar OnNext* (OnCompleted|OnError)?.
+- Writing a program with IObservables involves three steps:
+    - Create IObservables using the methods in System.Reactive.Linq.Observable.
+    - Transform and combine IObservables using the operators in Rx, or other operators you may define.
+    - Subscribe to and consume the values produced by the IObservable.
+    - Associate an observer to an IObservable with Subscribe.
+    - Remove an observer by disposing of the subscription returned by Subscribe.
+    - Separate side effects (in observers) from logic (in stream transformations).
+- When deciding on whether to use IObservable, consider the following:
+    - IObservable allows you to specify logic that spans multiple events.
+    - IObservable is good for modeling unidirectional data flows, not request-response.
+
+
+
 ## Others
 
 - Use higher-order functions with LINQ and avoid writing your own for-loops.Try to avoid unnecessary repetition. For many things, there are generic algorithms. Use LINQ and other Algorithms to create powerful abstractions. If there is not an algorithm available, try to be generic and write your own algorithms.
