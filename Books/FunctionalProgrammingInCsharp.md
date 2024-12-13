@@ -192,7 +192,29 @@ compromising on the separation of concerns, decoupling, and testability.
     - IObservable allows you to specify logic that spans multiple events.
     - IObservable is good for modeling unidirectional data flows, not request-response.
 
-
+## Chapter 15 - An introduction to message-passing concurrency
+- Functional programmers tend to avoid using locks and resort instead to alternative techniques:
+    - Compare-and-swap (CAS)
+    - Software transactional memory (STM)
+    - Message-passing concurrency
+        - The actor model
+        - Agent-based concurrency
+- Shared mutable state that’s accessed concurrently can cause difficult problems:
+    - For this reason, it’s best to avoid shared mutable state entirely, and this can often bevachieved in parallel processing.
+    - In other scenarios, notably in multithreaded applications that need to model real-world entities, shared mutable state is often required.
+    - Access to shared mutable state must be serialized to avoid inconsistent changes to the data. This can be achieved using locks, but also using lock-free techniques.
+- Message-passing concurrency is a technique that avoids locks by restricting state mutationvto processes (actors/agents) that have exclusive ownership of some state, 
+ which they can access single-threadedly in reaction to messages they’re sent.
+- An actor/agent is a lightweight process featuring 
+    - An inbox, in which messages sent to it are queued up.
+    - Some state, of which it has exclusive ownership.
+    - A processing loop, in which it processes messages sequentially, taking actions such as creating and communicating with other agents, changing its state, and performing side effects.
+- Agents and actors are fundamentally similar, but there are important differences:
+- Actors are distributed, whereas agents are local to a single process.
+- Unlike with agents, the actor model includes a model for error handling with supervisor actors that can take action if the supervised actor fails, resulting in very
+robust systems.
+- Message-passing concurrency feels quite different from other FP techniques, mainly because FP works by composing functions, whereas actors/agents tend to work in a fire-and-forget fashion.
+- It’s possible to write high-level functional APIs with agent-based or actor-based implementations.
 
 ## Others
 
