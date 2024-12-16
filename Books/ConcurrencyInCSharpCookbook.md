@@ -27,3 +27,35 @@ pieces.
 - Dataflow blocks are generally better than Rx observables when doing parallel processing. 
 - There is almost no need for you to ever create a new thread yourself. The only time you should ever create a Thread instance is if you need an STA thread for COM interop.
 - If you adopt a *functional* mindset, your concurrent designs will be less convoluted.
+
+## Chapter 2 - Async Basics
+- `Task.Delay` is a fine option for unit testing asynchronous code or for implementing retry logic. However, if you need to implement a timeout, a `CancellationToken` is usually a better choice.
+- Pausing for a Period of Time
+    - Q: You need to (asynchronously) wait for a period of time. 
+    - A: The `Task` type has a static method `Delay` that returns a task that completes after the specified time.
+- Returning Completed Tasks
+    - Q: You need to implement a synchronous method with an asynchronous signature.
+    - A: You can use `Task.FromResult` to create and return a new `Task<T>` that is already completed with the specified value.
+-  Reporting Progress
+    - Q: You need to respond to progress while an operation is executing.
+    - A: Use the provided `IProgress<T>` and `Progress<T>` types.
+- Waiting for a Set of Tasks to Complete
+    - Q: You have several tasks and need to wait for them all to complete.
+    - A: The framework provides a `Task.WhenAll` method for this purpose.
+- Waiting for Any Task to Complete
+    - Q: You have several tasks and need to respond to just one of them that’s completing
+    - A: Use the `Task.WhenAny` method.
+- If the other tasks aren’t canceled but are also never awaited, then they are abandoned. Abandoned tasks will run to completion, and their results will be ignored. Any exceptions from those abandoned tasks will also be ignored.
+- Processing Tasks as They Complete
+    - Q: You have a collection of tasks to await, and you want to do some processing on each task after it completes.
+    - A: The easiest solution is to restructure the code by introducing a higher-level async method that handles awaiting the task and processing its result.
+- Avoiding Context for Continuations
+    - Q: When an async method resumes after an await, by default it will resume executing within the same context. This can cause performance problems if that context was a UI context and a large number of async methods are resuming on the UI context.
+    - A: To avoid resuming on a context, await the result of `ConfigureAwait` and pass false for its `continueOnCapturedContext` parameter. (Not applicable for .NET core+. Needs further reading.)
+- Handling Exceptions from async void Methods
+    - Q: You have an async void method and need to handle exceptions propagated out of that method.
+    - A: There is no good solution. If at all possible, change the method to return Task instead of void.
+-  As a general rule, for your own application code, you should use `Task<T>` as a return type and not `ValueTask<T>`. Only consider using `ValueTask<T>` as a return type in your own application after profiling shows that you’d see a performance increase
+- A `ValueTask` or` ValueTask<T>` may only be awaited once.
+- Synchronously getting results from a `ValueTask` or `ValueTask<T>` may only be done once, after the `ValueTask` has completed, and that same `ValueTask` cannot be awaited or converted to a task.
+
