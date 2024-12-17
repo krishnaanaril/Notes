@@ -97,3 +97,24 @@ pieces.
 - Bear in mind that the Parallel class is more friendly to other processes on the system than PLINQ; this is especially a consideration if the parallel processing is done on a server machine.
 
 ## Chapter 5 - DataFlow Basics
+-  Linking Blocks
+    - Q: You need to link dataflow blocks to one another to create a mesh.
+    - A: Many of the useful TPL Dataflow methods are actually extension methods. The `LinkTo` extension method provides an easy way to link dataflow blocks together.
+    ```C#    
+    var options = new DataflowLinkOptions { PropagateCompletion = true };
+    multiplyBlock.LinkTo(subtractBlock, options);
+    ```
+-  Propagating Errors
+    - Q: You need a way to respond to errors that can happen in your dataflow mesh.
+    - When you propagate completion using the `PropagateCompletion` link option, errors are also propagated. However, the exception is passed to the next block wrapped in an `AggregateException`
+- Unlinking Blocks
+    - Q: During processing, you need to dynamically change the structure of your dataflow.
+    - A: You can link or unlink dataflow blocks at any time; data can be freely passing through the mesh and it’s still safe to link or unlink at any time. Both linking and unlinking are fully threadsafe.
+- Throttling Blocks
+    - Q: You have a fork scenario in your dataflow mesh and want the data to flow in a load-balancing way.
+    - A: This problem can be fixed by throttling the target blocks using the `BoundedCapacity` block option. By default, `BoundedCapacity` is set to `DataflowBlockOptions.Unbounded`, which causes the first target block to buffer all the data even if it isn’t ready to process it yet.
+- Parallel Processing with Dataflow Blocks
+    - Q: You want to perform some parallel processing within your dataflow mesh.
+    - A: You can instruct that block to operate in parallel on its input data by setting the `MaxDegreeOfParallelism` option. By default, this option is set to 1, so each dataflow block will only process one piece of data at a time.
+-  `DataflowBlock.Encapsulate` will create a single block out of the two endpoints.
+
