@@ -128,3 +128,13 @@ pieces.
 - Taming Event Streams with Throttling and Sampling
     - Q: A common problem with writing reactive code is when the events come in too quickly. A fast-moving stream of events can overwhelm your program’s processing.
     - A: `System.Reactive` provides operators specifically for dealing with a flood of event data. The `Throttle` and `Sample` operators give us two different ways to tame fast input events.
+
+## Chapter 7 - Testing
+- Two main advantages of unit testing:
+    - Better understanding of the code
+    - Greater confidence to make changes
+- Testing error handling is just as important as testing the successful scenarios.
+- It’s better to test for an exception thrown at a specific point rather than testing for an exception at any time during the test. Instead of `ExpectedException`, use `ThrowsAsync` (or its equivalent in your unit test framework)
+-  Rx introduced a concept called a *scheduler*, and every Rx operator that deals with time is implemented using this abstract scheduler.
+- `TestScheduler` is in a separate NuGet package from the rest of `System.Reactive`; you’ll need to install the `Microsoft.Reactive.Testing` NuGet package. `TestScheduler` gives you powerful control over (virtual) time.
+- `TestScheduler` also has `AdvanceTo` and `AdvanceBy` methods, which enable you to gradually step through virtual time.
