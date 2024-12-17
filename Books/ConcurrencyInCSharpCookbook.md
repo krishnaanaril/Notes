@@ -118,3 +118,13 @@ pieces.
     - A: You can instruct that block to operate in parallel on its input data by setting the `MaxDegreeOfParallelism` option. By default, this option is set to 1, so each dataflow block will only process one piece of data at a time.
 -  `DataflowBlock.Encapsulate` will create a single block out of the two endpoints.
 
+## Chapter 6 - System.Reactive Basics
+- Converting .NET Events
+    - Q: You have an event that you need to treat as a System.Reactive input stream, producing some data via OnNext each time the event is raised.
+    - A: Most .NET framework events are compatible with FromEventPattern, but if you have events that don’t follow the common pattern, you can use FromEvent instead.
+- The most common uses for the `ObserveOn` operator are moving on or off the UI thread, but schedulers are also useful in other scenarios. A more advanced scenario where schedulers are useful is faking the passage of time when unit testing
+- `ObserveOn` controls the context for the observable notifications. This is not to be confused with `SubscribeOn`, which controls the context for the code that adds and removes the event handlers.
+- `System.Reactive` provides a pair of operators that group incoming sequences: `Buffer` and `Window`. `Buffer` will hold on to the incoming events until the group is complete, at which time it forwards them all at once as a collection of events. `Window` will logically group the incoming events but will pass them along as they arrive. The return type of `Buffer` is `IObservable<IList<T>>` (an event stream of collections); the return type of Window is `IObservable<IObservable<T>>` (an event stream of event streams).
+- Taming Event Streams with Throttling and Sampling
+    - Q: A common problem with writing reactive code is when the events come in too quickly. A fast-moving stream of events can overwhelm your program’s processing.
+    - A: `System.Reactive` provides operators specifically for dealing with a flood of event data. The `Throttle` and `Sample` operators give us two different ways to tame fast input events.
