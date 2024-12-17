@@ -142,3 +142,22 @@ pieces.
 ## Chapter 8 - Interop
 - For new code, always use `HttpClient`. Only use `WebClient` if you’re working with legacy code.
 
+## Chapter 9 - Collections
+-  Immutable collections follow a pattern where they return an updated collection; the original collection reference is unchanged. This means that once you have a 
+ reference to a particular immutable collection instance, it’ll never change.
+ - Even though immutable collections are threadsafe, references to immutable collections are not threadsafe. A variable that refers to an immutable collection needs the same synchronization protections as any other variable.
+- The immutable list is internally organized as a binary tree so that immutable list instances may maximize the amount of memory they share with other instances.
+- One important note about the sorted set is that its indexing is O(log N), not O(1), just like ImmutableList<T>. This means that the same caveat applies in this situation: you should use foreach instead of for whenever possible with an `ImmutableSortedSet<T>`.
+- The `ConcurrentDictionary<TKey, TValue>` type in the .NET framework is a true gem of a data structure. It’s threadsafe, using a mixture of fine-grained locks and lock-free techniques to ensure fast access in the vast majority of scenarios.
+- You need a conduit to pass messages or data from one thread to another. The .NET type `BlockingCollection<T>` was designed to be this kind of conduit. By default, `BlockingCollection<T>` is a blocking queue, providing first-in, first-out behavior.
+- A lot of the time, using TPL Dataflow is simpler than building your own conduits and background threads.
+- Channels are a modern library for asynchronous producer/consumer collections, with a nice emphasis on high performance for high-volume scenarios.
+- Channels are the easiest way to apply sampling to input items. One common example is to always take the latest n items, discarding the oldest items once the queue is full.
+    ```csharp
+    Channel<int> queue = Channel.CreateBounded<int>(
+    new BoundedChannelOptions(1)
+    {
+    FullMode = BoundedChannelFullMode.DropOldest,
+    });
+    ChannelWriter<int> writer = queue.Writer;
+    ```
