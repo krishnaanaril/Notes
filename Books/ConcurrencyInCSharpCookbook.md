@@ -59,3 +59,16 @@ pieces.
 - A `ValueTask` or` ValueTask<T>` may only be awaited once.
 - Synchronously getting results from a `ValueTask` or `ValueTask<T>` may only be done once, after the `ValueTask` has completed, and that same `ValueTask` cannot be awaited or converted to a task.
 
+## Chapter 3 - Asynchronous Streams
+- `IAsyncEnumerable<T>` works just like an `IEnumerable<T>`, except that it asynchronously retrieves each next element.
+- Creating Asynchronous Streams
+    - Q: You need to return multiple values, and each value may require some asynchronous work. 
+    - A: Returning multiple values from a method can be done with `yield return`, and asynchronous methods use `async` and `await`.
+-  Consuming Asynchronous Streams
+    - Q: You need to process the results of an asynchronous stream, also known as an asynchronous enumerable.
+    - A: Consuming an asynchronous operation is done via `await`, and consuming an enumerable is usually done via `foreach`. Consuming an asynchronous enumerable is done by combining these two into `await foreach`. 
+- `Observable` subscriptions must be synchronous, but `await foreach` permits natural asynchronous processing.
+- Asynchronous streams are **pull-based**, so there’s no time-related operators like there are for observables. `Throttle` and `Sample` don’t make sense in this world, since the elements are pulled out of the asynchronous stream on demand.
+- Asynchronous Streams and Cancellation
+    - Q: You want a way to cancel asynchronous streams
+    - A: Not all asynchronous streams require cancellation. It’s possible to simply stop enumerating when a condition is reached. Asynchronous streams support a `WithCancellation` extension method that you can use to attach a CancellationToken to a specific iteration of an asynchronous stream. With the `EnumeratorCancellation` parameter attribute in place, the compiler takes care of passing the token from `WithCancellation` to the token parameter marked by  `EnumeratorCancellation`, and the cancellation request now causes await foreach to raise an `OperationCanceledException` after it has processed the first few items.
