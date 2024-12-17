@@ -161,3 +161,12 @@ pieces.
     });
     ChannelWriter<int> writer = queue.Writer;
     ```
+
+## Chapter 10 - Cancellation
+- Cancellation is treated as a special kind of error. The convention is that canceled code will throw an exception of type `OperationCanceledException` (or a derived type, such as `TaskCanceledException`). This way the calling code knows that the cancellation was observed.
+- To execute code with a timeout, use `CancellationTokenSource` and `CancelAfter` (or the constructor). There are other ways to do the same thing, but using the existing cancellation system is the easiest and most efficient option.
+- Remember that the code to be canceled needs to observe the cancellation token; it isn’t possible to easily cancel un-cancelable code.
+- The easiest way to support cancellation is to pass the `CancellationToken` through to the parallel code. `Parallel` methods support this by taking a `ParallelOptions` instance.
+- The System.Reactive library has a notion of a *subscription* to an observable stream. Your code can dispose of the subscription to unsubscribe from the stream. In many cases, this is sufficient to logically cancel the stream.
+- Each block in a dataflow mesh supports cancellation as a part of its `DataflowBlockOptions`.
+- The `CreateLinkedTokenSource` method can take any number of cancellation tokens as parameters. This enables you to create a single combined token from which you can implement your logical cancellation.
