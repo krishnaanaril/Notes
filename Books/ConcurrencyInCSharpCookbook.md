@@ -72,3 +72,28 @@ pieces.
 - Asynchronous Streams and Cancellation
     - Q: You want a way to cancel asynchronous streams
     - A: Not all asynchronous streams require cancellation. It’s possible to simply stop enumerating when a condition is reached. Asynchronous streams support a `WithCancellation` extension method that you can use to attach a CancellationToken to a specific iteration of an asynchronous stream. With the `EnumeratorCancellation` parameter attribute in place, the compiler takes care of passing the token from `WithCancellation` to the token parameter marked by  `EnumeratorCancellation`, and the cancellation request now causes await foreach to raise an `OperationCanceledException` after it has processed the first few items.
+
+## Chapter 4 - Parallel Basics
+- Parallel Processing of Data
+    - Q: You have a collection of data, and you need to perform the same operation on each element of the data. This operation is CPU-bound and may take some time.
+    - A: The `Parallel` type contains a `ForEach` method specifically designed for this problem. 
+- `Parallel.ForEach(matrices, (matrix, state) => {})`. This code uses `ParallelLoopState.Stop` to stop the loop, preventing any further invocations of the loop body.
+- `Parallel.ForEach(matrices, new ParallelOptions { CancellationToken = token }, matrix => matrix.Rotate(degrees))` to cancel loop.
+-  One difference between `Parallel` and `PLINQ` is that `PLINQ` assumes it can use all the cores on the computer, while `Parallel` will dynamically react to changing CPU conditions.
+- Parallel Aggregation
+    - Q: At the conclusion of a parallel operation, you need to aggregate the results.
+    - A: If you’re already using the Parallel class, you may want to use its aggregation support. Otherwise, in most scenarios, the PLINQ support is more expressive and has shorter code.
+- Parallel Invocation
+    - Q: You have a number of methods to call in parallel, and these methods are (mostly) independent of one another.
+    - A: The `Parallel` class contains a simple `Invoke` member that is designed for this scenario. 
+- Dynamic Parallelism
+    - Q: You have a more complex parallel situation where the structure and number of parallel tasks depend on information known only at runtime.
+    - A: When you need dynamic parallelism, it’s easiest to use the `Task` type directly.
+
+- Using Task for parallel processing is completely different than using Task for asynchronous processing
+- The Task type serves two purposes in concurrent programming: it can be a parallel task or an asynchronous task.
+- Asynchronous tasks should not use AttachedToParent, but they can form an implicit kind of parent/child relationship by awaiting another task.
+- The Parallel class is good for many scenarios, but PLINQ code is simpler when doing aggregation or transforming one sequence to another.
+- Bear in mind that the Parallel class is more friendly to other processes on the system than PLINQ; this is especially a consideration if the parallel processing is done on a server machine.
+
+## Chapter 5 - DataFlow Basics
