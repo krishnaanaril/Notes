@@ -138,3 +138,7 @@ pieces.
 -  Rx introduced a concept called a *scheduler*, and every Rx operator that deals with time is implemented using this abstract scheduler.
 - `TestScheduler` is in a separate NuGet package from the rest of `System.Reactive`; you’ll need to install the `Microsoft.Reactive.Testing` NuGet package. `TestScheduler` gives you powerful control over (virtual) time.
 - `TestScheduler` also has `AdvanceTo` and `AdvanceBy` methods, which enable you to gradually step through virtual time.
+
+## Chapter 8 - Interop
+- For new code, always use `HttpClient`. Only use `WebClient` if you’re working with legacy code.
+
