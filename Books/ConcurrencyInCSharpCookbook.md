@@ -170,3 +170,9 @@ pieces.
 - The System.Reactive library has a notion of a *subscription* to an observable stream. Your code can dispose of the subscription to unsubscribe from the stream. In many cases, this is sufficient to logically cancel the stream.
 - Each block in a dataflow mesh supports cancellation as a part of its `DataflowBlockOptions`.
 - The `CreateLinkedTokenSource` method can take any number of cancellation tokens as parameters. This enables you to create a single combined token from which you can implement your logical cancellation.
+
+## Chapter 11 - Functional-Friendly OOP
+- The async keyword can only be applied to methods with implementations; it isn’t possible to apply it to abstract methods or interface methods (unless they have default implementations).
+- If you want to do some async work in the construtor, the bettern pattern is to create a `static` method that does the initalization and make the constructor `private`. Constructors cannot be async, nor can they use the await keyword. 
+- One of the important questions to ask yourself is whether reading the property should start a new 
+ asynchronous operation; if the answer is yes, then use an asynchronous method instead of a property.
