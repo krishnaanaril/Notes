@@ -176,3 +176,18 @@ pieces.
 - If you want to do some async work in the construtor, the bettern pattern is to create a `static` method that does the initalization and make the constructor `private`. Constructors cannot be async, nor can they use the await keyword. 
 - One of the important questions to ask yourself is whether reading the property should start a new 
  asynchronous operation; if the answer is yes, then use an asynchronous method instead of a property.
+
+ ## Chapter 12 - Synchronization
+ - There are two major types of synchronization: *communication* and *data protection*. 
+ - Immutable types are naturally threadsafe because they cannot change; it’s not possible to update an immutable collection, so no synchronization is necessary.
+- Blocking Lock
+    - Q: You have some shared data and need to safely read and write it from multiple threads.
+    - A: The best solution for this situation is to use the `lock` statement. 
+- There are four important guidelines when using locks:
+    - Restrict lock visibility.
+    - Document what the lock protects.
+    - Minimize code under lock.
+    - Never execute arbitrary code while holding a lock
+-  The `SemaphoreSlim` is a lightweight alternative to the `Semaphore` class that doesn't use Windows kernel semaphores. The `SemaphoreSlim` class is the recommended semaphore for synchronization within a single app.
+- `ManualResetEventSlim` is a great general-purpose signal from one thread to another, but you should only use it when appropriate. If the “signal” is actually a message sending some piece of data across threads, then consider using a producer/consumer queue. On the other hand, if the signals are just used to coordinate access to shared data, then you should
+use a lock instead.
