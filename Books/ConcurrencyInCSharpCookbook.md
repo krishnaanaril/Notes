@@ -204,3 +204,13 @@ dynamic parallel code.
 - There is no way to pass a `TaskScheduler` to Parallel LINQ (PLINQ) code.
 - Specifying a `TaskScheduler` is especially useful in coordinating the
 actions of blocks in different parts of your dataflow mesh. For example, you can utilize the `ConcurrentExclusiveSchedulerPair.ExclusiveScheduler` to ensure that blocks A and C never execute code at the same time, while allowing block B to execute whenever it wants.
+
+## Chapter 14 - Scenarios
+- Initializing Shared Resources
+    - Q: You have a resource that is shared between multiple parts of your code. This resource needs to be initialized the first time it is accessed.
+    - A: The .NET framework includes a type specifically for this purpose: `Lazy<T>`. You construct an instance of the `Lazy<T>` type with a factory delegate that is used to initialize the instance. 
+- Lazy initialization is thread-safe, but it doesn't protect the object after creation. You must lock the object before accessing it, unless the type is thread safe.
+- If you want to create a new source observable whenever someone subscribes to it, the System.Reactive library has an operator `Observable.Defer`, which
+will execute a delegate each time the observable is subscribed to.
+- When converting older code to be asynchronous, `AsyncLocal<T>` is a prime candidate for replacing `ThreadStaticAttribute`. `AsyncLocal<T>` works for both synchronous and asynchronous code, and should be the default choice for implicit state in modern applications.
+- Railway programming is a great way to avoid faulting dataflow blocks. Since railway programming is a functional programming construct based on monads, it’s a bit awkward when  translated to .NET, but it is usable. If you have a dataflow mesh that needs to be fault-tolerant, then railway programming is certainly worth it.
