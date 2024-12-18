@@ -191,3 +191,16 @@ pieces.
 -  The `SemaphoreSlim` is a lightweight alternative to the `Semaphore` class that doesn't use Windows kernel semaphores. The `SemaphoreSlim` class is the recommended semaphore for synchronization within a single app.
 - `ManualResetEventSlim` is a great general-purpose signal from one thread to another, but you should only use it when appropriate. If the “signal” is actually a message sending some piece of data across threads, then consider using a producer/consumer queue. On the other hand, if the signals are just used to coordinate access to shared data, then you should
 use a lock instead.
+
+## Chapter 13 - Scheduling
+- `Task.Run` is ideal for UI applications, when you have time-consuming work to do that cannot be done on the UI thread.
+- On ASP.NET, request handling code is already running on a threadpool thread, so pushing it onto another threadpool thread is usually counterproductive.
+- If you’re doing dynamic parallelism, then use `Task.Factory.StartNew` instead of `Task.Run`. This is necessary because the Task returned by `Task.Run` has its default options configured for asynchronous use (i.e., to be consumed by asynchronous or reactive code). It also doesn’t support advanced concepts, such as parent/child tasks, which are more common in
+dynamic parallel code.
+- The simplest TaskScheduler is T`askScheduler.Default`, which queues work to the thread pool. You will seldomly specify `TaskScheduler.Default` in your own code, but it’s important to be aware of it, since it’s the default for many scheduling scenarios. Task.Run, parallel, and dataflow code all use `TaskScheduler.Default`.
+- You can capture a specific context and later schedule work back to it by using `TaskScheduler.FromCurrentSynchronizationContext`:
+- `Parallel.Invoke` also takes an instance of `ParallelOptions`, so you can pass a `TaskScheduler` to `Parallel.Invoke` the same way as `Parallel.ForEach`. 
+- If you’re doing dynamic parallel code, you can pass `TaskScheduler` directly to `TaskFactory.StartNew `or `Task.ContinueWith`.
+- There is no way to pass a `TaskScheduler` to Parallel LINQ (PLINQ) code.
+- Specifying a `TaskScheduler` is especially useful in coordinating the
+actions of blocks in different parts of your dataflow mesh. For example, you can utilize the `ConcurrentExclusiveSchedulerPair.ExclusiveScheduler` to ensure that blocks A and C never execute code at the same time, while allowing block B to execute whenever it wants.
