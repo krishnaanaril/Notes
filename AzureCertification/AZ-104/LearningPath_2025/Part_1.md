@@ -1,0 +1,58 @@
+- Azure dashboards are stored as JSON files, which allows them to be uploaded and downloaded to share with other members of the Azure directory.
+- You can persist files on Cloud Shell by using the Azure CloudDrive.
+- You shouldn't use Azure Cloud Shell if:
+    - You intend to leave a session open for more than 20 minutes for long running scripts or activities. In these cases, your session is disconnected without warning, and the current state is lost.
+    - You need to open multiple sessions at the same time. Azure Cloud Shell allows only one instance at time and isn't suitable for concurrent work across multiple subscriptions or tenants.
+- JSON Azure Resource Manager templates (ARM templates) allow you to specify your project's infrastructure in a declarative and reusable way.
+- The advantages to infrastructure as code are:
+    - Consistent configurations
+    - Improved scalability
+    - Faster deployments
+    - Better traceability
+- Use **secureString** for all passwords and secrets. If you pass sensitive data in a JSON object, use the **secureObject** type. Template parameters with **secureString** or **secureObject** types can't be read or harvested after the deployment of the resource.
+
+## Manage identities and governance in Azure
+- **Microsoft Entra ID** is a cloud-based identity and access management service provided by Microsoft. Microsoft Entra ID is a comprehensive solution for managing identities, enforcing access policies, and securing your applications and data in the cloud and on-premises.
+- With Microsoft Entra ID, you also have access to a set of features that aren’t natively available in AD DS, such as support for multi-factor authentication, identity protection, and self-service password reset.
+- At any given time, an Azure subscription must be associated with one, and only one, Microsoft Entra tenant. But you can associate the same Microsoft Entra tenant with multiple Azure subscriptions. 
+- By using Microsoft Entra Domain Services, you can freely migrate applications that use LDAP, NTLM, or the Kerberos protocols from your on-premises infrastructure to the cloud.
+- After you delete a user, the account remains in a suspended state for 30 days. During that 30-day window, the user account can be restored, along with all its properties. After that 30-day window passes, the permanent deletion process is automatically started.
+- You must have one of the following roles to restore or permanently delete users.
+    - Global administrator
+    - Partner Tier-1 Support
+    - Partner Tier-2 Support
+    - User administrator
+- Microsoft Entra ID allows you to define two different types of groups.
+    - Security groups
+    - Microsoft 365 groups
+- SCIM - System for Cross-Domain Identity Management
+- The core architectural components of Azure may be broken down into two main groupings: 
+    - the physical infrastructure, and 
+    - the management infrastructure.
+- Availability zones are connected through high-speed, private fiber-optic networks.
+- To ensure resiliency, a minimum of three separate availability zones are present in all availability zone-enabled regions. However, not all Azure Regions currently support availability zones.
+- Sovereign regions are instances of Azure that are isolated from the main instance of Azure. 
+- The five core disciplines of cloud governance are as follows:
+    - Cost management
+    - Security baseline
+    - Resource consistency 
+    - Identity baseline 
+    - Deployment acceleration 
+- When you assign a new policy, a delay can occur in the policy taking effect, which can be up to 30 minutes. 
+- Azure RBAC is an allow model. This means that when you're assigned a role, Azure RBAC allows you to perform certain actions such as read, write, or delete. 
+- A contributor can create and manage all types of Azure resources, but they can't grant access to other users.
+- A strong, two-method authentication policy is always applied to accounts with an administrator role, regardless of your configuration for other users.
+- The security-question method isn't available to accounts associated with an administrator role.
+
+## Configure and manage virtual networks for Azure administrators
+
+- Each virtual network has its own Classless Inter-Domain Routing (CIDR) block and can be linked to other virtual networks and on-premises networks.
+- Each subnet can have a maximum of one associated network security group.
+- Each network interface that exists in a subnet can have zero, or one, associated network security groups.
+- Each security rule is assigned a Priority value. All security rules for a network security group are processed in priority order. When a rule has a low Priority value, the rule has a higher priority or precedence in terms of order processing.
+- By organizing your virtual machines into application security groups, you don't need to also distribute your servers across specific subnets. You can arrange your servers by application and purpose to achieve logical groupings.
+- Azure DNS allows you to host your registered domains. You can control and configure the domain records, like A, CNAME, MX, and set up alias records.
+- Changing the NS details is called **domain delegation**. When you delegate the domain, you must use all four name servers provided by Azure DNS.
+- Azure Virtual Network peering lets you connect virtual networks in the same or different regions. 
+- A network gateway in your on-premises network can exchange routes with a virtual network gateway in Azure by using BGP. 
+- BGP is the standard routing protocol that's normally used to exchange routing information among two or more networks. BGP is used to transfer data and information between autonomous systems on the internet, such as different host gateways.
