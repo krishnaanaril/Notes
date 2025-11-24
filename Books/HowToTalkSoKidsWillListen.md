@@ -19,7 +19,7 @@
 - Instead of punishment:
   - Express your feelings strongly - without attacking character. eg: "I'm furious that my new saw was left outside to rust  in the rain"
   - State your expectations. eg: "I expect the tools to be returned after they've been borrowed"
-  - Show the child how to make amends. eg: "What this saw needs now is a little steel wook and a lot of elbow grease."
+  - Show the child how to make amends. eg: "What this saw needs now is a little steel wool and a lot of elbow grease."
   - Offer a choice. eg: "You can borrow my tools and return them or you can give up the privilege of using them. You decide."
   - Take action. Allow the child to experience the consequences of his/her behaviour.
   - Problem solve
@@ -67,4 +67,4 @@
   - Let children overhear you say something positive about them
   - Model the behaviour you'd like to see. eg: "It's had to lose, but I'll try to be a port about it. Congratulations"
   - Be a storehouse for your child's special moments. eg: "I remember the time you..."
-  - When you r child acts according the old label, state your feelings and/or your expectations. eg: "I don't like that. Despite your strong feelings, I expect sportsmanship from you."
+  - When your child acts according the old label, state your feelings and/or your expectations. eg: "I don't like that. Despite your strong feelings, I expect sportsmanship from you."
